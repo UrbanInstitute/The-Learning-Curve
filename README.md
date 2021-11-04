@@ -1,8 +1,8 @@
-##The Learning Curve
+<h2>The Learning Curve</h2>
 
 The Learning Curve is an Urban Institute blog in which internal and external researchers publish short form pieces (~2000 words) focused on education policy. Blog posts will primarily feature quantitative analysis, with a focus on easy-to-parse analytics.
 
-##Organization
+<h2>Organization</h2>
 
 Blog Posts are organized by release date. Directories are organized accordingly:
 - {week_of_release_date}-{blog_topic}
