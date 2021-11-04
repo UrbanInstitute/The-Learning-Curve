@@ -1,0 +1,3 @@
+In order to reproduce results, you will need to download both the "Urban Institute SBPK Analysis.do" file and the "Outputs/Prekindergaten analyses.xlsx" file. Both this file and the folder containing the xlsx file need to be downloaded to the same location.
+
+After downloading both the above file and folder, you need to go into the "Urban Institute SBPK Analysis.do" file and edit the first two lines to the directory where you want data downloaded to and the directory containing your "Outputs" folder, respectiveley. Then run the .do file accordingly.

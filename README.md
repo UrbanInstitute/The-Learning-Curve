@@ -1,6 +1,6 @@
 ##The Learning Curve
 
-[The Learning Curve](https://urban.org/the-learning-curve) is an Urban Institute blog in which internal and external researchers publish short form pieces (~2000 words) focused on education policy. Blog posts will primarily feature quantitative analysis, with a focus on easy-to-parse analytics.
+The Learning Curve is an Urban Institute blog in which internal and external researchers publish short form pieces (~2000 words) focused on education policy. Blog posts will primarily feature quantitative analysis, with a focus on easy-to-parse analytics.
 
 ##Organization
 
@@ -11,4 +11,4 @@ For example, 2021_11_07-school_police_officers_and_social_workers will contain t
 
 - Programs
   - All relevant scripts
-- readme.md with instructions on how to organize files, install any packages or dependencies, and download data that is not automatically downloaded by the analysis
+- readme.md with instructions on how to organize files, install any packages or dependencies, and download data that is not automatically downloaded by the analysis.
