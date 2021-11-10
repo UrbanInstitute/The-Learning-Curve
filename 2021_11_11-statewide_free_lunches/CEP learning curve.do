@@ -2,9 +2,7 @@
 *states with direct cert data for at least 90% of students in 2018
 ******************************************************************
 
-clear
-
-cd ["YOUR_DIR"] //Edit this line with the directory this file is saved in.
+cd ["YOUR_DIR"]
 
 *--------------------------------------------------------------------
 educationdata using "school ccd directory", sub(year=2019) 
