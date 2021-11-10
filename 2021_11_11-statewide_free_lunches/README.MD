@@ -1,0 +1,1 @@
+To run the program, change the path at the top to your local folder. Poverty data for the figures can be found [here](https://nces.ed.gov/programs/edge/TableViewer/acsProfile/2019).
