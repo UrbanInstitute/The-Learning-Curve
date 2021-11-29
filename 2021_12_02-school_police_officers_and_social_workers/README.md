@@ -1,3 +1,1 @@
-## Distribution of police officers and social workers in US schools
-
-In order to reproduce results in this blog post, please download and store analysis.Rmd file and Input_Data folder in the same location. The school characteristics data can also be downloaded [here]("https://ocrdata.ed.gov/resources/downloaddatafile"); after downloading, please store in the Input_Data folder. Running the analysis.Rmd file will reproduce the results in the original blog post.
+In order to reproduce results in this blog post, please download and store analysis.Rmd file and Input_Data folder in the same location. The school characteristics data can also be downloaded [here](https://ocrdata.ed.gov/resources/downloaddatafile); after downloading, please store in the Input_Data folder. Running the analysis.Rmd file will reproduce the results in the original blog post.
