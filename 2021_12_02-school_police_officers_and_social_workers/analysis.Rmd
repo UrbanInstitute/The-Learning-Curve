@@ -1,0 +1,1232 @@
+---
+title: "Script for Urban Institute"
+author: "Mauro Ampie"
+date: "Submitted 10/10/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_knit$set(root.dir = "../")
+```
+
+```{r global-options, include=FALSE}
+knitr::opts_chunk$set(warning=FALSE, message=FALSE,
+                      include=TRUE, echo=FALSE, results = "hide")
+```
+
+# Part I: Setup
+
+Loading all relevant packages
+
+```{r}
+library("tidyverse")
+library("data.table")
+library("bit64")
+library("usmap")
+library("sf")
+library("sp")
+library("urbnthemes")
+```
+
+Loading data From Education Data Portal (Note: if enrollment data doesn't load after 2 minutes, stop the operation and run it again)
+
+```{r}
+enrollment <- fread('https://educationdata.urban.org/csv/crdc/schools_crdc_enrollment_k12_2017.csv')
+enrollment <- as_tibble(enrollment)
+```
+
+```{r}
+staff <- fread('https://educationdata.urban.org/csv/crdc/schools_crdc_teacher')
+staff <- as_tibble(staff)
+```
+
+Loading school characteristics data from my CRDC download
+
+```{r}
+school_characteristics <- read_csv("Input_Data/School_Characteristics.csv")
+```
+
+Creating directory for holding output files
+
+```{r}
+if(!dir.exists("Output_Data")){
+  dir.create("Output_Data")
+}
+```
+
+
+Reformatting race, sex, and fips variables in enrollment data to make the values more easily legible (following the value breakdowns in the Data Portal codebook)
+
+```{r}
+enrollment$race[enrollment$race %in% c(-3, -2, -1, 8, 9, 20, 99)] <- NA
+enrollment$race[enrollment$race == 1] <- "SCH_ENR_WH"
+enrollment$race[enrollment$race == 2] <- "SCH_ENR_BL"
+enrollment$race[enrollment$race == 3] <- "SCH_ENR_HI"
+enrollment$race[enrollment$race == 4] <- "SCH_ENR_AS"
+enrollment$race[enrollment$race == 5] <- "SCH_ENR_AM"
+enrollment$race[enrollment$race == 6] <- "SCH_ENR_HP"
+enrollment$race[enrollment$race == 7] <- "SCH_ENR_TR"
+
+enrollment <- enrollment %>% 
+  filter(!is.na(race))
+
+enrollment$sex[enrollment$sex %in% c(-3, -2, -1, 9, 99)] <- NA
+enrollment$sex[enrollment$sex == 1] <- "M"
+enrollment$sex[enrollment$sex == 2] <- "F"
+
+enrollment <- enrollment %>% 
+  filter(!is.na(sex))
+
+enrollment$fips[enrollment$fips %in% c(-3, -2, -1, 3, 7, 14, 43, 52)] <- NA
+enrollment$fips[enrollment$fips == 1] <- "AL"
+enrollment$fips[enrollment$fips == 2] <- "AK"
+enrollment$fips[enrollment$fips == 4] <- "AZ"
+enrollment$fips[enrollment$fips == 5] <- "AR"
+enrollment$fips[enrollment$fips == 6] <- "CA"
+enrollment$fips[enrollment$fips == 8] <- "CO"
+enrollment$fips[enrollment$fips == 9] <- "CT"
+enrollment$fips[enrollment$fips == 10] <- "DE"
+enrollment$fips[enrollment$fips == 11] <- "DC"
+enrollment$fips[enrollment$fips == 12] <- "FL"
+enrollment$fips[enrollment$fips == 13] <- "GA"
+enrollment$fips[enrollment$fips == 15] <- "HI"
+enrollment$fips[enrollment$fips == 16] <- "ID"
+enrollment$fips[enrollment$fips == 17] <- "IL"
+enrollment$fips[enrollment$fips == 18] <- "IN"
+enrollment$fips[enrollment$fips == 19] <- "IA"
+enrollment$fips[enrollment$fips == 20] <- "KS"
+enrollment$fips[enrollment$fips == 21] <- "KY"
+enrollment$fips[enrollment$fips == 22] <- "LA"
+enrollment$fips[enrollment$fips == 23] <- "ME"
+enrollment$fips[enrollment$fips == 24] <- "MD"
+enrollment$fips[enrollment$fips == 25] <- "MA"
+enrollment$fips[enrollment$fips == 26] <- "MI"
+enrollment$fips[enrollment$fips == 27] <- "MN"
+enrollment$fips[enrollment$fips == 28] <- "MS"
+enrollment$fips[enrollment$fips == 29] <- "MO"
+enrollment$fips[enrollment$fips == 30] <- "MT"
+enrollment$fips[enrollment$fips == 31] <- "NE"
+enrollment$fips[enrollment$fips == 32] <- "NV"
+enrollment$fips[enrollment$fips == 33] <- "NH"
+enrollment$fips[enrollment$fips == 34] <- "NJ"
+enrollment$fips[enrollment$fips == 35] <- "NM"
+enrollment$fips[enrollment$fips == 36] <- "NY"
+enrollment$fips[enrollment$fips == 37] <- "NC"
+enrollment$fips[enrollment$fips == 38] <- "ND"
+enrollment$fips[enrollment$fips == 39] <- "OH"
+enrollment$fips[enrollment$fips == 40] <- "OK"
+enrollment$fips[enrollment$fips == 41] <- "OR"
+enrollment$fips[enrollment$fips == 42] <- "PA"
+enrollment$fips[enrollment$fips == 44] <- "RI"
+enrollment$fips[enrollment$fips == 45] <- "SC"
+enrollment$fips[enrollment$fips == 46] <- "SD"
+enrollment$fips[enrollment$fips == 47] <- "TN"
+enrollment$fips[enrollment$fips == 48] <- "TX"
+enrollment$fips[enrollment$fips == 49] <- "UT"
+enrollment$fips[enrollment$fips == 50] <- "VT"
+enrollment$fips[enrollment$fips == 51] <- "VA"
+enrollment$fips[enrollment$fips == 53] <- "WA"
+enrollment$fips[enrollment$fips == 54] <- "WV"
+enrollment$fips[enrollment$fips == 55] <- "WI"
+enrollment$fips[enrollment$fips == 56] <- "WY"
+
+enrollment <- enrollment %>% 
+  rename(LEASTATE = fips)
+
+enrollment$enrollment_crdc[enrollment$enrollment_crdc<0] = NA
+enrollment$psenrollment_crdc[enrollment$psenrollment_crdc<0] = NA
+```
+
+```{r}
+enrollment$race_sex <- paste(enrollment$race, enrollment$sex, sep = "_")
+```
+
+Limiting data only to variables I'm interested in (and renaming some of the variables)
+
+```{r}
+staff <- staff %>% 
+  select(crdc_id, year, leaid, fips, social_workers_fte, law_enforcement_fte) %>%
+  rename(SCH_FTESERVICES_SOC = social_workers_fte,
+         SCH_FTESECURITY_LEO = law_enforcement_fte)
+
+staff$SCH_FTESERVICES_SOC[staff$SCH_FTESERVICES_SOC<0] = NA
+staff$SCH_FTESECURITY_LEO[staff$SCH_FTESECURITY_LEO<0] = NA
+
+```
+
+```{r}
+enrollment <- enrollment %>% 
+  select(crdc_id, year, leaid, LEASTATE, race_sex, enrollment_crdc)
+```
+
+```{r}
+school_characteristics <- school_characteristics %>% 
+  select(SCH_NAME, COMBOKEY, LEAID, JJ, SCH_GRADE_PS, SCH_GRADE_KG, SCH_GRADE_G01, SCH_GRADE_G02, SCH_GRADE_G03, SCH_GRADE_G04, SCH_GRADE_G05, SCH_GRADE_G06, SCH_GRADE_G07, SCH_GRADE_G08, SCH_GRADE_G09, SCH_GRADE_G10, SCH_GRADE_G11, SCH_GRADE_G12, SCH_STATUS_SPED, SCH_STATUS_MAGNET, SCH_STATUS_CHARTER, SCH_STATUS_ALT, SCH_MAGNETDETAIL, SCH_ALTFOCUS)
+```
+
+Limiting staff data to only 2017
+
+```{r}
+
+staff <- staff %>% 
+  filter(year == 2017)
+
+```
+
+Making the enrollment data "tidy"
+
+```{r}
+
+enrollment <- enrollment %>% 
+  group_by(crdc_id, year, leaid, LEASTATE, race_sex) %>% 
+  dplyr::summarize(enrollment = sum(enrollment_crdc, na.rm = T))
+
+```
+
+```{r}
+enrollment <- enrollment %>% 
+  spread(key = race_sex, value = enrollment)
+```
+
+Making matching variables have the same type across the three dataframes
+
+```{r}
+staff$leaid <- as.integer(staff$leaid)
+school_characteristics$LEAID <- as.integer(school_characteristics$LEAID)
+```
+
+Joining the enrollment and staff dataframes together
+
+```{r}
+crdc1718 <- left_join(enrollment, staff)
+```
+
+Renaming variables so I can join dataframe with school_characteristics
+
+```{r}
+crdc1718 <- crdc1718 %>% 
+  rename(COMBOKEY = crdc_id,
+          LEAID = leaid)
+```
+
+Joining dataframe with school_characteristics
+
+```{r}
+crdc1718 <- left_join(crdc1718, school_characteristics)
+```
+
+Excluding juvenile justice facilities, virtual schools, and pre-K-only schools
+
+```{r}
+# juvenile justice facilities
+crdc1718 <- crdc1718[crdc1718$JJ != "Yes",]
+
+# pre-K-only schools
+crdc1718 <- crdc1718 %>% 
+  filter((SCH_GRADE_PS == "Yes" & SCH_GRADE_KG == "No" & SCH_GRADE_G01 == "No" & SCH_GRADE_G02 == "No" & SCH_GRADE_G03 == "No" & SCH_GRADE_G04 == "No" & SCH_GRADE_G05 == "No" & SCH_GRADE_G06 == "No" & SCH_GRADE_G07 == "No" & SCH_GRADE_G08 == "No" & SCH_GRADE_G09 == "No" & SCH_GRADE_G10 == "No" & SCH_GRADE_G11 == "No" & SCH_GRADE_G12 == "No") == FALSE)
+```
+
+Excluding rows that aren't a state or DC
+
+```{r}
+crdc1718 <- crdc1718 %>% 
+  filter(!is.na(LEASTATE))
+```
+
+Cleaning up the environment
+
+```{r}
+rm(enrollment, staff, school_characteristics)
+```
+
+
+
+
+
+
+# Part II: Analysis
+
+## Grade Distribution
+
+Now I'll create variables that mark whether a school is at the elementary, middle, or high school level. Rules I'll be using to catalogue schools:
+- Any school with students anywhere from K through 5th is considered elementary school
+- Any school with students anywhere from 6th to 8th grade is considered middle school
+- Any school with a 9th, 10th, 11th, or 12th grade is considered high school
+- IMPORTANT: A single school can be classified as more than one level. This presents the slight challenge that it's not possible to get an exact count of students at each level, but I'll assume that all grade levels have the same enrollment and just divide the total enrollment by the number of grades to arrive at enrollment per grade (and then use this to arrive at an enrollment count per school level - see "Enrollment" section below).
+
+```{r, results = "markup"}
+crdc1718$elementary <- "No"
+crdc1718$elementary[crdc1718$SCH_GRADE_KG == "Yes" |
+                crdc1718$SCH_GRADE_G01 == "Yes" |
+                crdc1718$SCH_GRADE_G02 == "Yes" |
+                crdc1718$SCH_GRADE_G03 == "Yes" |
+                crdc1718$SCH_GRADE_G04 == "Yes" |
+                crdc1718$SCH_GRADE_G05 == "Yes" ] <- "Yes"
+
+crdc1718$middle_school <- "No"
+crdc1718$middle_school[crdc1718$SCH_GRADE_G06 == "Yes" |
+                   crdc1718$SCH_GRADE_G07 == "Yes" |
+                   crdc1718$SCH_GRADE_G08 == "Yes"] <- "Yes"
+
+crdc1718$high_school <- "No"
+crdc1718$high_school[crdc1718$SCH_GRADE_G09 == "Yes" |
+                 crdc1718$SCH_GRADE_G10 == "Yes" |
+                 crdc1718$SCH_GRADE_G11 == "Yes" |
+                 crdc1718$SCH_GRADE_G12 == "Yes"] <- "Yes"
+```
+
+## Enrollment
+
+```{r}
+crdc1718$TOT_ENR_F <- crdc1718$SCH_ENR_WH_F + crdc1718$SCH_ENR_BL_F + crdc1718$SCH_ENR_HI_F + crdc1718$SCH_ENR_AS_F + crdc1718$SCH_ENR_AM_F + crdc1718$SCH_ENR_HP_F + crdc1718$SCH_ENR_TR_F
+
+crdc1718$TOT_ENR_M <- crdc1718$SCH_ENR_WH_M + crdc1718$SCH_ENR_BL_M + crdc1718$SCH_ENR_HI_M + crdc1718$SCH_ENR_AS_M + crdc1718$SCH_ENR_AM_M + crdc1718$SCH_ENR_HP_M + crdc1718$SCH_ENR_TR_M
+
+crdc1718 <- crdc1718 %>% 
+  mutate(total_grades = (SCH_GRADE_KG == "Yes") + (SCH_GRADE_G01 == "Yes") + (SCH_GRADE_G02 == "Yes") + (SCH_GRADE_G03 == "Yes") + (SCH_GRADE_G04 == "Yes") + (SCH_GRADE_G05 == "Yes") + (SCH_GRADE_G06 == "Yes") + (SCH_GRADE_G07 == "Yes") + (SCH_GRADE_G08 == "Yes") + (SCH_GRADE_G09 == "Yes") + (SCH_GRADE_G10 == "Yes") + (SCH_GRADE_G11 == "Yes") + (SCH_GRADE_G12 == "Yes"),
+         
+         elementary_grades = (SCH_GRADE_KG == "Yes") + (SCH_GRADE_G01 == "Yes") + (SCH_GRADE_G02 == "Yes") + (SCH_GRADE_G03 == "Yes") + (SCH_GRADE_G04 == "Yes") + (SCH_GRADE_G05 == "Yes"),
+         
+         middle_school_grades = (SCH_GRADE_G06 == "Yes") + (SCH_GRADE_G07 == "Yes") + (SCH_GRADE_G08 == "Yes"),
+         
+         high_school_grades = (SCH_GRADE_G09 == "Yes") + (SCH_GRADE_G10 == "Yes") + (SCH_GRADE_G11 == "Yes") + (SCH_GRADE_G12 == "Yes"),
+         
+         TOT_ENR = TOT_ENR_F+ TOT_ENR_M,
+         
+         enrollment_elementary = round(TOT_ENR * elementary_grades / total_grades, 0),
+         
+         enrollment_middle_school = round(TOT_ENR * middle_school_grades / total_grades, 0),
+           
+         enrollment_high_school = round(TOT_ENR * high_school_grades / total_grades, 0))
+```
+
+## Student Demographics
+
+Creating minority indicator, which will categorize White/AAPI as one category and Black/Hispanic/Native American/Multirace as another
+
+Note: I'm including AAPI with White because, in all literature I've reviewed (~50 sources), only non-AAPI minorities are mentioned as getting targeted by school police.
+
+```{r}
+crdc1718$hispanic_percent <- (crdc1718$SCH_ENR_HI_M + crdc1718$SCH_ENR_HI_F) / crdc1718$TOT_ENR
+crdc1718$american_indian_percent <- (crdc1718$SCH_ENR_AM_M + crdc1718$SCH_ENR_AM_F) / crdc1718$TOT_ENR
+crdc1718$asian_pi_percent <- (crdc1718$SCH_ENR_AS_M + crdc1718$SCH_ENR_AS_F + crdc1718$SCH_ENR_HP_M + crdc1718$SCH_ENR_HP_F) / crdc1718$TOT_ENR
+crdc1718$black_percent <- (crdc1718$SCH_ENR_BL_M + crdc1718$SCH_ENR_BL_F) / crdc1718$TOT_ENR
+crdc1718$white_percent <- (crdc1718$SCH_ENR_WH_M + crdc1718$SCH_ENR_WH_F) / crdc1718$TOT_ENR
+crdc1718$multirace_percent <- (crdc1718$SCH_ENR_TR_M + crdc1718$SCH_ENR_TR_F) / crdc1718$TOT_ENR
+
+crdc1718$minority <- crdc1718$hispanic_percent + crdc1718$black_percent + crdc1718$multirace_percent + crdc1718$american_indian_percent
+```
+
+## Socioemotional supports
+
+Checking what % of students in each school level are in a school with a social worker
+
+```{r}
+crdc1718$has_sw <- 0
+crdc1718$has_sw[crdc1718$SCH_FTESERVICES_SOC > 0] <- 1
+
+crdc1718 %>% 
+  filter(elementary == "Yes", !is.na(enrollment_elementary)) %>% 
+  group_by(has_sw) %>% 
+  dplyr::summarize(enrollment = sum(enrollment_elementary)) %>% 
+  ungroup() %>% 
+  mutate(percentage = enrollment / sum(enrollment))
+
+crdc1718 %>% 
+  filter(middle_school == "Yes", !is.na(enrollment_middle_school)) %>% 
+  group_by(has_sw) %>% 
+  dplyr::summarize(enrollment = sum(enrollment_middle_school)) %>% 
+  ungroup() %>% 
+  mutate(percentage = enrollment / sum(enrollment))
+
+crdc1718 %>% 
+  filter(high_school == "Yes", !is.na(enrollment_high_school)) %>% 
+  group_by(has_sw) %>% 
+  dplyr::summarize(enrollment = sum(enrollment_high_school)) %>% 
+  ungroup() %>% 
+  mutate(percentage = enrollment / sum(enrollment))
+```
+
+In 1718, 30.6% of elementary school students, 33.4% of middle school students, and 39.6% of high school students attend schools with social worker FTEs.
+
+Checking what % of middle and high school students are in schools with a law enforcement officer
+
+```{r}
+crdc1718$has_leo <- 0
+crdc1718$has_leo[crdc1718$SCH_FTESECURITY_LEO > 0] <- 1
+
+crdc1718 %>% 
+  filter(elementary == "Yes", !is.na(enrollment_elementary)) %>% 
+  group_by(has_leo) %>% 
+  dplyr::summarize(enrollment = sum(enrollment_elementary)) %>% 
+  ungroup() %>% 
+  mutate(percentage = enrollment / sum(enrollment))
+
+crdc1718 %>% 
+  filter(middle_school == "Yes", !is.na(enrollment_middle_school)) %>% 
+  group_by(has_leo) %>% 
+  dplyr::summarize(enrollment = sum(enrollment_middle_school)) %>% 
+  ungroup() %>% 
+  mutate(percentage = enrollment / sum(enrollment))
+
+crdc1718 %>% 
+  filter(high_school == "Yes", !is.na(enrollment_high_school)) %>% 
+  group_by(has_leo) %>% 
+  dplyr::summarize(enrollment = sum(enrollment_high_school)) %>% 
+  ungroup() %>% 
+  mutate(percentage = enrollment / sum(enrollment))
+```
+
+In 1718, 18.1% of elementary school students, 38.1% of middle school students, and 55.4% of high school students are in schools with law enforcement FTEs.
+
+Is there some sort of "geographic" effect? Do states vary significantly on the percentage of their student body attending schools with a social worker? With a law enforcement officer?
+
+```{r}
+ms_sw <- crdc1718 %>% 
+  filter(middle_school == "Yes", !is.na(enrollment_middle_school)) %>%
+  group_by(LEASTATE, has_sw) %>% 
+  dplyr::summarize(enrollment = sum(enrollment_middle_school)) %>% 
+  ungroup() %>% 
+  group_by(LEASTATE) %>% 
+  mutate(percentage = enrollment / sum(enrollment)) %>% 
+  filter(has_sw == 1)
+
+hs_sw <- crdc1718 %>% 
+  filter(high_school == "Yes", !is.na(enrollment_high_school)) %>% 
+  group_by(LEASTATE, has_sw) %>% 
+  dplyr::summarize(enrollment = sum(enrollment_high_school)) %>% 
+  ungroup() %>% 
+  group_by(LEASTATE) %>% 
+  mutate(percentage = enrollment / sum(enrollment)) %>% 
+  filter(has_sw == 1)
+```
+
+```{r}
+ms_leo <- crdc1718 %>% 
+  filter(!is.na(enrollment_middle_school), middle_school == "Yes", LEASTATE != "FL", LEASTATE != "HI") %>% 
+  group_by(LEASTATE, has_leo) %>% 
+  dplyr::summarize(enrollment = sum(enrollment_middle_school)) %>% 
+  ungroup() %>% 
+  group_by(LEASTATE) %>% 
+  mutate(percentage = enrollment / sum(enrollment)) %>% 
+  filter(has_leo == 1)
+
+hs_leo <- crdc1718 %>% 
+  filter(!is.na(enrollment_high_school), high_school == "Yes", LEASTATE != "FL", LEASTATE != "HI") %>%
+  group_by(LEASTATE, has_leo) %>% 
+  dplyr::summarize(enrollment = sum(enrollment_high_school)) %>% 
+  ungroup() %>% 
+  group_by(LEASTATE) %>% 
+  mutate(percentage = enrollment / sum(enrollment)) %>% 
+  filter(has_leo == 1)
+
+hs = merge(hs_leo,
+           hs_sw,
+           by = "LEASTATE")
+
+hs$indicator = ifelse(hs$percentage.x>=hs$percentage.y, 1, 0)
+
+sum(hs$indicator, na.rm = T)/(50-2)
+
+
+ms = merge(ms_leo,
+           ms_sw,
+           by = "LEASTATE")
+
+ms$indicator = ifelse(ms$percentage.x>=ms$percentage.y, 1, 0)
+
+sum(ms$indicator, na.rm = T)/(50-2)
+
+
+```
+
+Police presence and social worker presence by percentage minority in each school
+
+```{r}
+crdc1718$bins_minority <- as.character(expression(0-20))
+crdc1718$bins_minority[crdc1718$minority >= 0.2] <- as.character(expression(20-40))
+crdc1718$bins_minority[crdc1718$minority >= 0.4] <- as.character(expression(40-60))
+crdc1718$bins_minority[crdc1718$minority >= 0.6] <- as.character(expression(60-80))
+crdc1718$bins_minority[crdc1718$minority >= 0.8] <- as.character(expression(80-100))
+crdc1718$bins_minority = paste0(crdc1718$bins_minority,"%")
+
+
+ 
+ms_minority <- crdc1718 %>% 
+  filter(!is.na(enrollment_middle_school), middle_school == "Yes") %>% 
+  group_by(bins_minority, has_leo, has_sw) %>%
+  dplyr::summarize(enrollment = sum(enrollment_middle_school)) %>% 
+  ungroup() %>% 
+  group_by(bins_minority) %>% 
+  dplyr::summarize(percentage = enrollment / sum(enrollment),
+            has_leo = has_leo,
+            has_sw = has_sw,
+            enrollment = enrollment)
+
+hs_minority = crdc1718 %>% 
+  filter(!is.na(enrollment_high_school), high_school == "Yes", LEASTATE != "FL", LEASTATE != "HI") %>% 
+  group_by(bins_minority, has_leo, has_sw) %>%
+  dplyr::summarize(enrollment = sum(enrollment_high_school)) %>% 
+  ungroup() %>% 
+  group_by(bins_minority) %>% 
+  dplyr::summarize(percentage = enrollment / sum(enrollment),
+            has_leo = has_leo,
+            has_sw = has_sw,
+            enrollment = enrollment)
+
+
+# Looking to see how high schools with different proportions of minority makeup do in terms of
+# exposure to law enforcement workers
+
+ms_minority[grep("0-20",hs_minority$bins_minority),]%>%
+  ungroup()%>%
+  mutate(grand_total = sum(enrollment))%>%
+  filter(has_leo == 1)%>%
+  group_by(grand_total)%>%
+  dplyr::summarise(enrollment = sum(enrollment))%>%
+  mutate(proportion = enrollment/grand_total)
+
+ms_minority[grep("(40)|(60)",hs_minority$bins_minority),]%>%
+  ungroup()%>%
+  mutate(grand_total = sum(enrollment))%>%
+  filter(has_leo == 1)%>%
+  group_by(grand_total)%>%
+  dplyr::summarise(enrollment = sum(enrollment))%>%
+  mutate(proportion = enrollment/grand_total)
+
+ms_minority[grep("80-100",hs_minority$bins_minority),]%>%
+  ungroup()%>%
+  mutate(grand_total = sum(enrollment))%>%
+  filter(has_leo == 1)%>%
+  group_by(grand_total)%>%
+  dplyr::summarise(enrollment = sum(enrollment))%>%
+  mutate(proportion = enrollment/grand_total)
+
+
+# Looking to see how high schools with different proportions of minority makeup do in terms of
+# exposure to law enforcement workers
+
+hs_minority[grep("0-20",hs_minority$bins_minority),]%>%
+  ungroup()%>%
+  mutate(grand_total = sum(enrollment))%>%
+  filter(has_leo == 1)%>%
+  group_by(grand_total)%>%
+  dplyr::summarise(enrollment = sum(enrollment))%>%
+  mutate(proportion = enrollment/grand_total)
+
+hs_minority[grep("(40)|(60)",hs_minority$bins_minority),]%>%
+  ungroup()%>%
+  mutate(grand_total = sum(enrollment))%>%
+  filter(has_leo == 1)%>%
+  group_by(grand_total)%>%
+  dplyr::summarise(enrollment = sum(enrollment))%>%
+  mutate(proportion = enrollment/grand_total)
+
+hs_minority[grep("80-100",hs_minority$bins_minority),]%>%
+  ungroup()%>%
+  mutate(grand_total = sum(enrollment))%>%
+  filter(has_leo == 1)%>%
+  group_by(grand_total)%>%
+  dplyr::summarise(enrollment = sum(enrollment))%>%
+  mutate(proportion = enrollment/grand_total)
+
+# Looking to see how middle schools with different proportions of minority makeup do in terms of
+# exposure to Social Workers
+
+ms_minority[grep("0-20",hs_minority$bins_minority),]%>%
+  ungroup()%>%
+  mutate(grand_total = sum(enrollment))%>%
+  filter(has_sw == 1)%>%
+  group_by(grand_total)%>%
+  dplyr::summarise(enrollment = sum(enrollment))%>%
+  mutate(proportion = enrollment/grand_total)
+
+ms_minority[grep("20-40",hs_minority$bins_minority),]%>%
+  ungroup()%>%
+  mutate(grand_total = sum(enrollment))%>%
+  filter(has_sw == 1)%>%
+  group_by(grand_total)%>%
+  dplyr::summarise(enrollment = sum(enrollment))%>%
+  mutate(proportion = enrollment/grand_total)
+
+ms_minority[grep("40-60",hs_minority$bins_minority),]%>%
+  ungroup()%>%
+  mutate(grand_total = sum(enrollment))%>%
+  filter(has_sw == 1)%>%
+  group_by(grand_total)%>%
+  dplyr::summarise(enrollment = sum(enrollment))%>%
+  mutate(proportion = enrollment/grand_total)
+
+ms_minority[grep("60-80",hs_minority$bins_minority),]%>%
+  ungroup()%>%
+  mutate(grand_total = sum(enrollment))%>%
+  filter(has_sw == 1)%>%
+  group_by(grand_total)%>%
+  dplyr::summarise(enrollment = sum(enrollment))%>%
+  mutate(proportion = enrollment/grand_total)
+
+ms_minority[grep("80-100",hs_minority$bins_minority),]%>%
+  ungroup()%>%
+  mutate(grand_total = sum(enrollment))%>%
+  filter(has_sw == 1)%>%
+  group_by(grand_total)%>%
+  dplyr::summarise(enrollment = sum(enrollment))%>%
+  mutate(proportion = enrollment/grand_total)
+
+
+# Looking to see how high schools with different proportions of minority makeup do in terms of
+# exposure to Social Workers
+
+hs_minority[grep("0-20",hs_minority$bins_minority),]%>%
+  ungroup()%>%
+  mutate(grand_total = sum(enrollment))%>%
+  filter(has_sw == 1)%>%
+  group_by(grand_total)%>%
+  dplyr::summarise(enrollment = sum(enrollment))%>%
+  mutate(proportion = enrollment/grand_total)
+
+hs_minority[grep("20-40",hs_minority$bins_minority),]%>%
+  ungroup()%>%
+  mutate(grand_total = sum(enrollment))%>%
+  filter(has_sw == 1)%>%
+  group_by(grand_total)%>%
+  dplyr::summarise(enrollment = sum(enrollment))%>%
+  mutate(proportion = enrollment/grand_total)
+
+hs_minority[grep("40-60",hs_minority$bins_minority),]%>%
+  ungroup()%>%
+  mutate(grand_total = sum(enrollment))%>%
+  filter(has_sw == 1)%>%
+  group_by(grand_total)%>%
+  dplyr::summarise(enrollment = sum(enrollment))%>%
+  mutate(proportion = enrollment/grand_total)
+
+hs_minority[grep("60-80",hs_minority$bins_minority),]%>%
+  ungroup()%>%
+  mutate(grand_total = sum(enrollment))%>%
+  filter(has_sw == 1)%>%
+  group_by(grand_total)%>%
+  dplyr::summarise(enrollment = sum(enrollment))%>%
+  mutate(proportion = enrollment/grand_total)
+
+hs_minority[grep("80-100",hs_minority$bins_minority),]%>%
+  ungroup()%>%
+  mutate(grand_total = sum(enrollment))%>%
+  filter(has_sw == 1)%>%
+  group_by(grand_total)%>%
+  dplyr::summarise(enrollment = sum(enrollment))%>%
+  mutate(proportion = enrollment/grand_total)
+
+```
+
+Exporting as csv
+
+```{r}
+write.csv(ms_minority, "Output_Data/ms_minority_dataportal.csv")
+write.csv(hs_minority, "Output_Data/hs_minority_dataportal.csv")
+```
+
+Exporting as csv
+
+```{r}
+write.csv(ms_sw, "Output_Data/ms_sw_dataportal.csv")
+write.csv(hs_sw, "Output_Data/hs_sw_dataportal.csv")
+write.csv(ms_leo, "Output_Data/ms_leo_dataportal.csv")
+write.csv(hs_leo, "Output_Data/hs_leo_dataportal.csv")
+```
+
+Creating maps
+```{r}
+
+state_map = tigris::states(cb = T)[c("STUSPS","STATEFP","geometry")]
+
+map_DF = merge(state_map,
+               ms_leo,
+               by.x = "STUSPS",
+               by.y = "LEASTATE",
+               all = T)%>%
+  rename(enrollment_ms_leo = enrollment,
+         percentage_ms_leo = percentage)%>%
+  select(-has_leo)
+
+map_DF = merge(map_DF,
+               hs_leo,
+               by.x = "STUSPS",
+               by.y = "LEASTATE",
+               all = T)%>%
+  rename(enrollment_hs_leo = enrollment,
+         percentage_hs_leo = percentage)%>%
+  select(-has_leo)
+map_DF = merge(map_DF,
+               hs_sw,
+               by.x = "STUSPS",
+               by.y = "LEASTATE",
+               all = T)%>%
+  rename(enrollment_hs_sw = enrollment,
+         percentage_hs_sw = percentage)%>%
+  select(-has_sw)
+
+map_DF = merge(map_DF,
+               ms_sw,
+               by.x = "STUSPS",
+               by.y = "LEASTATE",
+               all = T)%>%
+  rename(enrollment_ms_sw = enrollment,
+         percentage_ms_sw = percentage)%>%
+  select(c(STUSPS),starts_with(c("enrollment","percentage")),-has_sw)%>%
+  filter(!c(STUSPS %in% c("PR","GU","AS", "MP", "VI")))
+
+```
+
+Middle School Social Work
+```{r}
+
+set_urbn_defaults(style = "map")
+
+plot_1 = ggplot()+
+  geom_sf(
+    map_DF,
+    mapping = aes(fill = percentage_ms_sw))+
+  coord_sf(crs = st_crs(2163),
+           xlim = c(-2500000, 2500000),
+           ylim = c(-2300000, 730000))+
+  theme_void()+
+  scale_color_gradient(high = "#1696d2",
+                       low = "#cfe8f3",
+                       na.value = "darkgrey",
+                       labels = function(x) paste0(100*x, "%"),
+                       aesthetics = "fill")
+
+alaska = ggplot()+
+  geom_sf(
+    map_DF,
+    mapping = aes(fill = percentage_ms_sw))+
+     coord_sf(crs = st_crs(3467),
+              xlim = c(-2400000, 1600000),
+              ylim = c(200000, 2500000),
+              expand = FALSE, datum = NA)+
+  theme_void()+
+  theme(legend.position = "none")+
+  scale_color_gradient(high = "#1696d2",
+                        low = "#cfe8f3",
+                       na.value = "darkgrey",
+                       aesthetics = "fill")
+
+hawaii = ggplot()+
+  geom_sf(
+    map_DF,
+    mapping = aes(fill = percentage_ms_sw))+
+  coord_sf(crs = st_crs(4135),
+           xlim = c(-161, -154),
+           ylim = c(18,23),
+           expand = FALSE, datum = NA)+
+  theme_void()+
+  theme(legend.position = "none")+
+      scale_color_gradient(high = "#1696d2",
+                        low = "#cfe8f3",
+                       na.value = "darkgrey",
+                       aesthetics = "fill")
+
+plot_1 = plot_1 +
+   annotation_custom(
+      grob = ggplotGrob(alaska),
+      xmin = -2750000,
+      xmax = -2750000 + (1600000 - (-2400000))/2.5,
+      ymin = -2450000,
+      ymax = -2450000 + (2500000 - 200000)/2.5
+  ) +
+  annotation_custom(
+      grob = ggplotGrob(hawaii),
+      xmin = -1250000,
+      xmax = -1250000 + (-154 - (-161))*120000,
+      ymin = -2450000,
+      ymax = -2450000 + (23 - 18)*120000
+  )
+
+```
+
+Middle School Law Enforcement
+```{r}
+plot_2 = ggplot()+
+  geom_sf(
+    map_DF,
+    mapping = aes(fill = percentage_ms_leo))+
+  coord_sf(crs = st_crs(2163),
+           xlim = c(-2500000, 2500000),
+           ylim = c(-2300000, 730000))+
+  theme_void()+
+      scale_color_gradient(high = "#1696d2",
+                        low = "#cfe8f3",
+                       na.value = "darkgrey",
+                       labels = function(x) paste0(100*x, "%"),
+                       aesthetics = "fill")
+alaska = ggplot()+
+  geom_sf(
+    map_DF,
+    mapping = aes(fill = percentage_ms_leo))+
+     coord_sf(crs = st_crs(3467),
+              xlim = c(-2400000, 1600000),
+              ylim = c(200000, 2500000),
+              expand = FALSE, datum = NA)+
+  theme_void()+
+  theme(legend.position = "none")+
+      scale_color_gradient(high = "#1696d2",
+                        low = "#cfe8f3",
+                       na.value = "darkgrey",
+                       aesthetics = "fill")
+
+hawaii = ggplot()+
+  geom_sf(
+    map_DF,
+    mapping = aes(fill = percentage_ms_leo))+
+  coord_sf(crs = st_crs(4135),
+           xlim = c(-161, -154),
+           ylim = c(18,23),
+           expand = FALSE, datum = NA)+
+  theme_void()+
+  theme(legend.position = "none")+      scale_color_gradient(high = "#1696d2",
+                        low = "#cfe8f3",
+                       na.value = "darkgrey",
+                       aesthetics = "fill")
+
+plot_2 = plot_2 +
+   annotation_custom(
+      grob = ggplotGrob(alaska),
+      xmin = -2750000,
+      xmax = -2750000 + (1600000 - (-2400000))/2.5,
+      ymin = -2450000,
+      ymax = -2450000 + (2500000 - 200000)/2.5
+  ) +
+  annotation_custom(
+      grob = ggplotGrob(hawaii),
+      xmin = -1250000,
+      xmax = -1250000 + (-154 - (-161))*120000,
+      ymin = -2450000,
+      ymax = -2450000 + (23 - 18)*120000
+  )
+plot_2
+```
+
+High School Social Work
+```{r}
+plot_3 = ggplot()+
+  geom_sf(
+    map_DF,
+    mapping = aes(fill = percentage_hs_sw))+
+  coord_sf(crs = st_crs(2163),
+           xlim = c(-2500000, 2500000),
+           ylim = c(-2300000, 730000))+
+  theme_void()+
+scale_color_gradient(high = "#1696d2",
+                        low = "#cfe8f3",
+                       na.value = "darkgrey",
+                     labels = function(x) paste0(100*x, "%"),
+                       aesthetics = "fill")
+
+alaska = ggplot()+
+  geom_sf(
+    map_DF,
+    mapping = aes(fill = percentage_hs_sw))+
+     coord_sf(crs = st_crs(3467),
+              xlim = c(-2400000, 1600000),
+              ylim = c(200000, 2500000),
+              expand = FALSE, datum = NA)+
+  theme_void()+
+  theme(legend.position = "none")+
+scale_color_gradient(high = "#1696d2",
+                        low = "#cfe8f3",
+                       na.value = "darkgrey",
+                       aesthetics = "fill")
+hawaii = ggplot()+
+  geom_sf(
+    map_DF,
+    mapping = aes(fill = percentage_hs_sw))+
+  coord_sf(crs = st_crs(4135),
+           xlim = c(-161, -154),
+           ylim = c(18,23),
+           expand = FALSE, datum = NA)+
+  theme_void()+
+  theme(legend.position = "none")+
+scale_color_gradient(high = "#1696d2",
+                        low = "#cfe8f3",
+                       na.value = "darkgrey",
+                       aesthetics = "fill")
+plot_3 = plot_3 +
+   annotation_custom(
+      grob = ggplotGrob(alaska),
+      xmin = -2750000,
+      xmax = -2750000 + (1600000 - (-2400000))/2.5,
+      ymin = -2450000,
+      ymax = -2450000 + (2500000 - 200000)/2.5
+  ) +
+  annotation_custom(
+      grob = ggplotGrob(hawaii),
+      xmin = -1250000,
+      xmax = -1250000 + (-154 - (-161))*120000,
+      ymin = -2450000,
+      ymax = -2450000 + (23 - 18)*120000
+  )
+```
+
+High School Law Enforcement
+```{r}
+plot_4 = ggplot()+
+  geom_sf(
+    map_DF,
+    mapping = aes(fill = percentage_hs_leo))+
+  coord_sf(crs = st_crs(2163),
+           xlim = c(-2500000, 2500000),
+           ylim = c(-2300000, 730000))+
+  theme_void()+
+scale_color_gradient(high = "#1696d2",
+                        low = "#cfe8f3",
+                       na.value = "darkgrey",
+                     labels = function(x) paste0(100*x, "%"),
+                       aesthetics = "fill")
+alaska = ggplot()+
+  geom_sf(
+    map_DF,
+    mapping = aes(fill = percentage_hs_leo))+
+     coord_sf(crs = st_crs(3467),
+              xlim = c(-2400000, 1600000),
+              ylim = c(200000, 2500000),
+              expand = FALSE, datum = NA)+
+  theme_void()+
+  theme(legend.position = "none")+
+scale_color_gradient(high = "#1696d2",
+                        low = "#cfe8f3",
+                       na.value = "darkgrey",
+                       aesthetics = "fill")
+
+hawaii = ggplot()+
+  geom_sf(
+    map_DF,
+    mapping = aes(fill = percentage_hs_leo))+
+  coord_sf(crs = st_crs(4135),
+           xlim = c(-161, -154),
+           ylim = c(18,23),
+           expand = FALSE, datum = NA)+
+  theme_void()+
+  theme(legend.position = "none")+
+scale_color_gradient(high = "#1696d2",
+                        low = "#cfe8f3",
+                       na.value = "darkgrey",
+                       aesthetics = "fill")
+
+plot_4 = plot_4 +
+   annotation_custom(
+      grob = ggplotGrob(alaska),
+      xmin = -2750000,
+      xmax = -2750000 + (1600000 - (-2400000))/2.5,
+      ymin = -2450000,
+      ymax = -2450000 + (2500000 - 200000)/2.5
+  ) +
+  annotation_custom(
+      grob = ggplotGrob(hawaii),
+      xmin = -1250000,
+      xmax = -1250000 + (-154 - (-161))*120000,
+      ymin = -2450000,
+      ymax = -2450000 + (23 - 18)*120000
+  )
+```
+
+Middle School Likelihood_comparison
+```{r}
+plot_5_a = ggplot()+
+  geom_sf(
+    map_DF,
+    mapping = aes(fill = percentage_ms_sw-percentage_ms_leo))+
+  coord_sf(crs = st_crs(2163),
+           xlim = c(-2500000, 2500000),
+           ylim = c(-2300000, 730000))+
+  scale_color_gradient2(low = "#ca5800",
+                        mid = "#cfe8f3",
+                        high = "#1696d2",
+                        na.value = "darkgrey",
+                        labels = function(x) paste0(100*x, "%"),
+                        aesthetics = "fill")+
+  theme_void()
+
+alaska = ggplot()+
+  geom_sf(
+    map_DF,
+    mapping = aes(fill = percentage_ms_sw-percentage_ms_leo))+
+  coord_sf(crs = st_crs(3467),
+           xlim = c(-2400000, 1600000),
+           ylim = c(200000, 2500000),
+           expand = FALSE, datum = NA)+
+  scale_color_gradient2(low = "#ca5800",
+                        mid = "#cfe8f3",
+                        high = "#1696d2",
+                        na.value = "darkgrey",
+                        aesthetics = "fill")+
+  theme_void()+
+  theme(legend.position = "none")
+
+hawaii = ggplot()+
+  geom_sf(
+    map_DF,
+    mapping = aes(fill = percentage_ms_sw-percentage_ms_leo))+
+  coord_sf(crs = st_crs(4135),
+           xlim = c(-161, -154),
+           ylim = c(18,23),
+           expand = FALSE, datum = NA)+
+  scale_color_gradient2(low = "#ca5800",
+                        mid = "#cfe8f3",
+                        high = "#1696d2",
+                        na.value = "darkgrey",
+                        aesthetics = "fill")+
+  theme_void()+
+  theme(legend.position = "none")
+
+plot_5_a = plot_5_a +
+  annotation_custom(
+    grob = ggplotGrob(alaska),
+    xmin = -2750000,
+    xmax = -2750000 + (1600000 - (-2400000))/2.5,
+    ymin = -2450000,
+    ymax = -2450000 + (2500000 - 200000)/2.5
+  ) +
+  annotation_custom(
+    grob = ggplotGrob(hawaii),
+    xmin = -1250000,
+    xmax = -1250000 + (-154 - (-161))*120000,
+    ymin = -2450000,
+    ymax = -2450000 + (23 - 18)*120000
+  )
+```
+
+High School Likelihood comparison
+```{r}
+plot_5_b = ggplot()+
+  geom_sf(
+    map_DF,
+    mapping = aes(fill = percentage_hs_sw-percentage_hs_leo, color = "white"))+
+  coord_sf(crs = st_crs(2163),
+           xlim = c(-2500000, 2500000),
+           ylim = c(-2300000, 730000))+
+  scale_color_gradient2(low = "#ca5800",
+                        mid = "#cfe8f3",
+                        high = "#1696d2",
+                        na.value = "darkgrey",
+                        labels = function(x) paste0(100*x, "%"),
+                        aesthetics = "fill")+
+  theme_void()
+
+alaska = ggplot()+
+  geom_sf(
+    map_DF,
+    mapping = aes(fill = percentage_hs_sw-percentage_hs_leo))+
+     coord_sf(crs = st_crs(3467),
+              xlim = c(-2400000, 1600000),
+              ylim = c(200000, 2500000),
+              expand = FALSE, datum = NA)+
+    scale_color_gradient2(low = "#ca5800",
+                        mid = "#cfe8f3",
+                        high = "#1696d2",
+                        na.value = "darkgrey",
+                        aesthetics = "fill")+
+  theme_void()+
+  theme(legend.position = "none")
+
+hawaii = ggplot()+
+  geom_sf(
+    map_DF,
+    mapping = aes(fill = percentage_hs_sw-percentage_hs_leo))+
+  coord_sf(crs = st_crs(4135),
+           xlim = c(-161, -154),
+           ylim = c(18,23),
+           expand = FALSE, datum = NA)+
+    scale_color_gradient2(low = "#ca5800",
+                        mid = "#cfe8f3",
+                        high = "#1696d2",
+                        na.value = "darkgrey",
+                        aesthetics = "fill")+
+  theme_void()+
+  theme(legend.position = "none")
+
+plot_5_b = plot_5_b +
+   annotation_custom(
+      grob = ggplotGrob(alaska),
+      xmin = -2750000,
+      xmax = -2750000 + (1600000 - (-2400000))/2.5,
+      ymin = -2450000,
+      ymax = -2450000 + (2500000 - 200000)/2.5
+  ) +
+  annotation_custom(
+      grob = ggplotGrob(hawaii),
+      xmin = -1250000,
+      xmax = -1250000 + (-154 - (-161))*120000,
+      ymin = -2450000,
+      ymax = -2450000 + (23 - 18)*120000
+  )
+```
+Stacked and grouped boxplots
+
+```{r}
+hs_minority$category =NA
+hs_minority$category[
+  hs_minority$has_leo==1 & hs_minority$has_sw==1] =
+  "Both"
+hs_minority$category[
+  hs_minority$has_leo==1 & hs_minority$has_sw==0] =
+  "Policer officers"
+hs_minority$catagory[
+  hs_minority$has_leo==0 & hs_minority$has_sw==1] =
+  "Social workers"
+hs_minority$category[
+  hs_minority$has_leo==0 & hs_minority$has_sw==0] =
+  "Neither"
+
+hs_minority_2 = hs_minority %>%
+  select(-c(has_sw,has_leo, enrollment))%>%
+  spread(catagory, value = percentage)
+
+bar_plot_1_a = ggplot(hs_minority, aes(fill=category, y=percentage, x=bins_minority)) + 
+  geom_bar(position="dodge", stat="identity")+
+  ggplot2::scale_color_manual(values = c(rgb(22, 150, 210, maxColorValue = 255),
+                                         rgb(253, 191, 17, maxColorValue = 255),
+                                         rgb(0, 0, 0, maxColorValue = 255),
+                                         rgb(210, 210, 210, maxColorValue = 255)
+                                         ),
+                              labels = levels(factor(ms_minority$category)),
+                              aesthetics = "fill")+
+  theme_classic()
+
+bar_plot_1_b = ggplot(hs_minority, aes(fill=category, y=percentage, x=bins_minority)) + 
+  geom_bar(position="stack", stat="identity")+
+  ggplot2::scale_color_manual(values = c(rgb(22, 150, 210, maxColorValue = 255),
+                                         rgb(253, 191, 17, maxColorValue = 255),
+                                         rgb(0, 0, 0, maxColorValue = 255),
+                                         rgb(210, 210, 210, maxColorValue = 255)
+                                         ),
+                              labels = levels(factor(ms_minority$category)),
+                              aesthetics = "fill")+
+  theme_classic()
+
+
+  
+# Doing the same for middle school
+ms_minority$category =NA
+ms_minority$category[
+  ms_minority$has_leo==1 & ms_minority$has_sw==1] =
+  "Both"
+ms_minority$category[
+  ms_minority$has_leo==1 & ms_minority$has_sw==0] =
+  "Policer officers"
+ms_minority$category[
+  ms_minority$has_leo==0 & ms_minority$has_sw==1] =
+  "Social workers"
+ms_minority$category[
+  hs_minority$has_leo==0 & ms_minority$has_sw==0] =
+  "Neither"
+
+bar_plot_2_a = ggplot(ms_minority, aes(fill=category, y=percentage, x=bins_minority)) + 
+  geom_bar(position="dodge", stat="identity")+
+  ggplot2::scale_color_manual(values = c(rgb(22, 150, 210, maxColorValue = 255),
+                                         rgb(253, 191, 17, maxColorValue = 255),
+                                         rgb(0, 0, 0, maxColorValue = 255),
+                                         rgb(210, 210, 210, maxColorValue = 255)
+                                         ),
+                              labels = levels(factor(ms_minority$category)),
+                              aesthetics = "fill")+
+  theme_classic()
+
+bar_plot_2_b = ggplot(ms_minority, aes(fill=category, y=percentage, x=bins_minority)) + 
+  geom_bar(position="stack", stat="identity")+
+  ggplot2::scale_color_manual(values = c(rgb(22, 150, 210, maxColorValue = 255),
+                                         rgb(253, 191, 17, maxColorValue = 255),
+                                         rgb(0, 0, 0, maxColorValue = 255),
+                                         rgb(210, 210, 210, maxColorValue = 255)
+                                         ),
+                              labels = levels(factor(ms_minority$category)),
+                              aesthetics = "fill")+
+  theme_classic()
+```
+
+```{r}
+# Printing every map
+
+jpeg("Output_Data/hs_likelihood.jpeg",  width = 1000, height = 1000)
+plot_5_a+
+  ggtitle("Difference between Social Worker Likelihood and\nPolice Officer Likelihood in Middle Schools")+
+  labs(fill = "Social worker likehood minus\nlaw enforcement officer likelihood")+
+  theme(text = element_text(family = "Lato"))
+dev.off()
+
+jpeg("Output_Data/ms_likelihood.jpeg", width = 1000, height = 1000)
+plot_5_b+
+  ggtitle("Difference between Social Worker Likelihood and\nPolice Officer Likelihood in High Schools")+
+  labs(fill = "Social worker likehood minus\nlaw enforcement officer likelihood")+
+  theme(text = element_text(family = "Lato"))
+dev.off()
+
+jpeg("Output_Data/ms_sw.jpeg", width = 1000, height = 1000)
+plot_1+
+  ggtitle("Share of Middle School Racial and Ethnic Minority\nStudents Exposed to a Social Worker")+
+  labs(fill = "Social worker exposure")+
+  theme(text = element_text(family = "Lato"))
+dev.off()
+
+jpeg("Output_Data/ms_leo.jpeg", width = 1000, height = 1000)
+plot_2+
+  ggtitle("Share of Middle School Racial and Ethnic Minority\nStudents Exposed to a Police Officer")+
+  labs(fill = "Police officer exposure")+
+  theme(text = element_text(family = "Lato"))
+dev.off()
+
+jpeg("Output_Data/hs_sw.jpeg", width = 1000, height = 1000)
+plot_3+
+  ggtitle("Share of High School Racial and Ethnic Minority\nStudents Exposed to a Social Worker")+
+  labs(fill = "Social worker exposure")+
+  theme(text = element_text(family = "Lato"))
+dev.off()
+
+jpeg("Output_Data/hs_leo.jpeg", width = 1000, height = 1000)
+plot_4+
+  ggtitle("Share of High School Racial and Ethnic Minority\nStudents Exposed to a Police Officer")+
+  labs(fill = "Police officer exposure")+
+  theme(text = element_text(family = "Lato"))
+dev.off()
+
+jpeg("Output_Data/hs_stacked.jpeg", width = 1000, height = 1000)
+bar_plot_1_b+
+  ggtitle("Share of High School Students Attending a School\nwith Police Officers or Social Workers, by Racial\nand Ethnic Minority Share")+
+  xlab("Racial and ethnic minority share")+
+  ylab("Percentage")+
+  labs(fill = "")+
+  scale_y_continuous(labels = function(x) paste0(100*x, "%"))+
+  theme(text = element_text(family = "Lato"))
+dev.off()
+
+jpeg("Output_Data/ms_stacked.jpeg", width = 1000, height = 1000)
+bar_plot_2_b+
+  ggtitle("Share of Middle School Students Attending a School\nwith Police Officers or Social Workers, by Racial\nand Ethnic Minority Share")+
+  xlab("Racial and ethnic minority share")+
+  ylab("Percentage")+
+  labs(fill = "")+
+  scale_y_continuous(labels = function(x) paste0(100*x, "%"))+
+  theme(text = element_text(family = "Lato"))
+dev.off()
+
+jpeg("Output_Data/hs_grouped.jpeg", width = 1000, height = 1000)
+bar_plot_1_a+
+  ggtitle("Share of High School Students Attending a School with\nPolice Officers or Social Workers, by Racial\nand Ethnic Minority Share")+
+  xlab("Racial and ethnic minority share")+
+  ylab("Percentage")+
+  labs(fill = "")+
+  scale_y_continuous(labels = function(x) paste0(100*x, "%"))+
+  theme(text = element_text(family = "Lato"))
+dev.off()
+
+jpeg("Output_Data/ms_grouped.jpeg", width = 1000, height = 1000)
+bar_plot_2_a+
+  ggtitle("Share of Middle School Students Attending a School with\nPolice Officers or Social Workers, by Racial\nand Ethnic Minority Share")+
+  xlab("Racial and ethnic minority share")+
+  ylab("Percentage")+
+  labs(fill = "")+
+  scale_y_continuous(labels = function(x) paste0(100*x, "%"))+
+  theme(text = element_text(family = "Lato"))
+dev.off()
+
+```
