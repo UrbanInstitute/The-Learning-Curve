@@ -1,0 +1,1 @@
+In order to reproduce results in this blog post, please download and store analysis.R file and Data/Input_Data folder in the same location. The school characteristics data was gathered [here](https://fairtest.org/university/optional); After downloading, please store in the Input_Data folder. Running the analysis.R file will reproduce the results in the original blog post.
