@@ -1,0 +1,1 @@
+In order to generate the results in the piece, download analysis.R and run. The output will contain visuals and the final school level and county level data.
