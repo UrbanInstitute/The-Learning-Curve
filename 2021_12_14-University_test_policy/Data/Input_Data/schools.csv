@@ -1,969 +1,1835 @@
-ï»¿school,year,permenant,temp_year,GPA,blind,unitid
-Abilene Christian University,2020,0,2021,,,222178
-Abraham Baldwin Agricultural College,2020,0,2021,,,138558
-Adams State University,2020,0,2021,,,126182
-Adelphi University,2020,0,2023,,,188429
-Agnes Scott College,2009,1,,,,138600
-Alabama State University,2020,0,2021,,,100724
-Albany College of Pharmacy and Health Sciences,2020,0,2021,,,188526
-Albany State University,2020,0,2021,,,138716
-Albertus Magnus College,2019,1,,,,128498
-Albion College,2020,0,2021,,,168546
-Albright College,2008,1,,,,210571
-Alderson Broaddus University,2020,0,2021,,,237118
-Alfred University,2020,0,2023,,,188641
-Allegheny College,2015,1,,,,210669
-Alma College,2019,1,,,,168591
-Alverno College,2020,0,2021,,,238193
-American International College,2016,1,,,,164447
-American University,2009,1,,,,131159
-Amherst College,2020,0,2023,,,164465
-Anderson University (Indiana),2020,1,,,,150066
-Angelo State University,2020,0,2021,,,222831
-Anna Maria College,2011,1,,,,164492
-Appalachian State University,2020,0,2021,,,197869
-Aquinas College MI,2020,0,2021,,,168786
-Arcadia University,2020,1,,,,211088
-Arizona Christian University,2020,0,2021,,,105899
-Arkansas State University,2020,0,2021,,,106458
-Art Academy of Cincinnati,2020,1,2021,,,201061
-Asbury University,2018,1,,,,156213
-Ashland University,2020,0,2021,2.7,,201104
-Assumption College,2009,1,,,,164562
-Auburn University,2020,0,2021,,,100858
-Augsburg University,2018,1,,,,173045
-Augusta University,2020,0,2021,3,,482149
-Augustana College,2007,1,,,,143084
-Augustana University (South Dakota),2019,1,,,,219000
-Austin College,2016,1,,,,222983
-Austin Peay State University,2020,0,2021,2.85,,219602
-Avila University,2020,1,,,,176628
-Azuza Pacific University,2018,1,,,,109785
-Babson College,2020,0,2025,,,164580
-Baker University,2020,1,,3,,154688
-Baldwin-Wallace College,2008,1,,,,201195
-Ball State University,2018,1,,,,150136
-Barnard College,2020,0,2023,,,189097
-Barry University,2020,1,,,,132471
-Barton College,2020,0,2021,,,197911
-Baruch College,2020,0,2021,,1,190512
-Bay Path University,2015,1,,,,164632
-Baylor University,2020,0,2023,,,223232
-Bellin College,2020,1,,,,238324
-Bellmarine University,2019,1,,,,156286
-Belmont Abbey College,2008,1,,3,,197984
-Belmont University,2020,0,2022,,,219709
-Beloit College,2014,1,,,,238333
-Benedictine College KS,2020,0,2021,,,154712
-Benedictine University Mesa,2020,1,,,,145619
-Bennington College,2006,1,,,,230816
-Bentley University,2020,0,2022,,,164739
-Berea College,2020,0,2021,,,156295
-Berry College ,2020,1,,,,139144
-Bethel University,2020,1,,3.2,,173160
-Bethel University,2020,1,2022,,,219718
-Biola University,2020,0,2021,,,110097
-Birmingham-Southern College,2016,1,,,,100937
-Bloomfield College,2017,1,,,,183822
-Bluffton University,2020,1,,3,,201371
-Boston College,2020,0,2021,,,164924
-Boston University,2020,0,2023,,,164988
-Bowie State University,2020,0,2021,2.3,,162007
-Bowling Green State University,2020,0,2021,,,201441
-Bradley University,2020,1,,,,143358
-Brandeis University,2013,1,,,,165015
-Brenau University,2016,1,,,,139199
-Brescia University,2020,0,2021,,,156356
-Brevard College,2014,1,,,,198066
-Briar Cliff University,2020,0,2021,,,152992
-Bridgewater College,2020,0,2023,,,231581
-Bridgewater State University,2016,1,,,,165024
-Brigham Young University,2020,0,2021,,,230038
-Brooklyn College,2020,0,2021,,1,190549
-Brown University,2020,0,2022,,,217156
-Bryant University,2011,1,,,,217165
-Bryn Athyn College,2020,0,2021,,,210492
-Bryn Mawr,2009,1,,,,211273
-Bucknell University,2018,1,,,,211291
-Buena Vista University ,2020,1,,,,153001
-Bushnell University ,2020,1,,,,209409
-Butler University,2020,1,,,,150163
-Cabrini College,2014,1,,,,211352
-Caldwell University,2020,0,2023,,,183910
-California Baptist University,2020,0,2021,,,110361
-California Institute of Technology,2020,0,2022,,1,110404
-California Lutheran University,2020,1,,,,110413
-"California Polytechnic State U., San Luis Obispo",2020,0,2023,2.5,,110422
-"California State Polytechnic U., Pomona",2020,0,2023,2.5,,110529
-"California State U, Chico",2020,0,2023,2.5,,110538
-"California State U, Fresno",2020,0,2023,2.5,,110556
-California State U. Channel Islands,2020,0,2023,2.5,,441937
-California State U. Maritime Academy,2020,0,2023,2.5,,111188
-California State U. San Marcos,2020,0,2023,2.5,,366711
-"California State U., Bakersfield",2020,0,2023,2.5,,110486
-"California State U., Dominguez Hills",2020,0,2023,2.5,,110547
-"California State U., East Bay",2020,0,2023,2.5,,110574
-"California State U., Fullerton",2020,0,2023,2.5,,110565
-"California State U., Long Beach",2020,0,2023,2.5,,110583
-"California State U., Los Angeles",2020,0,2023,2.5,,110592
-"California State U., Monterey Bay",2020,0,2023,2.5,,409698
-"California State U., Northridge",2020,0,2023,2.5,,110608
-"California State U., Sacramento",2020,0,2023,2.5,,110617
-"California State U., San Bernardino",2020,0,2023,2.5,,110510
-"California State U., Stanislaus",2020,0,2023,2.5,,110495
-California University of Pennsylvania,2020,1,,,,211361
-Calvin University,2020,0,2022,,,169080
-Campbell University,2020,0,2021,,,198136
-Canisius College,2020,0,2022,,,189705
-Carleton College,2020,0,2021,,,173258
-Carlow University,2020,0,2021,,,211431
-Carnegie Mellon University,2020,0,2022,,,211440
-Carroll College,2019,1,,3,,180106
-Carroll University,2020,0,2021,,,238458
-Carson-Newman University,2020,1,,,,219806
-Carthage College,2016,1,,,,238476
-Case Western Reserve University,2019,0,2023,,,201645
-Castleton University,2020,0,2021,,,230834
-Catawba College,2012,1,,,,198215
-Catholic University,2020,1,,,1,131283
-Cedar Crest College,2020,0,2021,,,211468
-Cedarville University,2020,0,2022,,,201654
-Centenary College of Louisiana,2020,0,2021,,,158477
-Centenary University,2020,1,,,,183974
-Central College,2020,0,2021,,,153108
-Central Connecticut State University,2020,0,2021,,,128771
-Central Michigan University,2020,0,2022,,,169248
-Centre College,2020,0,2023,,,156408
-Chaminade University,2019,1,,,,141486
-Champlain College,2018,1,,,,230852
-Chapman University,2019,1,,,,111948
-Chatham College,2005,1,,,,211556
-Chestnut Hill College,2020,1,,,,211583
-Christian Brothers University,2020,1,,,,219833
-Christopher Newport University,2007,1,,3.5,,231712
-City College of New York,2020,0,2021,,1,190567
-Claremont McKenna College,2020,0,2022,,,112260
-Clarion University of Pennsylvania,2020,1,,,,211644
-Clark Atlanta University,2020,0,2021,,,138947
-Clark University,2011,1,,,,165334
-Clarke University,2020,0,2021,,,153126
-Clarkson University,2020,0,2021,,,190044
-Clayton State University,2020,0,2021,,,139311
-Clemson University,2020,0,2021,,,217882
-Coastal Carolina University,2020,1,,3.5,,218724
-Coe College,2020,1,,3,,153144
-Colby College,2009,1,,,,161086
-Colgate University,2020,0,2023,,,190099
-College for Creative Studies,2019,1,,,,169442
-College of Charleston,2020,0,2023,,,217819
-College of Idaho,2015,1,,,,142179
-College of Saint Benedict,2020,1,,,,174747
-College of Saint Rose,2012,1,,,,195234
-College of St. Elizabeth,2017,1,,,,186618
-College of St. Scholastica Evangel University,2018,1,,2.5,,174899
-College of Staten Island,2020,0,2021,,1,190558
-College of William & Mary,2020,0,2023,,,231624
-College of Wooster,2020,1,,,,206589
-Colorado College,2010,1,,,,126678
-Colorado Mesa University,2020,0,2021,,,127556
-Colorado School of Mines,2020,0,2021,,,126775
-Colorado State University Fort Collins,2020,0,2021,,,126818
-Colorado State University Pueblo,2020,0,2021,,,128106
-Columbia University,2020,0,2022,,,190150
-Columbus College of Art & Design,2014,1,,,,202170
-Columbus State University,2020,0,2021,,,139366
-Concordia College,2016,1,,,,190248
-Concordia College (Minnesota) ,2020,1,,,,173300
-Concordia University Chicago,2020,1,,,,144351
-Concordia University Irvine,2020,0,2021,,,112075
-Concordia University Nebraska,2020,1,,3,,180984
-Concordia University Texas,2020,0,2021,,,224004
-"Concordia University, St. Paul",2018,1,,,,173328
-Connecticut College,2009,1,,,,128902
-Converse College,2019,1,,,,217961
-Coppin State University,2020,0,2021,,,162283
-Cornell College,2015,1,,,,153162
-Cornell University,2020,0,2022,,1,190415
-Cornerstone University,2020,0,2021,,,170037
-Cottey College,2020,0,2021,2.6,,177117
-Covenant College,2020,0,2021,,,139393
-Creighton University,2018,1,,,,181002
-Dâ€™Youville College,2019,1,,,,190716
-Dakota Wesleyan University,2020,1,,3,,219091
-Dallas Baptist University,2020,0,2021,,,224226
-Dalton State College,2020,0,2021,,,139463
-Dartmouth College,2020,0,2022,,,182670
-Davidson College,2020,0,2023,,,198385
-Dean College,2015,1,,,,165574
-Delaware Valley University,2019,1,,,,211981
-Denison University,2006,1,,,,202523
-DePaul University,2010,1,,,,144740
-DePauw University,2018,1,,,,150400
-Dickinson College,2020,0,2021,,1,212009
-Dickinson State University,2020,0,2021,,,200059
-Doane University,2016,1,,,,181020
-Dominican College,2017,1,,,,190761
-Dominican University,2020,0,2021,,,148496
-Dominican University of California,2019,1,,,,113698
-Dordt University,2020,0,2021,3.2,,153250
-Drake University,2015,1,,,,153269
-Drew University,2005,1,,,,184348
-Drexel University,2020,0,2023,,,212054
-Drury University,2020,1,,,,177214
-Duke University,2020,0,2021,,,198419
-Duquesne University,2014,1,,3,,212106
-Earlham College,2011,1,,,,150455
-East Carolina University,2020,0,2021,,,198464
-East Stroudsburg University of Pennsylvania,2016,1,,,,212115
-Eastern Connecticut State University,2014,1,,3,,129215
-Eastern Illinois University,2020,1,,2.5,,144892
-Eastern Kentucky University,2020,1,,,,156620
-Eastern Mennonite University,2020,1,,,,232043
-Eastern Michigan State University,2020,0,2021,,,169798
-Eastern University,2018,1,,,,212133
-Eastern Washington University,2020,1,,,,235097
-Eckerd College,2020,0,2022,,,133492
-Edgewood College,2020,0,2021,,,238661
-Edinboro University,2020,0,2021,,,212160
-Elizabeth City State University,2020,0,2021,,,198507
-Elizabethtown College,2020,0,2021,,,212197
-Elmhurst University,2020,1,,,,144962
-Elmira College,2015,1,,,,190983
-Elms College,2019,1,,,,167394
-Elon University,2020,0,2023,,,198516
-Emerson College,2017,1,,,,165662
-Emmanuel College,2014,1,,,,165671
-Emory & Henry College,2020,0,2021,,,232025
-Emory University,2020,0,2022,,,139658
-Eugene Lang College â€“ The New School for Liberal Arts,2010,1,,,,193654
-Evergreen State College,2019,1,,,,235167
-Fairfield University,2009,1,,,,129242
-Fairleigh Dickinson University,2018,1,,,,184603
-Farmingdale State College SUNY,2020,0,2021,,,196042
-Felician University,2020,1,,,,184612
-Ferris State University,2018,1,,,,169910
-Finlandia University,2019,1,,,,172440
-Fisher College,2020,1,,,,165802
-Fitchburg State University,2017,1,,,,165820
-Flagler College,2018,1,,,,133711
-Flagler College,2018,1,,,,444990
-Florida Southern College,2020,0,2021,,,134079
-Fordham University,2020,0,2022,,,191241
-Fort Lewis College,2020,0,2021,,,127185
-Fort Valley State University,2020,0,2021,,,139719
-Framingham State University,2018,1,,,,165866
-Franklin & Marshall College,2006,1,,,,212577
-Franklin Pierce University,2015,1,,,,182795
-Fresno Pacific University,2020,1,,,,114813
-Frostburg State University,2020,0,2021,,,162584
-Gallaudet University,2020,0,2021,,,131450
-Gannon University,2020,0,2021,,,212601
-Gardner-Webb University,2020,0,2021,,,198561
-George Fox University,2020,1,,,,208822
-George Mason University,2006,1,,3.5,,232186
-George Washington University,2015,1,,,,131469
-Georgetown College,2020,0,2021,,,131496
-Georgetown University,2020,0,2021,,,156745
-Georgia College & State University,2020,0,2021,,,139861
-Georgia Institute of Technology,2020,0,2021,,,139755
-Georgia Southern University,2020,0,2021,,,139931
-Georgia Southwestern State University,2020,0,2021,,,139764
-Georgia State University,2020,0,2021,,,139940
-Georgian Court College,2007,1,,,,184773
-Georgian Court University,2020,1,,,,184773
-Gettysburg College,2006,1,,,,212674
-Gonzaga University,2020,1,,,,235316
-Gordon College,2020,0,2021,,,165936
-Gordon State College,2020,0,2021,,,139968
-Goshen College,2020,0,2021,,,150668
-Goucher College,2007,1,,,,162654
-Grace College and Seminary,2020,1,,,,150677
-Grand Valley State University,2020,0,2021,,,170082
-Green Mountain College,2007,1,,,,230898
-Greensboro College,2020,0,2021,,,198598
-Greenville University,2020,1,,,,145372
-Grinnell College,2020,0,2021,,,153384
-Grove City College,2020,0,2021,,,212805
-Gustavus Adolphus College,2006,1,,,,173647
-Gwynedd Mercy University,2020,0,2021,,,212832
-Hamilton College,2020,0,2023,,,191515
-Hamline University,2019,1,,,,173665
-Hampden-Sydney College,2020,0,2021,,,232256
-Hampshire College,2014,1,,,1,166018
-Hanover College,2017,1,,,,150756
-Hardin Simmons University,2019,1,,,,225247
-Harding University,2020,0,2021,,,107044
-Harvard College,2020,0,2022,,,166027
-Harvey Mudd College,2020,0,2022,,,115409
-Hastings College,2020,0,2021,,,181127
-Haverford College,2020,0,2023,,,212911
-Hawaiâ€™i Pacific University,2020,0,2023,,,141644
-Heidelberg University,2020,1,,,,203085
-Hendrix College,2019,1,,,,107080
-High Point University,2017,1,,,,198695
-Hillsdale College,2020,1,,,,170286
-Hiram College,2016,1,,2.8,,203128
-Hobart & William Smith Colleges,2006,1,,,,191630
-Hofstra University,2014,1,,,,191649
-Hollins University,2020,0,2022,,,232308
-Holy Names University,2020,0,2021,,,115728
-Hood College,2013,1,,,,162760
-Hope College,2020,0,2021,,,170301
-Houghton College,2016,1,,,,191676
-Houston Baptist University,2020,0,2021,,,225399
-Howard Payne University,2020,1,,,,225548
-Howard University,2020,0,2021,,,131520
-Humboldt State University,2020,0,2021,2.5,1,115755
-Hunter College,2020,0,2021,,1,190594
-Husson University,2020,1,,,,487524
-Illinois College,2009,1,,,,145691
-Illinois Institute of Technology,2020,0,2021,,,145725
-Illinois State University,2020,1,,,,145813
-Illinois Wesleyan University ,2020,1,,,,145646
-Immaculata University,2016,1,,,,213011
-Indiana State University,2019,1,,,,151324
-Indiana Tech,2020,1,,,,151801
-Indiana University â€“ Bloomington,2019,1,,,,151351
-Indiana University â€“ Fort Wayne,2019,1,,,,
-Indiana University -- Kokomo,2019,1,,,,151333
-Indiana University - Purdue University Indianapolis,2019,1,,,,151111
-Indiana University East    ,2020,1,,,,151388
-Indiana University Kokomo,2020,1,,,,151333
-Indiana University Northwest,2020,1,,,,151360
-Indiana University of Pennsylvania ,2020,1,,,,213020
-Indiana University South Bend,2020,1,,,,151342
-Indiana University Southeast,2020,1,,,,151379
-Indiana Wesleyan University,2020,1,,,,151801
-Iowa State University,2020,0,2021,,,153603
-Iowa Wesleyan University,2020,0,2021,,,153630
-Ithaca College,2012,1,,,,191968
-Jackson State University,2020,0,2021,,,175856
-Jacksonville State University,2020,0,2021,,,101480
-James Madison University,2017,1,,,,232423
-John Brown University,2020,0,2021,,,107141
-John Carroll University,2020,0,2021,,,203368
-John Jay College of Criminal Justice,2020,0,2021,,,190600
-Johns Hopkins University,2020,0,2022,,,162928
-Kalamazoo College,2015,1,,,,170532
-Kean University,2019,1,,3.5,,185262
-Kennesaw State University,2020,0,2021,,,486840
-Kent State University,2020,1,,,,203517
-Kent State University Ashtabula,2020,0,2021,,,203447
-Kentucky Wesleyan College,2020,0,2021,,,157076
-Kenyon College ,2020,0,2021,,,203535
-Kettering University,2020,0,2022,,,203544
-Keuka College,2006,1,,,,192192
-Keystone College,2016,1,,,,213303
-King University,2015,1,,,,220516
-Kingâ€™s College,2006,1,,,,213321
-Knox College,2005,1,,,,146427
-Kutztown University,2020,0,2021,,,213349
-La Roche University,2020,1,,,,213358
-La Salle University,2017,1,,,,213367
-Lafayette College,2020,0,2021,,,213385
-Lake Erie College,2015,1,,,,203580
-Lake Forest College,2006,1,,,,146481
-Lake Superior State University,2020,1,,,,170639
-Lakeland University,2020,0,2021,,,238980
-Lamar University,2020,1,,,,226091
-Lander University,2020,1,,,,218229
-Lasell College,2016,1,,,,166391
-Lawrence Technological University,2020,0,2022,,,170675
-Lawrence University,2005,1,,,,239017
-Le Moyne College,2015,1,,,,192323
-Lebanon Valley College,2006,1,,,,213507
-Lees-McRae College,2012,1,,,,198808
-Lehigh University,2020,0,2021,,,213543
-Lehman College,2020,0,2021,,1,190637
-Lesley University,2019,1,,,,166452
-Lewis University,2020,0,2021,,,146612
-Liberty University,2020,0,2021,,,232557
-Lincoln Memorial University,2020,0,2021,,,220631
-Lindenwood University,2018,1,,,,177968
-Linfield College,2018,1,,3,,209065
-Lipscomb University,2020,0,2021,,,219976
-List College of Jewish Studies,2020,0,2021,,,192040
-Lock Haven University of PA,2020,0,2021,,,213613
-Longwood University,2020,0,2021,,,232566
-Loras College,2020,1,,2.75,,153825
-Louisiana State University,2020,0,2021,,,159416
-Lourdes University,2019,1,,,,203757
-Loyola Marymount University,2020,0,2022,,,117946
-Loyola University Chicago,2020,1,,,,146719
-Loyola University Maryland,2009,1,,,,163046
-Loyola University New Orleans,2020,1,,,1,159656
-Luther College,2020,0,2021,,,153834
-Lycoming College,2020,0,2021,,,213668
-Lynn University,2013,1,,,,132657
-Lyon College,2020,1,,,,106342
-Macalester College,2020,1,,,,173902
-Maine Maritime Academy,2020,0,2021,,,161299
-Manchester University,2016,1,,,,151777
-Manhattan College,2020,0,2021,,,192703
-Manhattanville College,2010,1,,,,192749
-Manor College,2020,1,,,,213774
-Marietta College,2020,0,2021,,,203845
-Marist College,2010,1,,,,192819
-Marlboro College,2008,1,,,,230940
-Marquette University,2019,1,,,,239105
-Marshall University,2020,0,2021,,,237525
-Martin Methodist College,2020,0,2021,,,220701
-Mary Baldwin University,2020,1,,,,232672
-Marymount Manhattan College,2020,0,2021,,,192864
-Marymount University,2015,1,,3,,232706
-Marywood University,2020,0,2022,,,213826
-Massachusetts College of Art and Design,2016,1,,,,166674
-Massachusetts College of Liberal Arts,2020,0,2021,,1,167288
-Massachusetts Institute of Technology,2020,0,2021,,,166683
-Massachusetts Maritime Academy,2020,0,2021,,,166692
-McMurry University,2020,1,,,,226587
-McPherson College,2020,0,2021,2.5,,155511
-Medgar Evers College,2020,0,2021,,,190646
-Menlo College,2018,1,,,,118693
-Mercer University,2020,0,2023,,,140447
-Mercyhurst University,2014,1,,,,213987
-Meredith College ,2020,1,,,,198950
-Merrimack College,2007,1,,,,166850
-Methodist University,2020,1,,,,198969
-Metropolitan State University Denver,2020,0,2021,,,127565
-Miami University,2020,0,2021,,,204024
-Michigan State University,2020,1,,,,171100
-Michigan Technological University,2020,0,2021,3,,171128
-MidAmerica Nazarene University,2016,1,,,,155520
-Middle Georgia State University,2020,0,2021,,,482158
-Middlebury College,2020,0,2023,,,230959
-Midway University,2020,0,2021,,,157377
-Millersville University of Pennsylvania,2014,1,,,,214041
-Milligan University,2020,0,2021,,,486901
-Millikin University,2020,0,2021,3,,147244
-Mills College,2015,1,,,,118888
-Millsaps College,2020,0,2021,,,175980
-Milwaukee School of Engineering,2020,0,2021,,,239318
-Minneapolis College of Art and Design,2020,1,,,,174127
-Minnesota State University Moorhead,2020,1,,,,174358
-Misericordia University,2020,0,2021,,,214069
-Mississippi College,2020,1,,,,176053
-Missouri State University,2020,0,2021,3.25,,179566
-Missouri University of Science and Technology,2020,0,2022,,,178411
-Missouri Western State University,2020,1,,2.7,,178387
-Mitchell College,2006,1,,,,129774
-Molloy College,2020,0,2021,,,193292
-Monmouth College,2019,1,,,,147341
-Monmouth University,2020,0,2021,,,185572
-Montana State University,2020,0,2021,,,180461
-Montclair State University,2014,1,,,,185590
-Montevallo University,2020,0,2021,,,101709
-Moravian College,2019,1,,,,214157
-Morehouse College,2020,0,2021,,,140553
-Morgan State University,2020,0,2021,,,163453
-Mount Ida College,2016,1,,,,
-Mount Mercy University,2020,0,2021,3,,154013
-Mount Saint Mary College,2020,0,2021,,,193353
-Mount Saint Maryâ€™s University Los Angeles,2020,0,2021,,,119173
-Mount St. Joseph University,2020,0,2021,,,204200
-Mount St. Maryâ€™s University,2019,1,,,,163462
-Mount Vernon Nazarene University,2020,0,2021,,,204194
-Multnomah University,2015,1,,,,209287
-Murray State University,2020,0,2021,3,,157401
-Muskingum University,2020,0,2021,,,204264
-Nazareth College,2006,1,,,,193584
-Nebraska Methodist College,2020,1,,,,181297
-Neumann University,2020,1,,2.5,,214272
-New Jersey Institute of Technology,2020,0,2021,,,185828
-New York City College of Technology,2020,0,2021,,,190655
-New York Institute of Technology,2020,0,2021,,,194091
-New York University,2020,0,2022,,,193900
-Newman University,2019,1,,,,155335
-Niagara University,2017,1,,,,193973
-Nichols College,2011,1,,,,167260
-Norfolk State University,2020,0,2021,,,232937
-North Carolina A&T State University,2020,0,2021,,,199102
-North Carolina Central University,2020,0,2021,,,199157
-North Carolina State University,2020,0,2021,,,199193
-North Dakota State University,2020,0,2021,,,200332
-North Park University,2020,0,2021,,,147679
-Northeastern University,2020,0,2021,,,167358
-Northern Illinois University,2019,1,,,1,147703
-Northern Kentucky University,2020,1,,,,157447
-Northern Michigan University,2020,1,,,1,171456
-Northland College,2016,1,,,,239512
-Northwest University,2020,0,2021,,,236133
-Northwestern College,2020,0,2021,,,260992
-Northwestern University,2020,0,2022,,,147767
-Notre Dame of Maryland University,2016,1,,,,163578
-Nova Southeastern University,2020,0,2021,,,136215
-Nyack College,2020,1,,,,194161
-Oakland University,2020,0,2021,,,171571
-Oberlin College and Conservatory,2020,0,2023,,,204501
-Occidental College,2020,0,2021,,,120254
-Oglethorpe University,2020,0,2023,,,140696
-Ohio Northern University,2020,0,2021,,,204635
-Ohio State University,2020,0,2022,,,204796
-Ohio University,2020,1,,,,204857
-Ohio Wesleyan University,2013,1,,,,204909
-Oklahoma City University,2020,1,,3,,207458
-Oklahoma State University â€“ Stillwater,2020,1,,,,207388
-Old Dominion University,2014,1,,,,232982
-Olin College of Engineering,2020,0,2021,,,441982
-Olivet College,2020,0,2021,,,171599
-Oregon Institute of Technology,2019,1,,,,209506
-Oregon State University,2019,1,,,,209542
-Otterbein University,2020,0,2021,2.75,,204936
-Ouachita Baptist University,2020,0,2021,,,107512
-Our Lady of the Lake University Pacific University,2020,1,,,,227331
-Pace University,2019,1,,,,194310
-Pacific Lutheran University,2018,1,,,,236230
-Paul Quinn College,2020,0,2021,,,227429
-Paul Smithâ€™s College,2015,1,,,,194392
-Pennsylvania State University-Penn State Abington,2020,0,2023,,,214801
-Pennsylvania State University-Penn State Altoona,2020,0,2023,,,214689
-Pennsylvania State University-Penn State Beaver,2020,0,2023,,,214698
-Pennsylvania State University-Penn State Berks,2020,0,2023,,,214704
-Pennsylvania State University-Penn State Brandywine,2020,0,2023,,,214731
-Pennsylvania State University-Penn State DuBois,2020,0,2023,,,214740
-Pennsylvania State University-Penn State Erie-Behrend College   ,2020,0,2023,,,214591
-Pennsylvania State University-Penn State Fayette- Eberly,2020,0,2023,,,214759
-Pennsylvania State University-Penn State Greater Allegheny,2020,0,2023,,,214786
-Pennsylvania State University-Penn State Harrisburg,2020,0,2023,,,214713
-Pennsylvania State University-Penn State Hazleton,2020,0,2023,,,214768
-Pennsylvania State University-Penn State Lehigh Valley,2020,0,2023,,,214670
-Pennsylvania State University-Penn State Mont Alto,2020,0,2023,,,214795
-Pennsylvania State University-Penn State New Kensington,2020,0,2023,,,214625
-Pennsylvania State University-Penn State Schuylkill,2020,0,2023,,,214810
-Pennsylvania State University-Penn State Scranton,2020,0,2023,,,214652
-Pennsylvania State University-Penn State Shenango,2020,0,2023,,,214634
-Pennsylvania State University-Penn State Wilkes-Barre,2020,0,2023,,,214643
-Pennsylvania State University-Penn State York,2020,0,2023,,,214829
-Pennsylvania State University-University Park,2020,0,2023,,,214777
-Pennsylvania State University-World Campus,2020,0,2023,,,479956
-Pepperdine University,2020,0,2023,,,121150
-Pine Manor College,2014,1,,,,167455
-Plymouth State University,2014,1,,,,183080
-Point Loma Nazarene University,2020,0,2021,,,121309
-Point Park University,2015,1,,3,,215442
-Pomona College,2020,0,2021,,,121345
-Portland State University,2020,1,,,,209807
-Pratt Institute,2020,0,2021,,,194578
-Presbyterian College,2013,1,,,,218539
-Prescott College,2017,1,,,,105589
-Princeton University,2020,0,2022,,,186131
-Principia College,2020,0,2021,,,148016
-Providence College,2006,1,,,,217402
-Purchase College State University of New York,2017,1,,,,196219
-Purdue University Northwest,2020,0,2021,,,490805
-Queens College,2020,0,2021,,1,190664
-Queens University of Charlotte,2019,1,,,,199412
-Quincy University,2019,1,,,,148131
-Quinnipiac University,2016,1,,,,130226
-Radford University,2014,1,,3.5,,233277
-Ramapo College of New Jersey,2020,1,,,,186201
-Randolph College,2020,1,,3,,233301
-Randolph-Macon College,2020,0,2021,,,233295
-Reed College,2020,0,2022,,,209922
-Regent University,2020,0,2021,,,231651
-Regis College,2013,1,,,,167598
-Regis University,2020,1,,,,127918
-Rensselaer Polytechnic Institute,2020,0,2021,,,194824
-Rhode Island School of Design,2019,1,,,,217493
-Rhodes College,2020,0,2023,,,221351
-Rice University,2020,0,2022,,,227757
-Rider University,2018,1,,,,186283
-Ripon College,2016,1,,,,239628
-Rivier University,2015,1,,,,183211
-Roanoke College,2019,1,,,,233426
-Roanoke College,2014,1,,3,,233426
-Robert Morris University,2020,0,2021,,,215655
-Roberts Wesleyan University,2018,1,,,,194958
-Rochester Institute of Technology,2020,1,,,,195003
-Rockhurst University,2019,1,,,,179043
-Rocky Mountain College,2020,0,2021,,,180595
-Roger Williams University,2012,1,,,,217518
-Rollins College,2007,1,,,,136950
-Rose-Hulman Institute of Technology,2020,0,2021,,,152318
-Rosemont College,2018,1,,3,,215691
-Rowan University,2014,1,,,,184782
-Rutgers University â€“ Camden,2020,0,2021,,,186371
-Rutgers University â€“ New Brunswick,2020,0,2022,,,186380
-Rutgers University â€“ Newark,2020,0,2021,,,186399
-Sacred Heart University,2009,1,,,,130253
-Saint Francis University Pennsylvania,2020,0,2021,,,215743
-Saint Johnâ€™s University (Minnesota),2020,1,,,,174792
-Saint Josephâ€™s College,2016,1,,,,160409
-Saint Josephâ€™s College of Maine,2020,1,,,,161518
-Saint Josephâ€™s University,2013,1,,,,215770
-Saint Martinâ€™s University,2020,1,,,,236452
-Saint Maryâ€™s College of California ,2020,1,,,,123554
-Saint Maryâ€™s University of Minnesota,2020,1,,,,174817
-Saint Maryâ€™s University San Antonio,2020,0,2021,,,228149
-Saint Xavier University,2020,0,2021,,1,148627
-Salem College,2020,1,,,,199607
-Salem State University (Mass.),2015,1,,,,167729
-Salisbury University,2006,1,,3.5,,163851
-Salve Regina University,2010,1,,,,217536
-Sam Houston State University,2020,0,2022,,,227881
-Samford University,2020,0,2021,,,102049
-San Diego State University,2020,0,2021,2.5,1,122409
-San Francisco State University,2020,0,2021,2.5,1,122597
-San JosÃ© State University,2020,0,2021,2.5,1,122755
-Santa Clara University,2020,0,2022,,,122931
-Sarah Lawrence College,2004,1,,,,195304
-Savannah College of Art and Design,2020,0,2021,,,140951
-Savannah State University,2020,0,2021,,,140960
-School of the Art Institute of Chicago,2020,1,,,,143048
-Schreiner University,2020,0,2021,,,228042
-Scripps College,2020,1,,,,123165
-Seattle Pacific University,2020,0,2021,,,236577
-Seton Hall University,2020,0,2026,,,186584
-Sewaneeâ€”The University of the South,2008,1,,,,221519
-Shaw University,2020,0,2021,,,199643
-Shenandoah University,2019,1,,,,233541
-Shepherds University,2020,1,,,,237792
-Shippensburg University,2020,0,2021,,,216010
-Siena College,2014,1,,,,195474
-Siena Heights University,2015,1,,,,172264
-Sierra Nevada University,2020,0,2021,,,182458
-Simmons University,2020,0,2021,,,167783
-Simonâ€™s Rock College of Bard,2006,1,,,,167792
-Simpson College,2019,1,,,,154350
-Simpson University,2020,1,,,,123457
-Skidmore College,2016,1,,,,195526
-Slippery Rock University,2020,1,,,,216038
-Smith College,2008,1,,,,167835
-Soka University of America,2020,0,2021,,,399911
-Sonoma State University,2020,0,2021,2.5,1,123572
-Southern Connecticut State University,2020,1,,,,130493
-Southern Illinois University â€“ Carbondale,2019,1,,2.75,,149222
-Southern Illinois University â€“ Edwardsville,2020,0,2021,,,149231
-Southern Methodist University,2020,0,2022,,,228246
-Southern New Hampshire University,2010,1,,,,183026
-Southern Utah University,2020,0,2021,,,230603
-Southern Virginia University,2020,1,,,,233611
-Southwestern University,2019,1,,,,228343
-Spalding University,2019,1,,,,157757
-Spartanburg Methodist College,2020,1,,,,218821
-Spelman College,2020,0,2021,,,141060
-Spring Hill College,2019,1,,,,102234
-Springfield College,2019,1,,3,,167899
-St. Ambrose University,2020,1,,,,154235
-St. Andrews University,2020,0,2021,,,199698
-St. Anselm College,2010,1,,,,183239
-St. Bonaventure University,2019,1,,,,195164
-St. Catherine University,2020,1,,,,175005
-St. Edwards University (Texas),2020,1,,,,227845
-St. John Fisher College,2020,0,2022,,,195720
-St. Johnâ€™s University,2016,1,,,,174792
-St. Josephâ€™s College (New York),2020,0,2021,,,195544
-St. Lawrence University,2005,1,,,,195216
-St. Leo College ,2011,1,,,,137032
-St. Louis University,2020,0,2023,,,179159
-St. Maryâ€™s College of Maryland,2019,1,,,,163912
-"St. Maryâ€™s College, Notre Dame",2018,1,,3.2,,152390
-St. Mary-of-the-Woods College,2019,1,,,,152381
-St. Michaelâ€™s College,2010,1,,,,231059
-St. Norbert College,2020,0,2021,,,239716
-St. Olaf College,2020,1,,,,174844
-St. Peters University,2015,1,,,,186432
-St. Thomas Aquinas College,2020,0,2021,,,195243
-Stanford University,2020,0,2022,,,243744
-State University of New York (SUNY) â€“ Potsdam,2009,1,,,,196200
-Stephen F. Austin State University,2020,0,2021,,,228431
-Stephens College,2020,0,2021,,,179548
-Stevens Institute of Technology,2020,0,2021,,,186867
-Stevenson University,2020,0,2021,,,164173
-Stockton University,2018,1,,,,186876
-Stonehill College,2006,1,,,,167996
-Suffolk University,2019,1,,,,168005
-SUNY Albany,2020,0,2021,,,196060
-SUNY Binghamton,2020,0,2021,,,196079
-SUNY Brockport,2020,0,2021,,,196121
-SUNY Buffalo,2020,0,2021,,,196088
-SUNY Buffalo State,2020,0,2021,,,196130
-SUNY Cobleskill,2020,0,2021,,,196033
-SUNY College of Environmental Science and Forestry,2020,0,2021,,,196103
-SUNY College of Technology Alfred,2020,0,2021,,,196006
-SUNY College of Technology Canton,2020,0,2021,,,196015
-SUNY Cortland,2020,0,2021,,,196149
-SUNY Fredonia,2020,0,2021,,,196158
-SUNY Geneseo,2020,1,,,,196167
-SUNY Maritime College,2020,0,2021,,,196291
-SUNY Morrisville,2020,0,2021,,,196051
-SUNY New Paltz,2020,0,2021,,,196176
-SUNY Old Westbury,2020,0,2021,,,196237
-SUNY Oneonta,2020,0,2021,,,196185
-SUNY Oswego,2020,0,2021,,,196194
-SUNY Plattsburg,2020,0,2021,,,196246
-SUNY Polytechnic Institute,2020,0,2021,,,196112
-SUNY Stony Brook,2020,0,2021,,,196097
-Susquehanna University,2004,1,,,,216278
-Swarthmore College,2020,0,2022,,,216287
-Sweet Briar College,2018,1,,3,,233718
-Syracuse University,2020,0,2022,,,196413
-Taylor University,2020,1,,,,152530
-Temple University,2014,1,,,,216339
-Texas A&M University â€“ Kingsville,2020,0,2021,,,228705
-Texas A&M University â€“ San Antonio,2020,0,2021,2.75,1,459949
-Texas A&M Universityâ€“College Station,2020,0,2022,,,228723
-Texas Christian University,2020,0,2023,,,228875
-Texas Lutheran University,2020,0,2021,,,228981
-Texas Tech University,2020,0,2022,,,229115
-The Catholic University of America,2015,1,,,,131283
-The Citadel,2020,0,2021,,,217864
-The College of New Jersey,2020,0,2023,,,187134
-The College of the Holy Cross,2005,1,,,,166124
-The Cooper Union,2020,0,2022,,,190372
-The Kingâ€™s College,2020,0,2021,,,454184
-The Sage Colleges,2010,1,,,,195128
-Thiel College,2020,0,2021,,,216357
-Thomas College,2014,1,,,,161563
-Thomas Jefferson University,2020,1,,,,216366
-Thomas More university,2020,0,2021,,,157809
-Towson University,2020,0,2022,,,164076
-Transylvania University,2014,1,,,,157818
-Trevecca Nazarene University,2020,0,2021,,,221892
-Trine University,2020,0,2023,,,152567
-Trinity Christian College,2020,0,2021,,,149505
-Trinity College,2015,1,,,,130590
-Trinity University,2020,0,2023,,,229267
-Troy University,2020,0,2021,3,,102368
-Truman State University,2020,0,2021,,,178615
-Tufts University,2020,0,2023,,,168148
-Tulane University,2020,0,2022,,,160755
-Union College,2006,1,,,,196866
-Union University TN,2020,0,2021,,,221971
-United States Military Academy,2020,0,2021,,,197036
-United States Naval Academy,2020,0,2021,,,164155
-University of Akron,2020,0,2021,,,200800
-University of Alabama,2020,0,2021,,,100733
-University of Alabama at Birmingham,2020,0,2021,,,100663
-University of Alabama at Huntsville,2020,0,2022,,,100706
-"University of Alaska, Fairbanks",2020,0,2025,,,102614
-University of Arkansas,2020,0,2021,3.2,,106397
-University of Baltimore,2020,0,2021,,,161873
-University of Bridgeport,2019,1,,,,128744
-University of California Berkeley,2020,0,2022,,,110635
-University of California Davis,2020,0,2022,,,110644
-University of California Irvine,2020,0,2022,,,110653
-University of California Los Angeles,2020,0,2022,,,110662
-University of California Merced,2020,0,2022,,,445188
-University of California Riverside,2020,0,2022,,,110671
-University of California San Diego,2020,0,2022,,,110680
-University of California Santa Barbara,2020,0,2022,,,110705
-University of California Santa Cruz,2020,0,2022,,,110714
-University of Central Arkansas,2020,0,2021,,,106704
-University of Central Missouri,2020,1,,3.5,,176965
-University of Chicago,2018,1,,,,144050
-University of Cincinnati,2020,0,2022,,,201885
-University of Colorado - Boulder,2020,0,2021,,,126614
-University of Colorado â€“ Colorado Springs,2020,0,2021,,,126580
-University of Colorado â€“ Denver,2020,0,2021,,,126562
-University of Connecticut,2020,0,2023,,,129020
-University of Dallas,2020,0,2022,,,224323
-University of Dayton,2020,1,,,,202480
-University of Delaware,2015,1,,,,130943
-University of Denver,2018,1,,,,127060
-University of Detroit Mercy,2020,0,2021,,,169716
-University of Dubuque,2020,1,,,,153278
-University of Evansville,2017,1,,,,150534
-University of Georgia,2020,0,2021,,,139959
-University of Hartford,2017,1,,,,129525
-University of Hawaii,2020,0,2021,,,141963
-University of Health Sciences and Pharmacy in St. Louis,2020,0,2021,,,
-University of Illinois â€“ Chicago,2020,0,2022,,,145600
-University of Illinois â€“ Springfield,2020,0,2021,,,148654
-University of Illinois â€“ Urbana Champaign,2020,0,2021,,,145637
-University of Indianapolis,2020,0,2022,,,151263
-University of Iowa,2020,0,2021,,,153658
-University of Kentucky,2020,0,2024,,,157085
-University of La Verne,2019,1,,,,117140
-University of Louisville,2020,0,2021,,,157289
-University of Lynchburg,2020,0,2021,,,232609
-University of Maine,2020,1,,,,161253
-University of Maine at Augusta,2020,1,,,,161217
-University of Maine at Farmington,2020,1,,,,161226
-University of Maine at Fort Kent,2020,1,,,,161235
-University of Maine at Machias,2020,1,,,,161244
-University of Maine at Presque Isle,2020,1,,,,161341
-University of Maine-System Central Office,2020,1,,,,161280
-University of Mary Washington,2015,1,,3.5,,232681
-University of Maryland â€“ Eastern Shore,2019,1,,3.4,,163338
-University of Maryland Baltimore County,2020,0,2022,,,163268
-University of Maryland College Park,2020,0,2023,,,163286
-University of Massachusetts â€“ Amherst,2020,0,2023,,,166629
-University of Massachusetts â€“ Dartmouth,2018,1,,3,,167987
-University of Massachusetts -- Lowell,2015,1,,,,166513
-University of Miami,2020,0,2021,,,135726
-University of Michigan â€“ Ann Arbor,2020,0,2021,,,170976
-University of Michigan - Dearborn,2020,0,2021,,,171137
-University of Minnesotaâ€“Crookston,2020,0,2021,,1,174075
-University of Minnesotaâ€“Duluth,2020,0,2021,,,174233
-University of Minnesotaâ€“Morris,2020,0,2021,,,174251
-University of Minnesotaâ€”Rochester,2020,0,2021,,,456959
-University of Minnesotaâ€“-Twin Cities,2020,0,2021,,,174066
-University of Missouri,2020,0,2022,,,178396
-University of Missouri â€“ Kansas City,2019,1,,2.75,,178402
-University of Missouri â€“ St. Louis,2020,0,2022,,,178420
-University of Mobile,2020,1,,,,101693
-University of Montana,2020,0,2021,,,494922
-University of Mount Union,2020,0,2021,,,204185
-University of Nebraska â€“ Kearney,2019,1,,3,,181215
-University of Nebraska â€“ Lincoln,2019,1,,3,,181464
-University of Nebraska â€“ Omaha,2019,1,,3,,181394
-University of New England,2018,1,,,,161457
-University of New Hampshire,2019,1,,,,183044
-University of New Haven,2019,1,,,,129941
-University of New Mexico,2020,0,2021,,,187985
-University of North Alabama,2020,0,2021,,,101879
-University of North Carolina -- Asheville,2020,0,2021,,,199111
-University of North Carolina -- Chapel Hill,2020,0,2021,,,199120
-University of North Carolina -- Charlotte,2020,0,2021,,,199139
-University of North Carolina -- Greensboro,2020,0,2021,,,199148
-University of North Carolina -- Pembroke,2020,0,2021,,,199281
-University of North Carolina -- Wilmington,2020,0,2021,,,199218
-University of North Carolina School of the Arts,2020,0,2021,,,199184
-University of North Dakota,2020,0,2021,,,200280
-University of North Georgia,2020,0,2021,,,482680
-University of Northern Colorado,2020,0,2021,,,127741
-University of Northern Iowa,2020,0,2021,,,154095
-University of Northwestern - St. Paul,2020,1,,,,174491
-University of Notre Dame,2020,0,2023,,,152080
-University of Oklahoma,2020,0,2025,,,207500
-University of Oregon,2020,1,,,,209551
-University of Pennsylvania,2020,0,2022,,,215062
-University of Pittsburgh,2020,0,2023,,,215293
-University of Pittsburgh-Bradford,2020,0,2023,,,215266
-University of Pittsburgh-Greensburg,2020,0,2023,,,215275
-University of Pittsburgh-Johnstown,2020,0,2023,,,215284
-University of Pittsburgh-Titusville,2020,0,2023,,,215309
-University of Portland,2020,0,2022,,,209825
-University of Puget Sound,2015,1,,,,236328
-University of Redlands,2019,1,,,,121691
-University of Rhode Island,2020,0,2021,,,217484
-University of Richmond,2020,0,2022,,,233374
-University of Rochester,2012,1,,,,195030
-University of Saint Joseph,2020,1,,,,130314
-University of Saint Joseph,2015,1,,3,,130314
-University of San Diego,2020,1,,,,122436
-University of San Francisco,2019,1,,,,122612
-University of South Alabama,2020,0,2021,,,102094
-University of South Carolina-Aiken,2020,0,2021,,,218645
-University of South Carolina-Columbia,2020,0,2021,,,218663
-University of South Carolina-Upstate,2020,0,2021,,,218742
-University of Southern California,2020,0,2023,,,123961
-University of Southern Indiana,2020,1,,,,151306
-University of Southern Maine,2019,1,,,,161554
-University of St. Francis,2020,1,,,,148584
-University of St. Thomas,2019,1,,,,174914
-University of St. Thomas,2019,1,,3.4,,227863
-University of Tampa,2020,0,2021,,,137847
-University of Tennessee â€“ Chattanooga,2020,0,2021,,,221740
-University of Tennessee â€“ Knoxville,2020,0,2021,,,221759
-University of Tennessee - Martin,2020,0,2021,,,221768
-University of Texas-Arlington,2020,0,2023,,,228769
-University of Texas-Austin,2020,0,2023,,,228778
-University of Texas-Permian Basin,2020,0,2021,,,229018
-University of Texas-Tyler,2020,0,2021,,,228802
-University of the Cumberlands,2020,1,,,,156541
-University of the Incarnate Word,2020,0,2021,,,225627
-University of the Ozarks,2016,1,,2.5,,107558
-University of the Sciences,2020,0,2021,,,215132
-University of Toledo,2019,1,,,,206084
-University of Tulsa,2020,1,,,,207971
-University of Utah,2020,0,2022,,,230764
-University of Vermont,2020,0,2023,,,231174
-University of Virginia,2020,0,2023,,,234076
-University of Virginiaâ€”Wise,2020,0,2022,,,233897
-University of Washington Bothell,2020,0,2021,,,377555
-University of Washington Seattle,2020,1,,,,236948
-University of Washington Tacoma,2020,0,2021,,,377564
-University of West Georgia,2020,0,2021,,,141334
-University of Western Kentucky,2020,1,,2.5,,157951
-University of Wisconsin Colleges Flex,2020,0,2023,,,491303
-University of Wisconsin-Eau Claire,2020,0,2023,,,240268
-University of Wisconsin-Green Bay,2020,0,2023,,,240277
-University of Wisconsin-La Crosse,2020,0,2023,,,240329
-University of Wisconsin-Madison,2020,0,2023,,,240444
-University of Wisconsin-Milwaukee,2020,0,2023,,,240453
-University of Wisconsin-Milwaukee Flex,2020,0,2023,,,491288
-University of Wisconsin-Oshkosh,2020,0,2023,,,240365
-University of Wisconsin-Parkside,2020,0,2023,,,240374
-University of Wisconsin-Parkside Flex,2020,0,2023,,,491297
-University of Wisconsin-Platteville,2020,0,2023,,,240462
-University of Wisconsin-River Falls,2020,0,2023,,,240471
-University of Wisconsin-Stevens Point,2020,0,2023,,,240480
-University of Wisconsin-Stout,2020,0,2023,,,240417
-University of Wisconsin-Superior,2020,0,2023,,,240426
-University of Wisconsin-System Administration,2020,0,2023,,,240435
-University of Wisconsin-Whitewater,2020,0,2023,,,240189
-Upper Iowa University,2020,0,2021,,,154493
-Ursinus College,2009,1,,,,216524
-Ursuline College,2020,1,,,,206349
-Utah State University,2020,0,2021,,,230728
-Valdosta State University,2020,0,2021,,,141264
-Valley City State University,2020,0,2021,,,200572
-Valparaiso University,2020,0,2022,,,152600
-Vanderbilt University,2020,0,2022,,,221999
-VanderCook College of Music,2020,0,2021,,,149639
-Vassar College,2020,0,2023,,,197133
-Villanova University,2020,0,2022,,,216597
-Virginia Commonwealth University,2014,1,,3.3,,234030
-Virginia Military Institute,2020,0,2021,,,234085
-Virginia Polytechnic Institute,2020,0,2021,,,233921
-Virginia Wesleyan,2010,1,,,,234173
-Wabash University,2020,0,2021,,,152673
-Wagner College,2010,1,,,,197197
-Wake Forest University,2008,1,,,,199847
-Walsh University,2015,1,,,,206437
-Warner Pacific University,2020,0,2021,,,210304
-Warren Wilson College,2015,1,,,,199865
-Wartburg College,2020,0,2021,,,154527
-Washington & Jefferson College,2009,1,,,,216667
-Washington and Lee University,2020,0,2022,,,234207
-Washington College,2007,1,,3.5,,164216
-Washington State University,2008,1,,3.5,,236939
-Washington State University Vancouver,2020,0,2021,,,23693901
-Washington University in St. Louis,2020,0,2022,,,179867
-Wayne State University,2020,0,2021,,,172644
-Waynesburg University,2020,0,2021,,,216694
-Webb Institute,2020,0,2021,,,197221
-Webster University,2020,1,,,,179894
-Wellesley College,2020,0,2022,,,168218
-Wells College,2015,1,,,,197230
-Wentworth Institute of Technology,2019,1,,,,168227
-Wesleyan University,2014,1,,,,130697
-West Chester University of Pennsylvania,2020,0,2021,,,216764
-West Virginia University,2020,0,2021,,,238032
-West Virginia Wesleyan College,2020,0,2021,,,237969
-Western Carolina University,2020,0,2021,,,200004
-Western Colorado University,2020,0,2021,,,128391
-Western Illinois University,2019,1,,3.3,,149772
-Western Michigan University,2020,1,,,,172699
-Western New England University,2015,1,,,,168254
-Western Oregon University,2016,1,,3,,210429
-Western Washington University,2020,1,,,,237011
-Westfield State University,2020,1,,,,168263
-Westminster College MO,2020,0,2021,,,179946
-Wheaton College IL,2020,0,2021,,,149781
-Wheelock College,2016,1,,,,
-Whitman College,2016,1,,,,237057
-Whittier College,2016,1,,,,125763
-Whitworth College,2006,1,,,,237066
-Widener University,2020,0,2022,,,216852
-Wilkes University,2020,0,2021,,,216931
-Willamette University,2016,1,,,,210401
-William Jewell College,2012,1,,,,179955
-William Paterson University of New Jersey,2018,1,,,,187444
-William Woods University,2020,1,,,,179964
-Williams College,2020,0,2023,,,168342
-Winston-Salem State University,2020,0,2021,,,199999
-Winthrop University,2020,0,2021,,,218964
-Wisconsin Lutheran College,2020,1,,,,240338
-Wittenberg University,2007,1,,,,206525
-Wofford College,2017,1,,,,218973
-Worcester Polytechnic Institute Wilson College,2007,1,,3,,168421
-Worcester State University,2016,1,,,,168430
-Wright State University,2020,0,2022,,,206604
-Xavier University (Ohio),2019,1,,,,206622
-Yale University,2020,0,2021,,,130794
-York College,2020,0,2021,,1,181853
-York College of Pennsylvania,2020,0,2021,,,217059
-Zaytuna College,2020,0,2021,,,458575
+school,year,permenant,temp_year,GPA,blind,unitid,left_censor
+Abilene Christian University,2020,0,2021,,,222178,0
+Abraham Baldwin Agricultural College,2020,0,2021,,,138558,0
+Adams State University,2020,0,2021,,,126182,0
+Adelphi University,2020,0,2023,,,188429,0
+Agnes Scott College,2009,1,,,,138600,0
+Alabama State University,2020,0,2021,,,100724,0
+Albany College of Pharmacy and Health Sciences,2020,0,2021,,,188526,0
+Albany State University,2020,0,2021,,,138716,0
+Albertus Magnus College,2019,1,,,,128498,0
+Albion College,2020,0,2021,,,168546,0
+Albright College,2008,1,,,,210571,0
+Alderson Broaddus University,2020,0,2021,,,237118,0
+Alfred University,2020,0,2023,,,188641,0
+Allegheny College,2015,1,,,,210669,0
+Alma College,2019,1,,,,168591,0
+Alverno College,2020,0,2021,,,238193,0
+American International College,2016,1,,,,164447,0
+American University,2009,1,,,,131159,0
+Amherst College,2020,0,2023,,,164465,0
+Anderson University (Indiana),2020,1,,,,150066,0
+Angelo State University,2020,0,2021,,,222831,0
+Anna Maria College,2011,1,,,,164492,0
+Appalachian State University,2020,0,2021,,,197869,0
+Aquinas College MI,2020,0,2021,,,168786,0
+Arcadia University,2020,1,,,,211088,0
+Arizona Christian University,2020,0,2021,,,105899,0
+Arkansas State University,2020,0,2021,,,106458,0
+Art Academy of Cincinnati,2020,1,2021,,,201061,0
+Asbury University,2018,1,,,,156213,0
+Ashland University,2020,0,2021,2.7,,201104,0
+Assumption College,2009,1,,,,164562,0
+Auburn University,2020,0,2021,,,100858,0
+Augsburg University,2018,1,,,,173045,0
+Augusta University,2020,0,2021,3,,482149,0
+Augustana College,2007,1,,,,143084,0
+Augustana University (South Dakota),2019,1,,,,219000,0
+Austin College,2016,1,,,,222983,0
+Austin Peay State University,2020,0,2021,2.85,,219602,0
+Avila University,2020,1,,,,176628,0
+Azuza Pacific University,2018,1,,,,109785,0
+Babson College,2020,0,2025,,,164580,0
+Baker University,2020,1,,3,,154688,0
+Baldwin-Wallace College,2008,1,,,,201195,0
+Ball State University,2018,1,,,,150136,0
+Barnard College,2020,0,2023,,,189097,0
+Barry University,2020,1,,,,132471,0
+Barton College,2020,0,2021,,,197911,0
+Baruch College,2020,0,2021,,1,190512,0
+Bay Path University,2015,1,,,,164632,0
+Baylor University,2020,0,2023,,,223232,0
+Bellin College,2020,1,,,,238324,0
+Bellmarine University,2019,1,,,,156286,0
+Belmont Abbey College,2008,1,,3,,197984,0
+Belmont University,2020,0,2022,,,219709,0
+Beloit College,2014,1,,,,238333,0
+Benedictine College KS,2020,0,2021,,,154712,0
+Benedictine University Mesa,2020,1,,,,145619,0
+Bennington College,2006,1,,,,230816,0
+Bentley University,2020,0,2022,,,164739,0
+Berea College,2020,0,2021,,,156295,0
+Berry College ,2020,1,,,,139144,0
+Bethel University,2020,1,,3.2,,173160,0
+Bethel University,2020,1,2022,,,219718,0
+Biola University,2020,0,2021,,,110097,0
+Birmingham-Southern College,2016,1,,,,100937,0
+Bloomfield College,2017,1,,,,183822,0
+Bluffton University,2020,1,,3,,201371,0
+Boston College,2020,0,2021,,,164924,0
+Boston University,2020,0,2023,,,164988,0
+Bowie State University,2020,0,2021,2.3,,162007,0
+Bowling Green State University,2020,0,2021,,,201441,0
+Bradley University,2020,1,,,,143358,0
+Brandeis University,2013,1,,,,165015,0
+Brenau University,2016,1,,,,139199,0
+Brescia University,2020,0,2021,,,156356,0
+Brevard College,2014,1,,,,198066,0
+Briar Cliff University,2020,0,2021,,,152992,0
+Bridgewater College,2020,0,2023,,,231581,0
+Bridgewater State University,2016,1,,,,165024,0
+Brigham Young University,2020,0,2021,,,230038,0
+Brooklyn College,2020,0,2021,,1,190549,0
+Brown University,2020,0,2022,,,217156,0
+Bryant University,2011,1,,,,217165,0
+Bryn Athyn College,2020,0,2021,,,210492,0
+Bryn Mawr,2009,1,,,,211273,0
+Bucknell University,2018,1,,,,211291,0
+Buena Vista University ,2020,1,,,,153001,0
+Bushnell University ,2020,1,,,,209409,0
+Butler University,2020,1,,,,150163,0
+Cabrini College,2014,1,,,,211352,0
+Caldwell University,2020,0,2023,,,183910,0
+California Baptist University,2020,0,2021,,,110361,0
+California Institute of Technology,2020,0,2022,,1,110404,0
+California Lutheran University,2020,1,,,,110413,0
+"California Polytechnic State U., San Luis Obispo",2020,0,2023,2.5,,110422,0
+"California State Polytechnic U., Pomona",2020,0,2023,2.5,,110529,0
+"California State U, Chico",2020,0,2023,2.5,,110538,0
+"California State U, Fresno",2020,0,2023,2.5,,110556,0
+California State U. Channel Islands,2020,0,2023,2.5,,441937,0
+California State U. Maritime Academy,2020,0,2023,2.5,,111188,0
+California State U. San Marcos,2020,0,2023,2.5,,366711,0
+"California State U., Bakersfield",2020,0,2023,2.5,,110486,0
+"California State U., Dominguez Hills",2020,0,2023,2.5,,110547,0
+"California State U., East Bay",2020,0,2023,2.5,,110574,0
+"California State U., Fullerton",2020,0,2023,2.5,,110565,0
+"California State U., Long Beach",2020,0,2023,2.5,,110583,0
+"California State U., Los Angeles",2020,0,2023,2.5,,110592,0
+"California State U., Monterey Bay",2020,0,2023,2.5,,409698,0
+"California State U., Northridge",2020,0,2023,2.5,,110608,0
+"California State U., Sacramento",2020,0,2023,2.5,,110617,0
+"California State U., San Bernardino",2020,0,2023,2.5,,110510,0
+"California State U., Stanislaus",2020,0,2023,2.5,,110495,0
+California University of Pennsylvania,2020,1,,,,211361,0
+Calvin University,2020,0,2022,,,169080,0
+Campbell University,2020,0,2021,,,198136,0
+Canisius College,2020,0,2022,,,189705,0
+Carleton College,2020,0,2021,,,173258,0
+Carlow University,2020,0,2021,,,211431,0
+Carnegie Mellon University,2020,0,2022,,,211440,0
+Carroll College,2019,1,,3,,180106,0
+Carroll University,2020,0,2021,,,238458,0
+Carson-Newman University,2020,1,,,,219806,0
+Carthage College,2016,1,,,,238476,0
+Case Western Reserve University,2019,0,2023,,,201645,0
+Castleton University,2020,0,2021,,,230834,0
+Catawba College,2012,1,,,,198215,0
+Catholic University,2020,1,,,1,131283,0
+Cedar Crest College,2020,0,2021,,,211468,0
+Cedarville University,2020,0,2022,,,201654,0
+Centenary College of Louisiana,2020,0,2021,,,158477,0
+Centenary University,2020,1,,,,183974,0
+Central College,2020,0,2021,,,153108,0
+Central Connecticut State University,2020,0,2021,,,128771,0
+Central Michigan University,2020,0,2022,,,169248,0
+Centre College,2020,0,2023,,,156408,0
+Chaminade University,2019,1,,,,141486,0
+Champlain College,2018,1,,,,230852,0
+Chapman University,2019,1,,,,111948,0
+Chatham College,2005,1,,,,211556,0
+Chestnut Hill College,2020,1,,,,211583,0
+Christian Brothers University,2020,1,,,,219833,0
+Christopher Newport University,2007,1,,3.5,,231712,0
+City College of New York,2020,0,2021,,1,190567,0
+Claremont McKenna College,2020,0,2022,,,112260,0
+Clarion University of Pennsylvania,2020,1,,,,211644,0
+Clark Atlanta University,2020,0,2021,,,138947,0
+Clark University,2011,1,,,,165334,0
+Clarke University,2020,0,2021,,,153126,0
+Clarkson University,2020,0,2021,,,190044,0
+Clayton State University,2020,0,2021,,,139311,0
+Clemson University,2020,0,2021,,,217882,0
+Coastal Carolina University,2020,1,,3.5,,218724,0
+Coe College,2020,1,,3,,153144,0
+Colby College,2009,1,,,,161086,0
+Colgate University,2020,0,2023,,,190099,0
+College for Creative Studies,2019,1,,,,169442,0
+College of Charleston,2020,0,2023,,,217819,0
+College of Idaho,2015,1,,,,142179,0
+College of Saint Benedict,2020,1,,,,174747,0
+College of Saint Rose,2012,1,,,,195234,0
+College of St. Elizabeth,2017,1,,,,186618,0
+College of St. Scholastica Evangel University,2018,1,,2.5,,174899,0
+College of Staten Island,2020,0,2021,,1,190558,0
+College of William & Mary,2020,0,2023,,,231624,0
+College of Wooster,2020,1,,,,206589,0
+Colorado College,2010,1,,,,126678,0
+Colorado Mesa University,2020,0,2021,,,127556,0
+Colorado School of Mines,2020,0,2021,,,126775,0
+Colorado State University Fort Collins,2020,0,2021,,,126818,0
+Colorado State University Pueblo,2020,0,2021,,,128106,0
+Columbia University,2020,0,2022,,,190150,0
+Columbus College of Art & Design,2014,1,,,,202170,0
+Columbus State University,2020,0,2021,,,139366,0
+Concordia College,2016,1,,,,190248,0
+Concordia College (Minnesota) ,2020,1,,,,173300,0
+Concordia University Chicago,2020,1,,,,144351,0
+Concordia University Irvine,2020,0,2021,,,112075,0
+Concordia University Nebraska,2020,1,,3,,180984,0
+Concordia University Texas,2020,0,2021,,,224004,0
+"Concordia University, St. Paul",2018,1,,,,173328,0
+Connecticut College,2009,1,,,,128902,0
+Converse College,2019,1,,,,217961,0
+Coppin State University,2020,0,2021,,,162283,0
+Cornell College,2015,1,,,,153162,0
+Cornell University,2020,0,2022,,1,190415,0
+Cornerstone University,2020,0,2021,,,170037,0
+Cottey College,2020,0,2021,2.6,,177117,0
+Covenant College,2020,0,2021,,,139393,0
+Creighton University,2018,1,,,,181002,0
+D’Youville College,2019,1,,,,190716,0
+Dakota Wesleyan University,2020,1,,3,,219091,0
+Dallas Baptist University,2020,0,2021,,,224226,0
+Dalton State College,2020,0,2021,,,139463,0
+Dartmouth College,2020,0,2022,,,182670,0
+Davidson College,2020,0,2023,,,198385,0
+Dean College,2015,1,,,,165574,0
+Delaware Valley University,2019,1,,,,211981,0
+Denison University,2006,1,,,,202523,0
+DePaul University,2010,1,,,,144740,0
+DePauw University,2018,1,,,,150400,0
+Dickinson College,2020,0,2021,,1,212009,0
+Dickinson State University,2020,0,2021,,,200059,0
+Doane University,2016,1,,,,181020,0
+Dominican College,2017,1,,,,190761,0
+Dominican University,2020,0,2021,,,148496,0
+Dominican University of California,2019,1,,,,113698,0
+Dordt University,2020,0,2021,3.2,,153250,0
+Drake University,2015,1,,,,153269,0
+Drew University,2005,1,,,,184348,0
+Drexel University,2020,0,2023,,,212054,0
+Drury University,2020,1,,,,177214,0
+Duke University,2020,0,2021,,,198419,0
+Duquesne University,2014,1,,3,,212106,0
+Earlham College,2011,1,,,,150455,0
+East Carolina University,2020,0,2021,,,198464,0
+East Stroudsburg University of Pennsylvania,2016,1,,,,212115,0
+Eastern Connecticut State University,2014,1,,3,,129215,0
+Eastern Illinois University,2020,1,,2.5,,144892,0
+Eastern Kentucky University,2020,1,,,,156620,0
+Eastern Mennonite University,2020,1,,,,232043,0
+Eastern Michigan State University,2020,0,2021,,,169798,0
+Eastern University,2018,1,,,,212133,0
+Eastern Washington University,2020,1,,,,235097,0
+Eckerd College,2020,0,2022,,,133492,0
+Edgewood College,2020,0,2021,,,238661,0
+Edinboro University,2020,0,2021,,,212160,0
+Elizabeth City State University,2020,0,2021,,,198507,0
+Elizabethtown College,2020,0,2021,,,212197,0
+Elmhurst University,2020,1,,,,144962,0
+Elmira College,2015,1,,,,190983,0
+Elms College,2019,1,,,,167394,0
+Elon University,2020,0,2023,,,198516,0
+Emerson College,2017,1,,,,165662,0
+Emmanuel College,2014,1,,,,165671,0
+Emory & Henry College,2020,0,2021,,,232025,0
+Emory University,2020,0,2022,,,139658,0
+Eugene Lang College – The New School for Liberal Arts,2010,1,,,,193654,0
+Evergreen State College,2019,1,,,,235167,0
+Fairfield University,2009,1,,,,129242,0
+Fairleigh Dickinson University,2018,1,,,,184603,0
+Farmingdale State College SUNY,2020,0,2021,,,196042,0
+Felician University,2020,1,,,,184612,0
+Ferris State University,2018,1,,,,169910,0
+Finlandia University,2019,1,,,,172440,0
+Fisher College,2020,1,,,,165802,0
+Fitchburg State University,2017,1,,,,165820,0
+Flagler College,2018,1,,,,133711,0
+Flagler College,2018,1,,,,444990,0
+Florida Southern College,2020,0,2021,,,134079,0
+Fordham University,2020,0,2022,,,191241,0
+Fort Lewis College,2020,0,2021,,,127185,0
+Fort Valley State University,2020,0,2021,,,139719,0
+Framingham State University,2018,1,,,,165866,0
+Franklin & Marshall College,2006,1,,,,212577,0
+Franklin Pierce University,2015,1,,,,182795,0
+Fresno Pacific University,2020,1,,,,114813,0
+Frostburg State University,2020,0,2021,,,162584,0
+Gallaudet University,2020,0,2021,,,131450,0
+Gannon University,2020,0,2021,,,212601,0
+Gardner-Webb University,2020,0,2021,,,198561,0
+George Fox University,2020,1,,,,208822,0
+George Mason University,2006,1,,3.5,,232186,0
+George Washington University,2015,1,,,,131469,0
+Georgetown College,2020,0,2021,,,131496,0
+Georgetown University,2020,0,2021,,,156745,0
+Georgia College & State University,2020,0,2021,,,139861,0
+Georgia Institute of Technology,2020,0,2021,,,139755,0
+Georgia Southern University,2020,0,2021,,,139931,0
+Georgia Southwestern State University,2020,0,2021,,,139764,0
+Georgia State University,2020,0,2021,,,139940,0
+Georgian Court College,2007,1,,,,184773,0
+Georgian Court University,2020,1,,,,184773,0
+Gettysburg College,2006,1,,,,212674,0
+Gonzaga University,2020,1,,,,235316,0
+Gordon College,2020,0,2021,,,165936,0
+Gordon State College,2020,0,2021,,,139968,0
+Goshen College,2020,0,2021,,,150668,0
+Goucher College,2007,1,,,,162654,0
+Grace College and Seminary,2020,1,,,,150677,0
+Grand Valley State University,2020,0,2021,,,170082,0
+Green Mountain College,2007,1,,,,230898,0
+Greensboro College,2020,0,2021,,,198598,0
+Greenville University,2020,1,,,,145372,0
+Grinnell College,2020,0,2021,,,153384,0
+Grove City College,2020,0,2021,,,212805,0
+Gustavus Adolphus College,2006,1,,,,173647,0
+Gwynedd Mercy University,2020,0,2021,,,212832,0
+Hamilton College,2020,0,2023,,,191515,0
+Hamline University,2019,1,,,,173665,0
+Hampden-Sydney College,2020,0,2021,,,232256,0
+Hampshire College,2014,1,,,1,166018,0
+Hanover College,2017,1,,,,150756,0
+Hardin Simmons University,2019,1,,,,225247,0
+Harding University,2020,0,2021,,,107044,0
+Harvard College,2020,0,2022,,,166027,0
+Harvey Mudd College,2020,0,2022,,,115409,0
+Hastings College,2020,0,2021,,,181127,0
+Haverford College,2020,0,2023,,,212911,0
+Hawai’i Pacific University,2020,0,2023,,,141644,0
+Heidelberg University,2020,1,,,,203085,0
+Hendrix College,2019,1,,,,107080,0
+High Point University,2017,1,,,,198695,0
+Hillsdale College,2020,1,,,,170286,0
+Hiram College,2016,1,,2.8,,203128,0
+Hobart & William Smith Colleges,2006,1,,,,191630,0
+Hofstra University,2014,1,,,,191649,0
+Hollins University,2020,0,2022,,,232308,0
+Holy Names University,2020,0,2021,,,115728,0
+Hood College,2013,1,,,,162760,0
+Hope College,2020,0,2021,,,170301,0
+Houghton College,2016,1,,,,191676,0
+Houston Baptist University,2020,0,2021,,,225399,0
+Howard Payne University,2020,1,,,,225548,0
+Howard University,2020,0,2021,,,131520,0
+Humboldt State University,2020,0,2021,2.5,1,115755,0
+Hunter College,2020,0,2021,,1,190594,0
+Husson University,2020,1,,,,487524,0
+Illinois College,2009,1,,,,145691,0
+Illinois Institute of Technology,2020,0,2021,,,145725,0
+Illinois State University,2020,1,,,,145813,0
+Illinois Wesleyan University ,2020,1,,,,145646,0
+Immaculata University,2016,1,,,,213011,0
+Indiana State University,2019,1,,,,151324,0
+Indiana Tech,2020,1,,,,151801,0
+Indiana University – Bloomington,2019,1,,,,151351,0
+Indiana University – Fort Wayne,2019,1,,,,,0
+Indiana University -- Kokomo,2019,1,,,,151333,0
+Indiana University - Purdue University Indianapolis,2019,1,,,,151111,0
+Indiana University East    ,2020,1,,,,151388,0
+Indiana University Kokomo,2020,1,,,,151333,0
+Indiana University Northwest,2020,1,,,,151360,0
+Indiana University of Pennsylvania ,2020,1,,,,213020,0
+Indiana University South Bend,2020,1,,,,151342,0
+Indiana University Southeast,2020,1,,,,151379,0
+Indiana Wesleyan University,2020,1,,,,151801,0
+Iowa State University,2020,0,2021,,,153603,0
+Iowa Wesleyan University,2020,0,2021,,,153630,0
+Ithaca College,2012,1,,,,191968,0
+Jackson State University,2020,0,2021,,,175856,0
+Jacksonville State University,2020,0,2021,,,101480,0
+James Madison University,2017,1,,,,232423,0
+John Brown University,2020,0,2021,,,107141,0
+John Carroll University,2020,0,2021,,,203368,0
+John Jay College of Criminal Justice,2020,0,2021,,,190600,0
+Johns Hopkins University,2020,0,2022,,,162928,0
+Kalamazoo College,2015,1,,,,170532,0
+Kean University,2019,1,,3.5,,185262,0
+Kennesaw State University,2020,0,2021,,,486840,0
+Kent State University,2020,1,,,,203517,0
+Kent State University Ashtabula,2020,0,2021,,,203447,0
+Kentucky Wesleyan College,2020,0,2021,,,157076,0
+Kenyon College ,2020,0,2021,,,203535,0
+Kettering University,2020,0,2022,,,203544,0
+Keuka College,2006,1,,,,192192,0
+Keystone College,2016,1,,,,213303,0
+King University,2015,1,,,,220516,0
+King’s College,2006,1,,,,213321,0
+Knox College,2005,1,,,,146427,0
+Kutztown University,2020,0,2021,,,213349,0
+La Roche University,2020,1,,,,213358,0
+La Salle University,2017,1,,,,213367,0
+Lafayette College,2020,0,2021,,,213385,0
+Lake Erie College,2015,1,,,,203580,0
+Lake Forest College,2006,1,,,,146481,0
+Lake Superior State University,2020,1,,,,170639,0
+Lakeland University,2020,0,2021,,,238980,0
+Lamar University,2020,1,,,,226091,0
+Lander University,2020,1,,,,218229,0
+Lasell College,2016,1,,,,166391,0
+Lawrence Technological University,2020,0,2022,,,170675,0
+Lawrence University,2005,1,,,,239017,0
+Le Moyne College,2015,1,,,,192323,0
+Lebanon Valley College,2006,1,,,,213507,0
+Lees-McRae College,2012,1,,,,198808,0
+Lehigh University,2020,0,2021,,,213543,0
+Lehman College,2020,0,2021,,1,190637,0
+Lesley University,2019,1,,,,166452,0
+Lewis University,2020,0,2021,,,146612,0
+Liberty University,2020,0,2021,,,232557,0
+Lincoln Memorial University,2020,0,2021,,,220631,0
+Lindenwood University,2018,1,,,,177968,0
+Linfield College,2018,1,,3,,209065,0
+Lipscomb University,2020,0,2021,,,219976,0
+List College of Jewish Studies,2020,0,2021,,,192040,0
+Lock Haven University of PA,2020,0,2021,,,213613,0
+Longwood University,2020,0,2021,,,232566,0
+Loras College,2020,1,,2.75,,153825,0
+Louisiana State University,2020,0,2021,,,159416,0
+Lourdes University,2019,1,,,,203757,0
+Loyola Marymount University,2020,0,2022,,,117946,0
+Loyola University Chicago,2020,1,,,,146719,0
+Loyola University Maryland,2009,1,,,,163046,0
+Loyola University New Orleans,2020,1,,,1,159656,0
+Luther College,2020,0,2021,,,153834,0
+Lycoming College,2020,0,2021,,,213668,0
+Lynn University,2013,1,,,,132657,0
+Lyon College,2020,1,,,,106342,0
+Macalester College,2020,1,,,,173902,0
+Maine Maritime Academy,2020,0,2021,,,161299,0
+Manchester University,2016,1,,,,151777,0
+Manhattan College,2020,0,2021,,,192703,0
+Manhattanville College,2010,1,,,,192749,0
+Manor College,2020,1,,,,213774,0
+Marietta College,2020,0,2021,,,203845,0
+Marist College,2010,1,,,,192819,0
+Marlboro College,2008,1,,,,230940,0
+Marquette University,2019,1,,,,239105,0
+Marshall University,2020,0,2021,,,237525,0
+Martin Methodist College,2020,0,2021,,,220701,0
+Mary Baldwin University,2020,1,,,,232672,0
+Marymount Manhattan College,2020,0,2021,,,192864,0
+Marymount University,2015,1,,3,,232706,0
+Marywood University,2020,0,2022,,,213826,0
+Massachusetts College of Art and Design,2016,1,,,,166674,0
+Massachusetts College of Liberal Arts,2020,0,2021,,1,167288,0
+Massachusetts Institute of Technology,2020,0,2021,,,166683,0
+Massachusetts Maritime Academy,2020,0,2021,,,166692,0
+McMurry University,2020,1,,,,226587,0
+McPherson College,2020,0,2021,2.5,,155511,0
+Medgar Evers College,2020,0,2021,,,190646,0
+Menlo College,2018,1,,,,118693,0
+Mercer University,2020,0,2023,,,140447,0
+Mercyhurst University,2014,1,,,,213987,0
+Meredith College ,2020,1,,,,198950,0
+Merrimack College,2007,1,,,,166850,0
+Methodist University,2020,1,,,,198969,0
+Metropolitan State University Denver,2020,0,2021,,,127565,0
+Miami University,2020,0,2021,,,204024,0
+Michigan State University,2020,1,,,,171100,0
+Michigan Technological University,2020,0,2021,3,,171128,0
+MidAmerica Nazarene University,2016,1,,,,155520,0
+Middle Georgia State University,2020,0,2021,,,482158,0
+Middlebury College,2020,0,2023,,,230959,0
+Midway University,2020,0,2021,,,157377,0
+Millersville University of Pennsylvania,2014,1,,,,214041,0
+Milligan University,2020,0,2021,,,486901,0
+Millikin University,2020,0,2021,3,,147244,0
+Mills College,2015,1,,,,118888,0
+Millsaps College,2020,0,2021,,,175980,0
+Milwaukee School of Engineering,2020,0,2021,,,239318,0
+Minneapolis College of Art and Design,2020,1,,,,174127,0
+Minnesota State University Moorhead,2020,1,,,,174358,0
+Misericordia University,2020,0,2021,,,214069,0
+Mississippi College,2020,1,,,,176053,0
+Missouri State University,2020,0,2021,3.25,,179566,0
+Missouri University of Science and Technology,2020,0,2022,,,178411,0
+Missouri Western State University,2020,1,,2.7,,178387,0
+Mitchell College,2006,1,,,,129774,0
+Molloy College,2020,0,2021,,,193292,0
+Monmouth College,2019,1,,,,147341,0
+Monmouth University,2020,0,2021,,,185572,0
+Montana State University,2020,0,2021,,,180461,0
+Montclair State University,2014,1,,,,185590,0
+Montevallo University,2020,0,2021,,,101709,0
+Moravian College,2019,1,,,,214157,0
+Morehouse College,2020,0,2021,,,140553,0
+Morgan State University,2020,0,2021,,,163453,0
+Mount Ida College,2016,1,,,,,0
+Mount Mercy University,2020,0,2021,3,,154013,0
+Mount Saint Mary College,2020,0,2021,,,193353,0
+Mount Saint Mary’s University Los Angeles,2020,0,2021,,,119173,0
+Mount St. Joseph University,2020,0,2021,,,204200,0
+Mount St. Mary’s University,2019,1,,,,163462,0
+Mount Vernon Nazarene University,2020,0,2021,,,204194,0
+Multnomah University,2015,1,,,,209287,0
+Murray State University,2020,0,2021,3,,157401,0
+Muskingum University,2020,0,2021,,,204264,0
+Nazareth College,2006,1,,,,193584,0
+Nebraska Methodist College,2020,1,,,,181297,0
+Neumann University,2020,1,,2.5,,214272,0
+New Jersey Institute of Technology,2020,0,2021,,,185828,0
+New York City College of Technology,2020,0,2021,,,190655,0
+New York Institute of Technology,2020,0,2021,,,194091,0
+New York University,2020,0,2022,,,193900,0
+Newman University,2019,1,,,,155335,0
+Niagara University,2017,1,,,,193973,0
+Nichols College,2011,1,,,,167260,0
+Norfolk State University,2020,0,2021,,,232937,0
+North Carolina A&T State University,2020,0,2021,,,199102,0
+North Carolina Central University,2020,0,2021,,,199157,0
+North Carolina State University,2020,0,2021,,,199193,0
+North Dakota State University,2020,0,2021,,,200332,0
+North Park University,2020,0,2021,,,147679,0
+Northeastern University,2020,0,2021,,,167358,0
+Northern Illinois University,2019,1,,,1,147703,0
+Northern Kentucky University,2020,1,,,,157447,0
+Northern Michigan University,2020,1,,,1,171456,0
+Northland College,2016,1,,,,239512,0
+Northwest University,2020,0,2021,,,236133,0
+Northwestern College,2020,0,2021,,,260992,0
+Northwestern University,2020,0,2022,,,147767,0
+Notre Dame of Maryland University,2016,1,,,,163578,0
+Nova Southeastern University,2020,0,2021,,,136215,0
+Nyack College,2020,1,,,,194161,0
+Oakland University,2020,0,2021,,,171571,0
+Oberlin College and Conservatory,2020,0,2023,,,204501,0
+Occidental College,2020,0,2021,,,120254,0
+Oglethorpe University,2020,0,2023,,,140696,0
+Ohio Northern University,2020,0,2021,,,204635,0
+Ohio State University,2020,0,2022,,,204796,0
+Ohio University,2020,1,,,,204857,0
+Ohio Wesleyan University,2013,1,,,,204909,0
+Oklahoma City University,2020,1,,3,,207458,0
+Oklahoma State University – Stillwater,2020,1,,,,207388,0
+Old Dominion University,2014,1,,,,232982,0
+Olin College of Engineering,2020,0,2021,,,441982,0
+Olivet College,2020,0,2021,,,171599,0
+Oregon Institute of Technology,2019,1,,,,209506,0
+Oregon State University,2019,1,,,,209542,0
+Otterbein University,2020,0,2021,2.75,,204936,0
+Ouachita Baptist University,2020,0,2021,,,107512,0
+Our Lady of the Lake University Pacific University,2020,1,,,,227331,0
+Pace University,2019,1,,,,194310,0
+Pacific Lutheran University,2018,1,,,,236230,0
+Paul Quinn College,2020,0,2021,,,227429,0
+Paul Smith’s College,2015,1,,,,194392,0
+Pennsylvania State University-Penn State Abington,2020,0,2023,,,214801,0
+Pennsylvania State University-Penn State Altoona,2020,0,2023,,,214689,0
+Pennsylvania State University-Penn State Beaver,2020,0,2023,,,214698,0
+Pennsylvania State University-Penn State Berks,2020,0,2023,,,214704,0
+Pennsylvania State University-Penn State Brandywine,2020,0,2023,,,214731,0
+Pennsylvania State University-Penn State DuBois,2020,0,2023,,,214740,0
+Pennsylvania State University-Penn State Erie-Behrend College   ,2020,0,2023,,,214591,0
+Pennsylvania State University-Penn State Fayette- Eberly,2020,0,2023,,,214759,0
+Pennsylvania State University-Penn State Greater Allegheny,2020,0,2023,,,214786,0
+Pennsylvania State University-Penn State Harrisburg,2020,0,2023,,,214713,0
+Pennsylvania State University-Penn State Hazleton,2020,0,2023,,,214768,0
+Pennsylvania State University-Penn State Lehigh Valley,2020,0,2023,,,214670,0
+Pennsylvania State University-Penn State Mont Alto,2020,0,2023,,,214795,0
+Pennsylvania State University-Penn State New Kensington,2020,0,2023,,,214625,0
+Pennsylvania State University-Penn State Schuylkill,2020,0,2023,,,214810,0
+Pennsylvania State University-Penn State Scranton,2020,0,2023,,,214652,0
+Pennsylvania State University-Penn State Shenango,2020,0,2023,,,214634,0
+Pennsylvania State University-Penn State Wilkes-Barre,2020,0,2023,,,214643,0
+Pennsylvania State University-Penn State York,2020,0,2023,,,214829,0
+Pennsylvania State University-University Park,2020,0,2023,,,214777,0
+Pennsylvania State University-World Campus,2020,0,2023,,,479956,0
+Pepperdine University,2020,0,2023,,,121150,0
+Pine Manor College,2014,1,,,,167455,0
+Plymouth State University,2014,1,,,,183080,0
+Point Loma Nazarene University,2020,0,2021,,,121309,0
+Point Park University,2015,1,,3,,215442,0
+Pomona College,2020,0,2021,,,121345,0
+Portland State University,2020,1,,,,209807,0
+Pratt Institute,2020,0,2021,,,194578,0
+Presbyterian College,2013,1,,,,218539,0
+Prescott College,2017,1,,,,105589,0
+Princeton University,2020,0,2022,,,186131,0
+Principia College,2020,0,2021,,,148016,0
+Providence College,2006,1,,,,217402,0
+Purchase College State University of New York,2017,1,,,,196219,0
+Purdue University Northwest,2020,0,2021,,,490805,0
+Queens College,2020,0,2021,,1,190664,0
+Queens University of Charlotte,2019,1,,,,199412,0
+Quincy University,2019,1,,,,148131,0
+Quinnipiac University,2016,1,,,,130226,0
+Radford University,2014,1,,3.5,,233277,0
+Ramapo College of New Jersey,2020,1,,,,186201,0
+Randolph College,2020,1,,3,,233301,0
+Randolph-Macon College,2020,0,2021,,,233295,0
+Reed College,2020,0,2022,,,209922,0
+Regent University,2020,0,2021,,,231651,0
+Regis College,2013,1,,,,167598,0
+Regis University,2020,1,,,,127918,0
+Rensselaer Polytechnic Institute,2020,0,2021,,,194824,0
+Rhode Island School of Design,2019,1,,,,217493,0
+Rhodes College,2020,0,2023,,,221351,0
+Rice University,2020,0,2022,,,227757,0
+Rider University,2018,1,,,,186283,0
+Ripon College,2016,1,,,,239628,0
+Rivier University,2015,1,,,,183211,0
+Roanoke College,2019,1,,,,233426,0
+Roanoke College,2014,1,,3,,233426,0
+Robert Morris University,2020,0,2021,,,215655,0
+Roberts Wesleyan University,2018,1,,,,194958,0
+Rochester Institute of Technology,2020,1,,,,195003,0
+Rockhurst University,2019,1,,,,179043,0
+Rocky Mountain College,2020,0,2021,,,180595,0
+Roger Williams University,2012,1,,,,217518,0
+Rollins College,2007,1,,,,136950,0
+Rose-Hulman Institute of Technology,2020,0,2021,,,152318,0
+Rosemont College,2018,1,,3,,215691,0
+Rowan University,2014,1,,,,184782,0
+Rutgers University – Camden,2020,0,2021,,,186371,0
+Rutgers University – New Brunswick,2020,0,2022,,,186380,0
+Rutgers University – Newark,2020,0,2021,,,186399,0
+Sacred Heart University,2009,1,,,,130253,0
+Saint Francis University Pennsylvania,2020,0,2021,,,215743,0
+Saint John’s University (Minnesota),2020,1,,,,174792,0
+Saint Joseph’s College,2016,1,,,,160409,0
+Saint Joseph’s College of Maine,2020,1,,,,161518,0
+Saint Joseph’s University,2013,1,,,,215770,0
+Saint Martin’s University,2020,1,,,,236452,0
+Saint Mary’s College of California ,2020,1,,,,123554,0
+Saint Mary’s University of Minnesota,2020,1,,,,174817,0
+Saint Mary’s University San Antonio,2020,0,2021,,,228149,0
+Saint Xavier University,2020,0,2021,,1,148627,0
+Salem College,2020,1,,,,199607,0
+Salem State University (Mass.),2015,1,,,,167729,0
+Salisbury University,2006,1,,3.5,,163851,0
+Salve Regina University,2010,1,,,,217536,0
+Sam Houston State University,2020,0,2022,,,227881,0
+Samford University,2020,0,2021,,,102049,0
+San Diego State University,2020,0,2021,2.5,1,122409,0
+San Francisco State University,2020,0,2021,2.5,1,122597,0
+San José State University,2020,0,2021,2.5,1,122755,0
+Santa Clara University,2020,0,2022,,,122931,0
+Sarah Lawrence College,2004,1,,,,195304,0
+Savannah College of Art and Design,2020,0,2021,,,140951,0
+Savannah State University,2020,0,2021,,,140960,0
+School of the Art Institute of Chicago,2020,1,,,,143048,0
+Schreiner University,2020,0,2021,,,228042,0
+Scripps College,2020,1,,,,123165,0
+Seattle Pacific University,2020,0,2021,,,236577,0
+Seton Hall University,2020,0,2026,,,186584,0
+Sewanee—The University of the South,2008,1,,,,221519,0
+Shaw University,2020,0,2021,,,199643,0
+Shenandoah University,2019,1,,,,233541,0
+Shepherds University,2020,1,,,,237792,0
+Shippensburg University,2020,0,2021,,,216010,0
+Siena College,2014,1,,,,195474,0
+Siena Heights University,2015,1,,,,172264,0
+Sierra Nevada University,2020,0,2021,,,182458,0
+Simmons University,2020,0,2021,,,167783,0
+Simon’s Rock College of Bard,2006,1,,,,167792,0
+Simpson College,2019,1,,,,154350,0
+Simpson University,2020,1,,,,123457,0
+Skidmore College,2016,1,,,,195526,0
+Slippery Rock University,2020,1,,,,216038,0
+Smith College,2008,1,,,,167835,0
+Soka University of America,2020,0,2021,,,399911,0
+Sonoma State University,2020,0,2021,2.5,1,123572,0
+Southern Connecticut State University,2020,1,,,,130493,0
+Southern Illinois University – Carbondale,2019,1,,2.75,,149222,0
+Southern Illinois University – Edwardsville,2020,0,2021,,,149231,0
+Southern Methodist University,2020,0,2022,,,228246,0
+Southern New Hampshire University,2010,1,,,,183026,0
+Southern Utah University,2020,0,2021,,,230603,0
+Southern Virginia University,2020,1,,,,233611,0
+Southwestern University,2019,1,,,,228343,0
+Spalding University,2019,1,,,,157757,0
+Spartanburg Methodist College,2020,1,,,,218821,0
+Spelman College,2020,0,2021,,,141060,0
+Spring Hill College,2019,1,,,,102234,0
+Springfield College,2019,1,,3,,167899,0
+St. Ambrose University,2020,1,,,,154235,0
+St. Andrews University,2020,0,2021,,,199698,0
+St. Anselm College,2010,1,,,,183239,0
+St. Bonaventure University,2019,1,,,,195164,0
+St. Catherine University,2020,1,,,,175005,0
+St. Edwards University (Texas),2020,1,,,,227845,0
+St. John Fisher College,2020,0,2022,,,195720,0
+St. John’s University,2016,1,,,,174792,0
+St. Joseph’s College (New York),2020,0,2021,,,195544,0
+St. Lawrence University,2005,1,,,,195216,0
+St. Leo College ,2011,1,,,,137032,0
+St. Louis University,2020,0,2023,,,179159,0
+St. Mary’s College of Maryland,2019,1,,,,163912,0
+"St. Mary’s College, Notre Dame",2018,1,,3.2,,152390,0
+St. Mary-of-the-Woods College,2019,1,,,,152381,0
+St. Michael’s College,2010,1,,,,231059,0
+St. Norbert College,2020,0,2021,,,239716,0
+St. Olaf College,2020,1,,,,174844,0
+St. Peters University,2015,1,,,,186432,0
+St. Thomas Aquinas College,2020,0,2021,,,195243,0
+Stanford University,2020,0,2022,,,243744,0
+State University of New York (SUNY) – Potsdam,2009,1,,,,196200,0
+Stephen F. Austin State University,2020,0,2021,,,228431,0
+Stephens College,2020,0,2021,,,179548,0
+Stevens Institute of Technology,2020,0,2021,,,186867,0
+Stevenson University,2020,0,2021,,,164173,0
+Stockton University,2018,1,,,,186876,0
+Stonehill College,2006,1,,,,167996,0
+Suffolk University,2019,1,,,,168005,0
+SUNY Albany,2020,0,2021,,,196060,0
+SUNY Binghamton,2020,0,2021,,,196079,0
+SUNY Brockport,2020,0,2021,,,196121,0
+SUNY Buffalo,2020,0,2021,,,196088,0
+SUNY Buffalo State,2020,0,2021,,,196130,0
+SUNY Cobleskill,2020,0,2021,,,196033,0
+SUNY College of Environmental Science and Forestry,2020,0,2021,,,196103,0
+SUNY College of Technology Alfred,2020,0,2021,,,196006,0
+SUNY College of Technology Canton,2020,0,2021,,,196015,0
+SUNY Cortland,2020,0,2021,,,196149,0
+SUNY Fredonia,2020,0,2021,,,196158,0
+SUNY Geneseo,2020,1,,,,196167,0
+SUNY Maritime College,2020,0,2021,,,196291,0
+SUNY Morrisville,2020,0,2021,,,196051,0
+SUNY New Paltz,2020,0,2021,,,196176,0
+SUNY Old Westbury,2020,0,2021,,,196237,0
+SUNY Oneonta,2020,0,2021,,,196185,0
+SUNY Oswego,2020,0,2021,,,196194,0
+SUNY Plattsburg,2020,0,2021,,,196246,0
+SUNY Polytechnic Institute,2020,0,2021,,,196112,0
+SUNY Stony Brook,2020,0,2021,,,196097,0
+Susquehanna University,2004,1,,,,216278,0
+Swarthmore College,2020,0,2022,,,216287,0
+Sweet Briar College,2018,1,,3,,233718,0
+Syracuse University,2020,0,2022,,,196413,0
+Taylor University,2020,1,,,,152530,0
+Temple University,2014,1,,,,216339,0
+Texas A&M University – Kingsville,2020,0,2021,,,228705,0
+Texas A&M University – San Antonio,2020,0,2021,2.75,1,459949,0
+Texas A&M University–College Station,2020,0,2022,,,228723,0
+Texas Christian University,2020,0,2023,,,228875,0
+Texas Lutheran University,2020,0,2021,,,228981,0
+Texas Tech University,2020,0,2022,,,229115,0
+The Catholic University of America,2015,1,,,,131283,0
+The Citadel,2020,0,2021,,,217864,0
+The College of New Jersey,2020,0,2023,,,187134,0
+The College of the Holy Cross,2005,1,,,,166124,0
+The Cooper Union,2020,0,2022,,,190372,0
+The King’s College,2020,0,2021,,,454184,0
+The Sage Colleges,2010,1,,,,195128,0
+Thiel College,2020,0,2021,,,216357,0
+Thomas College,2014,1,,,,161563,0
+Thomas Jefferson University,2020,1,,,,216366,0
+Thomas More university,2020,0,2021,,,157809,0
+Towson University,2020,0,2022,,,164076,0
+Transylvania University,2014,1,,,,157818,0
+Trevecca Nazarene University,2020,0,2021,,,221892,0
+Trine University,2020,0,2023,,,152567,0
+Trinity Christian College,2020,0,2021,,,149505,0
+Trinity College,2015,1,,,,130590,0
+Trinity University,2020,0,2023,,,229267,0
+Troy University,2020,0,2021,3,,102368,0
+Truman State University,2020,0,2021,,,178615,0
+Tufts University,2020,0,2023,,,168148,0
+Tulane University,2020,0,2022,,,160755,0
+Union College,2006,1,,,,196866,0
+Union University TN,2020,0,2021,,,221971,0
+United States Military Academy,2020,0,2021,,,197036,0
+United States Naval Academy,2020,0,2021,,,164155,0
+University of Akron,2020,0,2021,,,200800,0
+University of Alabama,2020,0,2021,,,100733,0
+University of Alabama at Birmingham,2020,0,2021,,,100663,0
+University of Alabama at Huntsville,2020,0,2022,,,100706,0
+"University of Alaska, Fairbanks",2020,0,2025,,,102614,0
+University of Arkansas,2020,0,2021,3.2,,106397,0
+University of Baltimore,2020,0,2021,,,161873,0
+University of Bridgeport,2019,1,,,,128744,0
+University of California Berkeley,2020,0,2022,,,110635,0
+University of California Davis,2020,0,2022,,,110644,0
+University of California Irvine,2020,0,2022,,,110653,0
+University of California Los Angeles,2020,0,2022,,,110662,0
+University of California Merced,2020,0,2022,,,445188,0
+University of California Riverside,2020,0,2022,,,110671,0
+University of California San Diego,2020,0,2022,,,110680,0
+University of California Santa Barbara,2020,0,2022,,,110705,0
+University of California Santa Cruz,2020,0,2022,,,110714,0
+University of Central Arkansas,2020,0,2021,,,106704,0
+University of Central Missouri,2020,1,,3.5,,176965,0
+University of Chicago,2018,1,,,,144050,0
+University of Cincinnati,2020,0,2022,,,201885,0
+University of Colorado - Boulder,2020,0,2021,,,126614,0
+University of Colorado – Colorado Springs,2020,0,2021,,,126580,0
+University of Colorado – Denver,2020,0,2021,,,126562,0
+University of Connecticut,2020,0,2023,,,129020,0
+University of Dallas,2020,0,2022,,,224323,0
+University of Dayton,2020,1,,,,202480,0
+University of Delaware,2015,1,,,,130943,0
+University of Denver,2018,1,,,,127060,0
+University of Detroit Mercy,2020,0,2021,,,169716,0
+University of Dubuque,2020,1,,,,153278,0
+University of Evansville,2017,1,,,,150534,0
+University of Georgia,2020,0,2021,,,139959,0
+University of Hartford,2017,1,,,,129525,0
+University of Hawaii,2020,0,2021,,,141963,0
+University of Health Sciences and Pharmacy in St. Louis,2020,0,2021,,,,0
+University of Illinois – Chicago,2020,0,2022,,,145600,0
+University of Illinois – Springfield,2020,0,2021,,,148654,0
+University of Illinois – Urbana Champaign,2020,0,2021,,,145637,0
+University of Indianapolis,2020,0,2022,,,151263,0
+University of Iowa,2020,0,2021,,,153658,0
+University of Kentucky,2020,0,2024,,,157085,0
+University of La Verne,2019,1,,,,117140,0
+University of Louisville,2020,0,2021,,,157289,0
+University of Lynchburg,2020,0,2021,,,232609,0
+University of Maine,2020,1,,,,161253,0
+University of Maine at Augusta,2020,1,,,,161217,0
+University of Maine at Farmington,2020,1,,,,161226,0
+University of Maine at Fort Kent,2020,1,,,,161235,0
+University of Maine at Machias,2020,1,,,,161244,0
+University of Maine at Presque Isle,2020,1,,,,161341,0
+University of Maine-System Central Office,2020,1,,,,161280,0
+University of Mary Washington,2015,1,,3.5,,232681,0
+University of Maryland – Eastern Shore,2019,1,,3.4,,163338,0
+University of Maryland Baltimore County,2020,0,2022,,,163268,0
+University of Maryland College Park,2020,0,2023,,,163286,0
+University of Massachusetts – Amherst,2020,0,2023,,,166629,0
+University of Massachusetts – Dartmouth,2018,1,,3,,167987,0
+University of Massachusetts -- Lowell,2015,1,,,,166513,0
+University of Miami,2020,0,2021,,,135726,0
+University of Michigan – Ann Arbor,2020,0,2021,,,170976,0
+University of Michigan - Dearborn,2020,0,2021,,,171137,0
+University of Minnesota–Crookston,2020,0,2021,,1,174075,0
+University of Minnesota–Duluth,2020,0,2021,,,174233,0
+University of Minnesota–Morris,2020,0,2021,,,174251,0
+University of Minnesota—Rochester,2020,0,2021,,,456959,0
+University of Minnesota–-Twin Cities,2020,0,2021,,,174066,0
+University of Missouri,2020,0,2022,,,178396,0
+University of Missouri – Kansas City,2019,1,,2.75,,178402,0
+University of Missouri – St. Louis,2020,0,2022,,,178420,0
+University of Mobile,2020,1,,,,101693,0
+University of Montana,2020,0,2021,,,494922,0
+University of Mount Union,2020,0,2021,,,204185,0
+University of Nebraska – Kearney,2019,1,,3,,181215,0
+University of Nebraska – Lincoln,2019,1,,3,,181464,0
+University of Nebraska – Omaha,2019,1,,3,,181394,0
+University of New England,2018,1,,,,161457,0
+University of New Hampshire,2019,1,,,,183044,0
+University of New Haven,2019,1,,,,129941,0
+University of New Mexico,2020,0,2021,,,187985,0
+University of North Alabama,2020,0,2021,,,101879,0
+University of North Carolina -- Asheville,2020,0,2021,,,199111,0
+University of North Carolina -- Chapel Hill,2020,0,2021,,,199120,0
+University of North Carolina -- Charlotte,2020,0,2021,,,199139,0
+University of North Carolina -- Greensboro,2020,0,2021,,,199148,0
+University of North Carolina -- Pembroke,2020,0,2021,,,199281,0
+University of North Carolina -- Wilmington,2020,0,2021,,,199218,0
+University of North Carolina School of the Arts,2020,0,2021,,,199184,0
+University of North Dakota,2020,0,2021,,,200280,0
+University of North Georgia,2020,0,2021,,,482680,0
+University of Northern Colorado,2020,0,2021,,,127741,0
+University of Northern Iowa,2020,0,2021,,,154095,0
+University of Northwestern - St. Paul,2020,1,,,,174491,0
+University of Notre Dame,2020,0,2023,,,152080,0
+University of Oklahoma,2020,0,2025,,,207500,0
+University of Oregon,2020,1,,,,209551,0
+University of Pennsylvania,2020,0,2022,,,215062,0
+University of Pittsburgh,2020,0,2023,,,215293,0
+University of Pittsburgh-Bradford,2020,0,2023,,,215266,0
+University of Pittsburgh-Greensburg,2020,0,2023,,,215275,0
+University of Pittsburgh-Johnstown,2020,0,2023,,,215284,0
+University of Pittsburgh-Titusville,2020,0,2023,,,215309,0
+University of Portland,2020,0,2022,,,209825,0
+University of Puget Sound,2015,1,,,,236328,0
+University of Redlands,2019,1,,,,121691,0
+University of Rhode Island,2020,0,2021,,,217484,0
+University of Richmond,2020,0,2022,,,233374,0
+University of Rochester,2012,1,,,,195030,0
+University of Saint Joseph,2020,1,,,,130314,0
+University of Saint Joseph,2015,1,,3,,130314,0
+University of San Diego,2020,1,,,,122436,0
+University of San Francisco,2019,1,,,,122612,0
+University of South Alabama,2020,0,2021,,,102094,0
+University of South Carolina-Aiken,2020,0,2021,,,218645,0
+University of South Carolina-Columbia,2020,0,2021,,,218663,0
+University of South Carolina-Upstate,2020,0,2021,,,218742,0
+University of Southern California,2020,0,2023,,,123961,0
+University of Southern Indiana,2020,1,,,,151306,0
+University of Southern Maine,2019,1,,,,161554,0
+University of St. Francis,2020,1,,,,148584,0
+University of St. Thomas,2019,1,,,,174914,0
+University of St. Thomas,2019,1,,3.4,,227863,0
+University of Tampa,2020,0,2021,,,137847,0
+University of Tennessee – Chattanooga,2020,0,2021,,,221740,0
+University of Tennessee – Knoxville,2020,0,2021,,,221759,0
+University of Tennessee - Martin,2020,0,2021,,,221768,0
+University of Texas-Arlington,2020,0,2023,,,228769,0
+University of Texas-Austin,2020,0,2023,,,228778,0
+University of Texas-Permian Basin,2020,0,2021,,,229018,0
+University of Texas-Tyler,2020,0,2021,,,228802,0
+University of the Cumberlands,2020,1,,,,156541,0
+University of the Incarnate Word,2020,0,2021,,,225627,0
+University of the Ozarks,2016,1,,2.5,,107558,0
+University of the Sciences,2020,0,2021,,,215132,0
+University of Toledo,2019,1,,,,206084,0
+University of Tulsa,2020,1,,,,207971,0
+University of Utah,2020,0,2022,,,230764,0
+University of Vermont,2020,0,2023,,,231174,0
+University of Virginia,2020,0,2023,,,234076,0
+University of Virginia—Wise,2020,0,2022,,,233897,0
+University of Washington Bothell,2020,0,2021,,,377555,0
+University of Washington Seattle,2020,1,,,,236948,0
+University of Washington Tacoma,2020,0,2021,,,377564,0
+University of West Georgia,2020,0,2021,,,141334,0
+University of Western Kentucky,2020,1,,2.5,,157951,0
+University of Wisconsin Colleges Flex,2020,0,2023,,,491303,0
+University of Wisconsin-Eau Claire,2020,0,2023,,,240268,0
+University of Wisconsin-Green Bay,2020,0,2023,,,240277,0
+University of Wisconsin-La Crosse,2020,0,2023,,,240329,0
+University of Wisconsin-Madison,2020,0,2023,,,240444,0
+University of Wisconsin-Milwaukee,2020,0,2023,,,240453,0
+University of Wisconsin-Milwaukee Flex,2020,0,2023,,,491288,0
+University of Wisconsin-Oshkosh,2020,0,2023,,,240365,0
+University of Wisconsin-Parkside,2020,0,2023,,,240374,0
+University of Wisconsin-Parkside Flex,2020,0,2023,,,491297,0
+University of Wisconsin-Platteville,2020,0,2023,,,240462,0
+University of Wisconsin-River Falls,2020,0,2023,,,240471,0
+University of Wisconsin-Stevens Point,2020,0,2023,,,240480,0
+University of Wisconsin-Stout,2020,0,2023,,,240417,0
+University of Wisconsin-Superior,2020,0,2023,,,240426,0
+University of Wisconsin-System Administration,2020,0,2023,,,240435,0
+University of Wisconsin-Whitewater,2020,0,2023,,,240189,0
+Upper Iowa University,2020,0,2021,,,154493,0
+Ursinus College,2009,1,,,,216524,0
+Ursuline College,2020,1,,,,206349,0
+Utah State University,2020,0,2021,,,230728,0
+Valdosta State University,2020,0,2021,,,141264,0
+Valley City State University,2020,0,2021,,,200572,0
+Valparaiso University,2020,0,2022,,,152600,0
+Vanderbilt University,2020,0,2022,,,221999,0
+VanderCook College of Music,2020,0,2021,,,149639,0
+Vassar College,2020,0,2023,,,197133,0
+Villanova University,2020,0,2022,,,216597,0
+Virginia Commonwealth University,2014,1,,3.3,,234030,0
+Virginia Military Institute,2020,0,2021,,,234085,0
+Virginia Polytechnic Institute,2020,0,2021,,,233921,0
+Virginia Wesleyan,2010,1,,,,234173,0
+Wabash University,2020,0,2021,,,152673,0
+Wagner College,2010,1,,,,197197,0
+Wake Forest University,2008,1,,,,199847,0
+Walsh University,2015,1,,,,206437,0
+Warner Pacific University,2020,0,2021,,,210304,0
+Warren Wilson College,2015,1,,,,199865,0
+Wartburg College,2020,0,2021,,,154527,0
+Washington & Jefferson College,2009,1,,,,216667,0
+Washington and Lee University,2020,0,2022,,,234207,0
+Washington College,2007,1,,3.5,,164216,0
+Washington State University,2008,1,,3.5,,236939,0
+Washington State University Vancouver,2020,0,2021,,,23693901,0
+Washington University in St. Louis,2020,0,2022,,,179867,0
+Wayne State University,2020,0,2021,,,172644,0
+Waynesburg University,2020,0,2021,,,216694,0
+Webb Institute,2020,0,2021,,,197221,0
+Webster University,2020,1,,,,179894,0
+Wellesley College,2020,0,2022,,,168218,0
+Wells College,2015,1,,,,197230,0
+Wentworth Institute of Technology,2019,1,,,,168227,0
+Wesleyan University,2014,1,,,,130697,0
+West Chester University of Pennsylvania,2020,0,2021,,,216764,0
+West Virginia University,2020,0,2021,,,238032,0
+West Virginia Wesleyan College,2020,0,2021,,,237969,0
+Western Carolina University,2020,0,2021,,,200004,0
+Western Colorado University,2020,0,2021,,,128391,0
+Western Illinois University,2019,1,,3.3,,149772,0
+Western Michigan University,2020,1,,,,172699,0
+Western New England University,2015,1,,,,168254,0
+Western Oregon University,2016,1,,3,,210429,0
+Western Washington University,2020,1,,,,237011,0
+Westfield State University,2020,1,,,,168263,0
+Westminster College MO,2020,0,2021,,,179946,0
+Wheaton College IL,2020,0,2021,,,149781,0
+Wheelock College,2016,1,,,,,0
+Whitman College,2016,1,,,,237057,0
+Whittier College,2016,1,,,,125763,0
+Whitworth College,2006,1,,,,237066,0
+Widener University,2020,0,2022,,,216852,0
+Wilkes University,2020,0,2021,,,216931,0
+Willamette University,2016,1,,,,210401,0
+William Jewell College,2012,1,,,,179955,0
+William Paterson University of New Jersey,2018,1,,,,187444,0
+William Woods University,2020,1,,,,179964,0
+Williams College,2020,0,2023,,,168342,0
+Winston-Salem State University,2020,0,2021,,,199999,0
+Winthrop University,2020,0,2021,,,218964,0
+Wisconsin Lutheran College,2020,1,,,,240338,0
+Wittenberg University,2007,1,,,,206525,0
+Wofford College,2017,1,,,,218973,0
+Worcester Polytechnic Institute Wilson College,2007,1,,3,,168421,0
+Worcester State University,2016,1,,,,168430,0
+Wright State University,2020,0,2022,,,206604,0
+Xavier University (Ohio),2019,1,,,,206622,0
+Yale University,2020,0,2021,,,130794,0
+York College,2020,0,2021,,1,181853,0
+York College of Pennsylvania,2020,0,2021,,,217059,0
+Zaytuna College,2020,0,2021,,,458575,0
+Abraham Lincoln University,2004,1,,,,488031,1
+Academy College,2004,1,,,,172866,1
+Academy of Art University,2004,1,,,,108232,1
+Adrian College,2004,1,,,,168528,1
+Adventist University of Health Sciences,2004,1,,,,,1
+Alabama A & M University,2004,1,,,,100654,1
+Alaska Pacific University,2004,1,,,,102669,1
+Alcorn State University,2004,1,,,,175342,1
+Alice Lloyd College,2004,1,,,,156189,1
+Allen University,2004,1,,,,217624,1
+Alliant International University,2004,1,,,,110468,1
+Alvernia University,2004,1,,,,210775,1
+Amberton University,2004,1,,,,222628,1
+AMDA College of the Performing Arts,2004,1,,,,,1
+AMDA The American Musical and Dramatic Academy,2004,1,,,,,1
+American Academy of Art,2004,1,,,,142887,1
+American Baptist College,2004,1,,,,219505,1
+American InterContinental University,2004,1,,,,445027,1
+American Islamic College,2004,1,,,,142957,1
+American Military University,2004,1,,,,,1
+American Musical and Dramatic Academy,2004,1,,,,188854,1
+American National University,2004,1,,,,232797,1
+American Public University System,2004,1,,,,449339,1
+American University of Health Sciences,2004,1,,,,433004,1
+American University of Puerto Rico,2004,1,,,,241128,1
+American University of Puerto Rico,2004,1,,,,241100,1
+Amridge University,2004,1,,,,100690,1
+Anderson University,2004,1,,,,217633,1
+Andrews University,2004,1,,,,168740,1
+Antioch College,2004,1,,,,483018,1
+Apex School of Theology,2004,1,,,,441511,1
+Appalachian Bible College,2004,1,,,,237136,1
+Arizona State University,2004,1,,,,104151,1
+Arkansas Baptist College,2004,1,,,,106306,1
+Arkansas Tech University,2004,1,,,,106467,1
+Arlington Baptist College,2004,1,,,,222877,1
+Art Center College of Design,2004,1,,,,109651,1
+Art Institute of Atlanta,2004,1,,,,138813,1
+Art Institute of Houston,2004,1,,,,222938,1
+ASA College,2004,1,,,,404994,1
+Aspen University,2004,1,,,,454829,1
+Atlanta Metropolitan State College,2004,1,,,,138901,1
+Atlantic University College,2004,1,,,,241216,1
+Atlantis University,2004,1,,,,485768,1
+Aurora University,2004,1,,,,143118,1
+Averett University,2004,1,,,,231420,1
+Baker College,2004,1,,,,168847,1
+Bakersfield College,2004,1,,,,109819,1
+Baptist Bible College,2004,1,,,,176664,1
+Baptist Missionary Ass'n Theological Seminary,2004,1,,,,223117,1
+Baptist University of the Americas,2004,1,,,,444398,1
+Bard College,2004,1,,,,189088,1
+Bates College,2004,1,,,,160977,1
+Bay Atlantic University,2004,1,,,,,1
+Bay State College,2004,1,,,,164641,1
+Bayamon Central University,2004,1,,,,444194,1
+Beacon College,2004,1,,,,384254,1
+Beal University,2004,1,,,,160995,1
+Beckfield College,2004,1,,,,247065,1
+Beis Medrash Heichal Dovid,2004,1,,,,444413,1
+Belhaven University,2004,1,,,,175421,1
+Bellevue College,2004,1,,,,234669,1
+Bellevue University,2004,1,,,,180814,1
+Bellin College,2004,1,,,,238324,1
+Bemidji State University,2004,1,,,,173124,1
+Benedict College,2004,1,,,,217721,1
+Benjamin Franklin Institute of Technology,2004,1,,,,165884,1
+Bennett College,2004,1,,,,197993,1
+Bergin Universiy,2004,1,,,,461643,1
+Berkeley College,2004,1,,,,189228,1
+Berklee College of Music,2004,1,,,,164748,1
+Beth HaMedrahs Shaarei Yosher Institute,2004,1,,,,189273,1
+Beth HaTalmud Rabbinical College,2004,1,,,,189264,1
+Beth Medrash Govoha,2004,1,,,,183804,1
+Bethany College,2004,1,,,,154721,1
+Bethany College,2004,1,,,,237181,1
+Bethany Global University,2004,1,,,,486284,1
+Bethesda University of California,2004,1,,,,110060,1
+Bethune Cookman University,2004,1,,,,132602,1
+Beulah Heights University,2004,1,,,,139153,1
+Beverly Hills Design Institute,2004,1,,,,475635,1
+Bismarck State College,2004,1,,,,200022,1
+Black Hills State University,2004,1,,,,219046,1
+Blackburn College,2004,1,,,,143288,1
+Bloomsburg University of Pennsylvania,2004,1,,,,211158,1
+Bluefield College,2004,1,,,,231554,1
+Bluefield State College,2004,1,,,,237215,1
+Boise State University,2004,1,,,,142115,1
+Boricua College,2004,1,,,,189413,1
+Boston Architectural College,2004,1,,,,164872,1
+Boston Conservatory at Berklee,2004,1,,,,,1
+Botttega University,2004,1,,,,,1
+Bowdoin College,2004,1,,,,161004,1
+Brazosport College,2004,1,,,,223506,1
+Brewton Parker College,2004,1,,,,139205,1
+Broadview University,2004,1,,,,230056,1
+Brookline College,2004,1,,,,444088,1
+Broward College,2004,1,,,,132709,1
+Bryan College,2004,1,,,,219790,1
+Bryan College of Health Sciences,2004,1,,,,180878,1
+Bryan University,2004,1,,,,110219,1
+Bryan University,2004,1,,,,369516,1
+Bryant & Stratton College,2004,1,,,,475699,1
+Buffalo State College,2004,1,,,,,1
+Cairn University,2004,1,,,,215114,1
+California Aeronautical University,2004,1,,,,433420,1
+California Christian College,2004,1,,,,110918,1
+California Coast University,2004,1,,,,,1
+California College,2004,1,,,,478634,1
+California College of the Arts,2004,1,,,,110370,1
+California Institute of the Arts,2004,1,,,,111081,1
+California Intercontinental University,2004,1,,,,485546,1
+California Miramar University,2004,1,,,,480781,1
+California Southern University,2004,1,,,,,1
+California University of Management and Sciences,2004,1,,,,460075,1
+Calumet College of St. Joseph,2004,1,,,,150172,1
+Cambridge College,2004,1,,,,165167,1
+Cameron University,2004,1,,,,206914,1
+Capella University,2004,1,,,,413413,1
+Capital University,2004,1,,,,201548,1
+Capitol Technology University,2004,1,,,,162061,1
+Cardinal Stritch University,2004,1,,,,238430,1
+Caribbean University,2004,1,,,,241377,1
+Carlos Albizu University,2004,1,,,,132842,1
+Carolina Christian College,2004,1,,,,199971,1
+Carolina University,2004,1,,,,,1
+Carver College,2004,1,,,,,1
+Cascadia College,2004,1,,,,439190,1
+Cazenovia College,2004,1,,,,189848,1
+Central Christian College,2004,1,,,,154855,1
+Central Penn College,2004,1,,,,211477,1
+Central State University,2004,1,,,,201690,1
+Central Washington University,2004,1,,,,234827,1
+Central Yeshiva Tomchei Tmimim-Lebavitch,2004,1,,,,189857,1
+Centralia College,2004,1,,,,234845,1
+Century College,2004,1,,,,175315,1
+Chadron State College,2004,1,,,,180948,1
+Chamberlain University,2004,1,,,,454218,1
+Charles Drew University of Medicine and Science,2004,1,,,,111966,1
+Charleston Southern University,2004,1,,,,217688,1
+Charlotte Christian College and Theological Seminary,2004,1,,,,444778,1
+Charter College,2004,1,,,,,1
+Charter Oak State College,2004,1,,,,128780,1
+Cheyney University,2004,1,,,,211608,1
+Chicago State University,2004,1,,,,144005,1
+Chipola College,2004,1,,,,133021,1
+Chowan University,2004,1,,,,198303,1
+Christian Life College,2004,1,,,,260947,1
+City College,2004,1,,,,244233,1
+City University of Seattle,2004,1,,,,234915,1
+City Vision University,2004,1,,,,457697,1
+Clark College,2004,1,,,,234933,1
+Clarkson College,2004,1,,,,180832,1
+Clear Creek Baptist Bible College,2004,1,,,,156417,1
+Cleary University,2004,1,,,,169327,1
+Cleveland Institute of Art,2004,1,,,,202046,1
+Cleveland Institute of Music,2004,1,,,,202073,1
+Cleveland State University,2004,1,,,,202134,1
+Clinton College,2004,1,,,,217891,1
+Cogswell College,2004,1,,,,112394,1
+Coker University,2004,1,,,,217907,1
+Colby-Sawyer College,2004,1,,,,182634,1
+College America,2004,1,,,,448752,1
+College of Biblical Studies,2004,1,,,,439613,1
+College of Central Florida,2004,1,,,,132851,1
+College of Coastal Georgia,2004,1,,,,139250,1
+College of Idaho The,2004,1,,,,,1
+College of Menominee Nation,2004,1,,,,413617,1
+College of Mount St. Vincent,2004,1,,,,193399,1
+College of New Jersey The,2004,1,,,,,1
+College of Southern Idaho,2004,1,,,,142559,1
+College of Southern Nevada,2004,1,,,,182005,1
+College of the Atlantic,2004,1,,,,160959,1
+College of Westchester The,2004,1,,,,,1
+Colorado Christian University,2004,1,,,,126669,1
+Colorado Mountain College,2004,1,,,,126711,1
+Colorado Technical University,2004,1,,,,126827,1
+Columbia Basin College,2004,1,,,,234979,1
+Columbia Centro Universitario,2004,1,,,,,1
+Columbia College,2004,1,,,,144281,1
+Columbia College,2004,1,,,,177065,1
+Columbia College,2004,1,,,,217934,1
+Columbia College Hollywood,2004,1,,,,112570,1
+Columbia International University,2004,1,,,,217925,1
+Columbia Southern University,2004,1,,,,450933,1
+Compass College of Cinematic Arts,2004,1,,,,459417,1
+Concord University,2004,1,,,,237330,1
+Concordia University,2004,1,,,,238616,1
+Conservatory of Music of Puerto Rico,2004,1,,,,241766,1
+Corban University,2004,1,,,,210331,1
+Cornish College of the Arts,2004,1,,,,235024,1
+Creative Center,2004,1,,,,,1
+Criswell College,2004,1,,,,475608,1
+Crossroads Bible College,2004,1,,,,,1
+Crowley Ridge College,2004,1,,,,106810,1
+Crown College,2004,1,,,,174862,1
+Culinary Institute of America,2004,1,,,,444565,1
+Culver Stockton College ,2004,1,,,,177144,1
+Curry College,2004,1,,,,165529,1
+Curtis Institute of Music,2004,1,,,,211893,1
+Daemen College,2004,1,,,,190725,1
+Dakota State University,2004,1,,,,219082,1
+Dallas Christian College,2004,1,,,,224244,1
+Davenport University,2004,1,,,,169479,1
+Davis & Elkins College,2004,1,,,,237358,1
+Davis College,2004,1,,,,194569,1
+Daytona State College,2004,1,,,,133386,1
+Defiance College,2004,1,,,,202514,1
+Delaware State University,2004,1,,,,130934,1
+Delta State University,2004,1,,,,175616,1
+DeSales University,2004,1,,,,210739,1
+Design Institute of San Diego,2004,1,,,,113582,1
+DeVry University,2004,1,,,,144777,1
+Dharma Realm Buddhist University,2004,1,,,,,1
+DigiPen Institute of Technology,2004,1,,,,443410,1
+Dillard University,2004,1,,,,158802,1
+Dine College,2004,1,,,,105297,1
+Divine Word College,2004,1,,,,153241,1
+Dixie State University,2004,1,,,,230171,1
+Donnelly College,2004,1,,,,155007,1
+Dunlap-Stone University,2004,1,,,,,1
+Dunwoody College of Technology,2004,1,,,,175227,1
+Eagle Gate College,2004,1,,,,447421,1
+East-West University,2004,1,,,,144883,1
+East Central University,2004,1,,,,207041,1
+East Georgia State College,2004,1,,,,139621,1
+East Tennessee State University,2004,1,,,,220075,1
+East Texas Baptist University,2004,1,,,,224527,1
+Eastern Florida State College,2004,1,,,,132693,1
+Eastern International College,2004,1,,,,448354,1
+Eastern Nazarene College,2004,1,,,,165644,1
+Eastern Oregon University,2004,1,,,,208646,1
+Eastwick College,2004,1,,,,183488,1
+ECPI University,2004,1,,,,248934,1
+EDP University of Puerto Rico,2004,1,,,,248832,1
+Embry-Riddle Aeronautical University,2004,1,,,,426314,1
+Emporia State University,2004,1,,,,155025,1
+Endicott College,2004,1,,,,165699,1
+Epic Bible College,2004,1,,,,124487,1
+Erskine College,2004,1,,,,217998,1
+Escuela de Artes Plasticas de Puerto Rico,2004,1,,,,241951,1
+Eureka College,2004,1,,,,144971,1
+Evangel University,2004,1,,,,177339,1
+Everglades University,2004,1,,,,385619,1
+Excelsior College,2004,1,,,,196680,1
+Fairfax University of Virginia,2004,1,,,,406376,1
+Fairmont State University,2004,1,,,,237367,1
+Faith International University and Seminary,2004,1,,,,443049,1
+Fashion Institute of Design & Merchandising,2004,1,,,,,1
+Fashion Institute of Technology,2004,1,,,,191126,1
+Faulkner University,2004,1,,,,101189,1
+Fayetteville State University,2004,1,,,,198543,1
+Ferrum College,2004,1,,,,232089,1
+Fisk University,2004,1,,,,220181,1
+Five Towns College,2004,1,,,,191205,1
+Flagstaff College,2004,1,,,,,1
+Florida Gateway College,2004,1,,,,135160,1
+Florida Memorial University,2004,1,,,,133979,1
+Florida National University,2004,1,,,,408844,1
+Florida SouthWestern State College,2004,1,,,,133508,1
+Florida State College,2004,1,,,,133702,1
+Florida Tech,2004,1,,,,134112,1
+Fontbonne Universite,2004,1,,,,177418,1
+Fort Hays State University,2004,1,,,,155061,1
+Franciscan University,2004,1,,,,205957,1
+Franklin College,2004,1,,,,150604,1
+Franklin University,2004,1,,,,202806,1
+Freed-Hardeman University,2004,1,,,,220215,1
+Fremont College,2004,1,,,,372073,1
+Friends University,2004,1,,,,155089,1
+Full Sail University,2004,1,,,,134237,1
+Furman University,2004,1,,,,218070,1
+Galen College of Nursing,2004,1,,,,491181,1
+Gemini School of Visual Arts,2004,1,,,,480912,1
+Geneva College,2004,1,,,,212656,1
+Georgia Gwinnett College,2004,1,,,,447689,1
+Georgia Highlands College,2004,1,,,,139700,1
+Glenville State College,2004,1,,,,237385,1
+Global University,2004,1,,,,,1
+Gnomon School of Visual Effects Games & Animation,2004,1,,,,449384,1
+God's Bible School and College,2004,1,,,,202903,1
+Goddard College,2004,1,,,,230889,1
+Golden Gate University,2004,1,,,,115083,1
+Goodwin College,2004,1,,,,129154,1
+Governors State University,2004,1,,,,145336,1
+Grace Christian University,2004,1,,,,170000,1
+Grace College of Divinity,2004,1,,,,461528,1
+Grace Mission University,2004,1,,,,481058,1
+Grace School of Theology,2004,1,,,,481401,1
+Graceland University,2004,1,,,,153366,1
+Grambling State University,2004,1,,,,159009,1
+Grand Canyon University,2004,1,,,,104717,1
+Grand View University,2004,1,,,,153375,1
+Granite State College,2004,1,,,,183257,1
+Grantham University,2004,1,,,,442569,1
+Great Basin College,2004,1,,,,182306,1
+Green River College,2004,1,,,,235343,1
+Guilford College,2004,1,,,,198613,1
+Gulf Coast State College,2004,1,,,,134343,1
+Hallmark University,2004,1,,,,225201,1
+Hamilton Technical College,2004,1,,,,153427,1
+Hampton University,2004,1,,,,232265,1
+Harris-Stowe State University,2004,1,,,,177551,1
+Harrisburg University of Science and Technology,2004,1,,,,446640,1
+Hartwick College,2004,1,,,,191533,1
+Haskell Indian Nations University,2004,1,,,,155140,1
+Helene Fuld College of Nursing,2004,1,,,,191597,1
+Hellenic College,2004,1,,,,166054,1
+Henderson State University,2004,1,,,,107071,1
+Heritage Bible College,2004,1,,,,198677,1
+Heritage Christian University,2004,1,,,,101453,1
+Heritage University,2004,1,,,,235422,1
+Herzing University,2004,1,,,,200785,1
+Hesston College,2004,1,,,,155177,1
+Highlands College,2004,1,,,,,1
+Hilbert College,2004,1,,,,191621,1
+Hobe Sound Bible College,2004,1,,,,134510,1
+Hodges University,2004,1,,,,367884,1
+Holy Apostles College and Seminary,2004,1,,,,129534,1
+Holy Cross College,2004,1,,,,150774,1
+Holy Family University,2004,1,,,,212984,1
+Holy Trinity Orthodox Seminary,2004,1,,,,,1
+Horizon University,2004,1,,,,457226,1
+Hult International Business School,2004,1,,,,164368,1
+Humphreys College,2004,1,,,,115773,1
+Huntingdon College,2004,1,,,,101435,1
+Huntington College,2004,1,,,,150941,1
+Huntington University of Health Sciences,2004,1,,,,488068,1
+Huntsville Bible College,2004,1,,,,449348,1
+Hussian College,2004,1,,,,212993,1
+Huston-Tillotson University,2004,1,,,,225575,1
+Idaho State University,2004,1,,,,142276,1
+IGlobal University,2004,1,,,,483780,1
+Indian River State College,2004,1,,,,134608,1
+Institute of American Indian Arts,2004,1,,,,187745,1
+Inter American University of Puerto Rico,2004,1,,,,242626,1
+Interior Designers Institute,2004,1,,,,116226,1
+International Baptist College,2004,1,,,,436614,1
+Iona College,2004,1,,,,191931,1
+Iowa Wesleyan University,2004,1,,,,153621,1
+Jacksonville University,2004,1,,,,134945,1
+Jamestown Business College,2004,1,,,,192004,1
+John Paul the Great Catholic University,2004,1,,,,462354,1
+Johnson & Wales University,2004,1,,,,445708,1
+Johnson C. Smith University,2004,1,,,,198756,1
+Johnson University,2004,1,,,,220473,1
+Jose Maria Vargas University,2004,1,,,,461281,1
+Judson University,2004,1,,,,146339,1
+Juilliard School,2004,1,,,,,1
+Juniata College,2004,1,,,,213251,1
+Kansas City Art Institute,2004,1,,,,177746,1
+Kansas State University,2004,1,,,,155399,1
+Kansas Wesleyan University,2004,1,,,,155414,1
+Keene State College,2004,1,,,,183062,1
+Kehilath Yakov Rabbinical Seminary,2004,1,,,,192165,1
+Keiser University,2004,1,,,,,1
+Kent State University Ashtabula,2004,1,,,,203447,1
+Kentucky State University,2004,1,,,,157058,1
+La Sierra University,2004,1,,,,117627,1
+Laboure College,2004,1,,,,165264,1
+Lackawanna College,2004,1,,,,213376,1
+Laguna College of Art and Design,2004,1,,,,117168,1
+Lake-Sumter State College,2004,1,,,,135188,1
+Lake Washington Institute of Technology,2004,1,,,,235699,1
+Landmark College,2004,1,,,,247649,1
+Lane College,2004,1,,,,220598,1
+Langston University,2004,1,,,,207209,1
+Laurus College,2004,1,,,,454786,1
+LeTourneau University,2004,1,,,,226231,1
+Lewis-Clark State College,2004,1,,,,142328,1
+Lewis and Clark College,2004,1,,,,209056,1
+LIM College,2004,1,,,,192271,1
+Limestone College,2004,1,,,,218238,1
+Lincoln College,2004,1,,,,146676,1
+Lincoln University,2004,1,,,,213598,1
+Lincoln University Oakland,2004,1,,,,117557,1
+Lindsey Wilson College,2004,1,,,,157216,1
+Living Arts College,2004,1,,,,421832,1
+Logan University,2004,1,,,,177986,1
+Longy School of Music,2004,1,,,,166489,1
+Los Angeles College of Music,2004,1,,,,446385,1
+Los Angeles Film School,2004,1,,,,436429,1
+Louisburg College,2004,1,,,,198871,1
+Lubbock Christian University,2004,1,,,,226383,1
+Luther Rice University,2004,1,,,,135364,1
+Machzikei Hadath Rabbinical College,2004,1,,,,192624,1
+Madonna University,2004,1,,,,170806,1
+Magdalen College of the Liberal Arts,2004,1,,,,182917,1
+Maharishi University of Management,2004,1,,,,153861,1
+Maine College of Art,2004,1,,,,161509,1
+Malone University,2004,1,,,,203775,1
+Manhattan Christian College,2004,1,,,,155496,1
+Manhattan School of Music,2004,1,,,,192712,1
+Mansfield University,2004,1,,,,213783,1
+Maria College,2004,1,,,,192785,1
+Marian University,2004,1,,,,151786,1
+Marian University,2004,1,,,,239080,1
+Mars Hill University,2004,1,,,,198899,1
+Martin University,2004,1,,,,151810,1
+Maryland Institute College of Art,2004,1,,,,163295,1
+Marymount California University,2004,1,,,,118541,1
+Maryville College,2004,1,,,,220710,1
+Maryville University of Saint Louis,2004,1,,,,178059,1
+Massachusetts College of Pharmacy and Health Sciences,2004,1,,,,,1
+Mayville State University,2004,1,,,,200226,1
+McDaniel College (Western MD College),2004,1,,,,164720,1
+McKendree University,2004,1,,,,147013,1
+McNeese State University,2004,1,,,,159717,1
+Medaille College,2004,1,,,,192925,1
+Mercy College,2004,1,,,,193016,1
+Mercy College of Ohio,2004,1,,,,203960,1
+Mesivta of Eastern Pkwy Rabbinical Seminary,2004,1,,,,193061,1
+Mesivta Tifereth Jerusalem of America,2004,1,,,,193070,1
+Mesivta Torah Vodaath Seminary,2004,1,,,,193052,1
+Messenger College,2004,1,,,,417752,1
+Messiah University,2004,1,,,,213996,1
+Metropolitan College of New York,2004,1,,,,190114,1
+Metropolitan State University,2004,1,,,,174020,1
+Miami-Dade College,2004,1,,,,135717,1
+Miami International University of Art and Design,2004,1,,,,224776,1
+Miami Regional University,2004,1,,,,451103,1
+Mid-America Christian University,2004,1,,,,245953,1
+Middle Tennessee State University,2004,1,,,,220978,1
+Midland University,2004,1,,,,181330,1
+Midwestern State University,2004,1,,,,226833,1
+Miles College,2004,1,,,,101675,1
+Millenia Atlantic University,2004,1,,,,461883,1
+Miller-Motte College,2004,1,,,,,1
+Milwaukee Institute of Art & Design,2004,1,,,,239309,1
+Minerva Schools at KGI,2004,1,,,,,1
+Minnesota State University,2004,1,,,,173920,1
+Minot State University,2004,1,,,,200253,1
+Mirrer Yeshiva,2004,1,,,,193247,1
+Mississippi State University,2004,1,,,,176080,1
+Mississippi University for Women,2004,1,,,,176035,1
+Mississippi Valley State University,2004,1,,,,176044,1
+Missouri Baptist University,2004,1,,,,178244,1
+Missouri Southern State University,2004,1,,,,178341,1
+Missouri Western State University,2004,1,,,,178387,1
+Monroe College,2004,1,,,,193308,1
+Montana Technological University,2004,1,,,,180416,1
+Montserrat College of Art,2004,1,,,,166911,1
+Moody Bible Institute,2004,1,,,,147369,1
+Morehead State University,2004,1,,,,157386,1
+Morningside University,2004,1,,,,154004,1
+Morris College,2004,1,,,,218399,1
+Mount Aloysius College,2004,1,,,,214166,1
+Mount Angel Seminary,2004,1,,,,209241,1
+Mount Holyoke College,2004,1,,,,166939,1
+Mount Mary University,2004,1,,,,239390,1
+Muhlenberg College,2004,1,,,,214175,1
+Musician's Institute,2004,1,,,,119270,1
+Naropa University,2004,1,,,,127653,1
+National American University,2004,1,,,,,1
+National Louis University,2004,1,,,,147536,1
+National Paralegal College,2004,1,,,,461023,1
+National University,2004,1,,,,119605,1
+National University College,2004,1,,,,242972,1
+Navajo Technical University,2004,1,,,,187596,1
+Nazarene Bible College,2004,1,,,,127714,1
+Nebraska Wesleyan University,2004,1,,,,181446,1
+Ner Israel Rabbinical College,2004,1,,,,163532,1
+Neumont University,2004,1,,,,445692,1
+Nevada State College,2004,1,,,,441900,1
+New England College,2004,1,,,,182980,1
+New England Conservatory,2004,1,,,,,1
+New England Institute of Technology,2004,1,,,,217305,1
+New Hope Christian College,2004,1,,,,208725,1
+New Jersey City University,2004,1,,,,185129,1
+New Mexico Highlands University,2004,1,,,,187897,1
+New Mexico State University,2004,1,,,,188030,1
+New Mexico Tech,2004,1,,,,,1
+New Orleans Baptist Theological Seminary,2004,1,,,,159948,1
+New School,2004,1,,,,,1
+New School of Architecture & Design,2004,1,,,,,1
+New York College of Health Professions,2004,1,,,,418126,1
+New York Film Academy,2004,1,,,,461148,1
+New York School of Interior Design,2004,1,,,,194116,1
+Newberry College,2004,1,,,,218414,1
+NewU University,2004,1,,,,,1
+Nicholls State University,2004,1,,,,159966,1
+Nightingale College,2004,1,,,,444787,1
+North American University,2004,1,,,,461795,1
+North Carolina Wesleyan University,2004,1,,,,199209,1
+North Central College,2004,1,,,,147660,1
+North Central State College,2004,1,,,,204422,1
+North Coast College The,2004,1,,,,,1
+North Seattle College,2004,1,,,,236072,1
+Northcentral University,2004,1,,,,444130,1
+Northeastern Illinois University,2004,1,,,,147776,1
+Northeastern State University,2004,1,,,,207263,1
+Northern Arizona University,2004,1,,,,105330,1
+Northern New Mexico College,2004,1,,,,188058,1
+Northern State University,2004,1,,,,219259,1
+Northern Vermont University - Johnson,2004,1,,,,230913,1
+Northpoint Bible College,2004,1,,,,217606,1
+Northwest College of Art & Design,2004,1,,,,377546,1
+Northwest Florida State College,2004,1,,,,136233,1
+Northwest Indian College,2004,1,,,,380377,1
+Northwest Missouri State University,2004,1,,,,178624,1
+Northwest Nazarene College,2004,1,,,,142461,1
+Northwestern Michigan College,2004,1,,,,171483,1
+Northwestern Oklahoma State University,2004,1,,,,207306,1
+Northwestern Polytechnic University,2004,1,,,,120166,1
+Northwestern State University,2004,1,,,,160038,1
+Norwich University,2004,1,,,,230995,1
+Nossi College of Art,2004,1,,,,368452,1
+Notre Dame College,2004,1,,,,204468,1
+Oak Hills Christian College,2004,1,,,,174525,1
+Oakland City University,2004,1,,,,152099,1
+Oakwood University,2004,1,,,,101912,1
+Oglala Lakota College,2004,1,,,,219277,1
+Ohio Christian University,2004,1,,,,201964,1
+Ohio Dominican University,2004,1,,,,204617,1
+Ohr HaMeir Theological Seminary,2004,1,,,,194189,1
+Oklahoma Baptist University,2004,1,,,,207403,1
+Oklahoma Christian University,2004,1,,,,207324,1
+Oklahoma Panhandle State University,2004,1,,,,207351,1
+Oklahoma Wesleyan University,2004,1,,,,206835,1
+Olympic College,2004,1,,,,236188,1
+Oral Roberts University,2004,1,,,,207582,1
+Oregon Health & Sciences University,2004,1,,,,209490,1
+Otis College of Art and Design,2004,1,,,,120403,1
+Ottawa University,2004,1,,,,155627,1
+Pacific College of Health and Science,2004,1,,,,442842,1
+Pacific Islands University,2004,1,,,,439862,1
+Pacific Northwest College of Art,2004,1,,,,209603,1
+Pacific Oaks College,2004,1,,,,120768,1
+Pacific Rim Christian University,2004,1,,,,457484,1
+Pacific States University,2004,1,,,,120838,1
+Pacific Union College,2004,1,,,,120865,1
+Pacific University,2004,1,,,,209612,1
+Palm Beach State College,2004,1,,,,136358,1
+Park University,2004,1,,,,178721,1
+Parker University,2004,1,,,,243823,1
+Pasco-Hernando State College,2004,1,,,,136400,1
+Peirce College,2004,1,,,,214883,1
+Peninsula College,2004,1,,,,236258,1
+Penn Foster College,2004,1,,,,,1
+Pennsylvania Academy of the Fine Arts,2004,1,,,,214971,1
+Pennsylvania College of Art and Design,2004,1,,,,215053,1
+Pennsylvania College of Technology,2004,1,,,,366252,1
+Pensacola State College,2004,1,,,,136473,1
+Peru State College,2004,1,,,,181534,1
+Pfeiffer University,2004,1,,,,199306,1
+Piedmont International University,2004,1,,,,489937,1
+Pillar College,2004,1,,,,440794,1
+Pittsburg State University,2004,1,,,,155681,1
+Pittsburgh Technical College,2004,1,,,,215415,1
+Pitzer College,2004,1,,,,121257,1
+Platt College,2004,1,,,,260789,1
+Platt College,2004,1,,,,260813,1
+Plaza College,2004,1,,,,194499,1
+Point University,2004,1,,,,138868,1
+Polk State College,2004,1,,,,136516,1
+Post University,2004,1,,,,130183,1
+Potomac State College,2004,1,,,,237701,1
+Prairie View A&M University,2004,1,,,,277526,1
+Presentation College,2004,1,,,,219295,1
+Purdue University,2004,1,,,,243780,1
+Purdue University Fort Wayne,2004,1,,,,151102,1
+Purdue University Global,2004,1,,,,489779,1
+Purdue University Northwest,2004,1,,,,490805,1
+Rabbi Jacob Joseph School,2004,1,,,,384421,1
+Rabbinical Academy Mesivta Rabbi Chaim Berlin,2004,1,,,,194657,1
+Rabbinical College Beth Shraga,2004,1,,,,194693,1
+Rabbinical College Bobover Yeshiva Bnci Zion,2004,1,,,,194666,1
+Rabbinical College Ch'san Sofer,2004,1,,,,,1
+Rabbinical College of America,2004,1,,,,186186,1
+Rabbinical College of Long Island,2004,1,,,,194736,1
+Rabbinical College of Ohr Shimon Yisroel,2004,1,,,,405854,1
+Rabbinical College of Telshe,2004,1,,,,205124,1
+Rabbinical Seminary Adas Yereim,2004,1,,,,,1
+Rabbinical Seminary M'kor Chaim,2004,1,,,,,1
+Rabbinical Seminary of America,2004,1,,,,194763,1
+Radford University – Carilion,2004,1,,,,231837,1
+Ranken Technical College,2004,1,,,,178891,1
+Rasmussen University,2004,1,,,,138309,1
+Restaurant School at Walnut Hill College,2004,1,,,,,1
+Ringling College of Art and Design,2004,1,,,,136774,1
+Rochester University,2004,1,,,,170967,1
+Rockford University,2004,1,,,,148405,1
+Rocky Mountain College of Art & Design,2004,1,,,,127945,1
+Rogers State University,2004,1,,,,207661,1
+Roosevelt University,2004,1,,,,148487,1
+Rust College,2004,1,,,,176318,1
+Sacred Heart Major Seminary,2004,1,,,,172033,1
+SAE Institute,2004,1,,,,476948,1
+Saginaw Valley State University,2004,1,,,,172051,1
+Saint Augustine's University,2004,1,,,,199582,1
+Saint Charles Borromeo Seminary,2004,1,,,,216047,1
+Saint Elizabeth University,2004,1,,,,,1
+Saint Johns River State College,2004,1,,,,137281,1
+Saint Vincent College,2004,1,,,,215798,1
+Salem International University,2004,1,,,,,1
+Salish Kootenai College,2004,1,,,,180647,1
+San Francisco Art Institute,2004,1,,,,122454,1
+San Francisco Conservatory of Music,2004,1,,,,122506,1
+Santa Fe College,2004,1,,,,137096,1
+Schiller International University,2004,1,,,,404338,1
+School of Visual Arts,2004,1,,,,197151,1
+Schoolcraft College,2004,1,,,,172200,1
+Seattle Central College,2004,1,,,,236513,1
+Seattle Film Institute,2004,1,,,,488448,1
+Seattle University,2004,1,,,,236595,1
+Selma University,2004,1,,,,102058,1
+Seminole State College,2004,1,,,,207740,1
+Seton Hill University,2004,1,,,,215947,1
+Shasta Bible College,2004,1,,,,123280,1
+Shawnee State University,2004,1,,,,205443,1
+Shiloh University,2004,1,,,,480499,1
+Shor Yoshuv Rabbinical College,2004,1,,,,195438,1
+Sinte Gleska University,2004,1,,,,219374,1
+Sitting Bull College ,2004,1,,,,200466,1
+Snow College,2004,1,,,,230597,1
+South College,2004,1,,,,220552,1
+South Dakota School of Mines and Technology,2004,1,,,,219347,1
+South Dakota State University,2004,1,,,,219356,1
+South Florida State College,2004,1,,,,137315,1
+South Georgia State College,2004,1,,,,482699,1
+South Seattle College,2004,1,,,,236504,1
+South Texas College,2004,1,,,,409315,1
+South University,2004,1,,,,459259,1
+Southeast Missouri State University,2004,1,,,,179557,1
+Southeastern Baptist College,2004,1,,,,176336,1
+Southeastern Baptist Theological Seminary,2004,1,,,,199759,1
+Southeastern Louisiana University,2004,1,,,,160612,1
+Southeastern Oklahoma State University,2004,1,,,,207847,1
+Southern Adventist University,2004,1,,,,221661,1
+Southern Arkansas University,2004,1,,,,107983,1
+Southern California Institute of Architecture,2004,1,,,,123952,1
+Southern California Institute of Technology,2004,1,,,,399869,1
+Southern California Seminary,2004,1,,,,117575,1
+Southern Oregon University,2004,1,,,,210146,1
+Southern States University,2004,1,,,,490063,1
+Southern Technical College,2004,1,,,,366553,1
+Southern University – New Orleans,2004,1,,,,160630,1
+Southern University & A&M College,2004,1,,,,160621,1
+Southern Wesleyan University,2004,1,,,,217776,1
+Southwest Baptist University,2004,1,,,,179326,1
+Southwest Minnesota State University,2004,1,,,,175078,1
+Southwest University,2004,1,,,,,1
+Southwest University of Visual Arts,2004,1,,,,,1
+Southwestern Adventist University,2004,1,,,,228468,1
+Southwestern Assemblies of God University,2004,1,,,,,1
+Southwestern Baptist Theological Seminary,2004,1,,,,494603,1
+Southwestern Christian College,2004,1,,,,228486,1
+Southwestern Christian University,2004,1,,,,207856,1
+Southwestern Oklahoma State University,2004,1,,,,207865,1
+Spartan College of Aeronautics and Technology,2004,1,,,,207254,1
+Spring Arbor University,2004,1,,,,172334,1
+St. Augustine College,2004,1,,,,148876,1
+St. Cloud State University,2004,1,,,,174783,1
+St. Francis College,2004,1,,,,195173,1
+St. John's College Annapolis,2004,1,,,,,1
+St. John's College Santa Fe,2004,1,,,,,1
+St. John's University,2004,1,,,,195809,1
+St. John Vianney College Seminary,2004,1,,,,137272,1
+St. Joseph Seminary College,2004,1,,,,160409,1
+St. Petersburg College,2004,1,,,,137078,1
+St. Thomas University,2004,1,,,,137476,1
+Stanbridge University,2004,1,,,,446561,1
+State College of Florida,2004,1,,,,135391,1
+Sterling College,2004,1,,,,155937,1
+Sterling College,2004,1,,,,231095,1
+Stetson University,2004,1,,,,137546,1
+Stevens-Henager College,2004,1,,,,438151,1
+Stevens-Henager College,2004,1,,,,230621,1
+Stevens-Henager College,2004,1,,,,446677,1
+Stevens-Henager College,2004,1,,,,230630,1
+Stevens-Henager College,2004,1,,,,477950,1
+Stillman College,2004,1,,,,102270,1
+Stratford University,2004,1,,,,438498,1
+Strayer University,2004,1,,,,494375,1
+Sul Ross State University,2004,1,,,,228501,1
+Sullivan University,2004,1,,,,157793,1
+SUM Bible College & Theological Seminary,2004,1,,,,447953,1
+Tabor College,2004,1,,,,155973,1
+Talladega College,2004,1,,,,102298,1
+Talmudic University,2004,1,,,,137777,1
+Talmudical Academy of New Jersey,2004,1,,,,186900,1
+Talmudical Institute of Upstate New York,2004,1,,,,196440,1
+Talmudical Seminary Oholei Torah,2004,1,,,,196431,1
+Talmudical Yeshiva of Philadelphia,2004,1,,,,216311,1
+Tarleton State University,2004,1,,,,228529,1
+Telshe Yeshiva,2004,1,,,,149329,1
+Tennessee State University,2004,1,,,,221838,1
+Tennessee Technological University,2004,1,,,,221847,1
+Texas A&M International University,2004,1,,,,226152,1
+Texas A&M University Commerce,2004,1,,,,224554,1
+Texas A&M University Corpus Christi,2004,1,,,,224147,1
+Texas A&M University Galveston,2004,1,,,,,1
+Texas A&M University Texarkana,2004,1,,,,224545,1
+Texas College,2004,1,,,,228884,1
+Texas Southern University,2004,1,,,,229063,1
+Texas State University San Marcos,2004,1,,,,228459,1
+Texas Wesleyan University,2004,1,,,,229160,1
+Texas Woman's University,2004,1,,,,229179,1
+The Art Institute of Virginia Beach,2004,1,,,,458496,1
+The Christ College of Nursing and Health Sciences,2004,1,,,,201821,1
+The Master's University,2004,1,,,,117751,1
+The University of Scranton,2004,1,,,,,1
+Thomas Edison State University,2004,1,,,,187046,1
+Thomas More College of Liberal Arts,2004,1,,,,183275,1
+Thomas University,2004,1,,,,141167,1
+Tiffin University,2004,1,,,,206048,1
+Torah Temimah Talmudical Seminary,2004,1,,,,196583,1
+Touro University Worldwide,2004,1,,,,459727,1
+Tri-State Bible College,2004,1,,,,206154,1
+Trident University International,2004,1,,,,450979,1
+Trinity Baptist College,2004,1,,,,137953,1
+Trinity Washington University,2004,1,,,,131876,1
+Trocaire College,2004,1,,,,196653,1
+Turtle Mountain Community College,2004,1,,,,200527,1
+Tusculum University,2004,1,,,,221953,1
+Tuskegee University,2004,1,,,,102377,1
+Union College,2004,1,,,,157863,1
+Union Institute & University,2004,1,,,,206279,1
+United International College,2004,1,,,,,1
+United States University,2004,1,,,,447050,1
+United Talmudical Seminary,2004,1,,,,197018,1
+United Tribes Technical College,2004,1,,,,200554,1
+Unity College,2004,1,,,,161572,1
+Universidad Adventista de las Antillas,2004,1,,,,241191,1
+Universidad Ana G. Mendez – Carolina,2004,1,,,,243346,1
+Universidad Ana G. Mendez – Gurabo,2004,1,,,,243601,1
+University of Advancing Technology,2004,1,,,,363934,1
+University of Alaska Anchorage,2004,1,,,,102553,1
+University of Alaska Southeast,2004,1,,,,102632,1
+University of Antelope Valley,2004,1,,,,442930,1
+University of Arizona,2004,1,,,,104179,1
+University of Central Oklahoma,2004,1,,,,206941,1
+University of Charleston,2004,1,,,,237312,1
+University of Findlay,2004,1,,,,,1
+University of Fort Lauderdale,2004,1,,,,457402,1
+University of Guam,2004,1,,,,240754,1
+University of Holy Cross,2004,1,,,,160065,1
+University of Houston,2004,1,,,,225511,1
+University of Houston-Downtown,2004,1,,,,225432,1
+University of Houston -- Clear Lake,2004,1,,,,225414,1
+University of Houston -- Victoria,2004,1,,,,225502,1
+University of Idaho,2004,1,,,,142285,1
+University of Jamestown,2004,1,,,,200156,1
+University of Kansas,2004,1,,,,155317,1
+University of Louisiana at Lafayette,2004,1,,,,160658,1
+University of Louisiana at Monroe,2004,1,,,,159993,1
+University of Management and Technology,2004,1,,,,437097,1
+University of Mary,2004,1,,,,200217,1
+University of Mary Hardin-Baylor,2004,1,,,,226471,1
+University of Massachusetts - Boston,2004,1,,,,166638,1
+University of Memphis,2004,1,,,,220862,1
+University of Michigan Flint,2004,1,,,,171146,1
+University of Mississippi,2004,1,,,,176017,1
+University of Montana - Western,2004,1,,,,494922,1
+University of Mount Olive,2004,1,,,,199069,1
+University of Nevada Las Vegas,2004,1,,,,182281,1
+University of Nevada Reno,2004,1,,,,182290,1
+University of New Hampshire at Manchester,2004,1,,,,183071,1
+University of New Orleans,2004,1,,,,159939,1
+University of North Texas,2004,1,,,,227216,1
+University of North Texas at Dallas,2004,1,,,,484905,1
+University of Northwestern Ohio,2004,1,,,,204486,1
+University of Phoenix,2004,1,,,,484613,1
+University of Pikeville,2004,1,,,,157535,1
+University of Providence,2004,1,,,,180258,1
+University of Rio Grande,2004,1,,,,205203,1
+University of Saint Mary,2004,1,,,,155812,1
+University of Science and Arts of Oklahoma,2004,1,,,,207722,1
+University of Silicon Valley,2004,1,,,,,1
+University of Sioux Falls,2004,1,,,,219383,1
+University of South Dakota,2004,1,,,,219471,1
+University of Tennessee Chatttanooga,2004,1,,,,,1
+University of Tennessee Knoxville,2004,1,,,,,1
+University of the Arts,2004,1,,,,,1
+University of the District of Columbia,2004,1,,,,131399,1
+University of the Pacific,2004,1,,,,120883,1
+University of the People,2004,1,,,,488846,1
+University of the Potomac,2004,1,,,,384412,1
+University of the Sacred Heart,2004,1,,,,,1
+University of the Southwest,2004,1,,,,188182,1
+University of the Virgin Islands St. Croix,2004,1,,,,243665,1
+University of the Virgin Islands St. Thomas,2004,1,,,,,1
+University of the West,2004,1,,,,449870,1
+University of Valley Forge,2004,1,,,,216542,1
+University of Wyoming,2004,1,,,,240727,1
+Utah Valley University,2004,1,,,,230737,1
+Utica College,2004,1,,,,197045,1
+Valencia College,2004,1,,,,138187,1
+Valley College,2004,1,,,,377661,1
+Vaughn College,2004,1,,,,188340,1
+Veritas Baptist College,2004,1,,,,482228,1
+Vermont Technical College,2004,1,,,,231165,1
+Villa Maria College,2004,1,,,,197142,1
+Vincennes University,2004,1,,,,152637,1
+Virginia State University,2004,1,,,,234155,1
+Virginia Union University,2004,1,,,,234164,1
+Virginia University of Lynchburg,2004,1,,,,234137,1
+Viterbo University,2004,1,,,,240107,1
+Voorhees College,2004,1,,,,218919,1
+Wade College,2004,1,,,,226879,1
+Walden University,2004,1,,,,125231,1
+Walla Walla University,2004,1,,,,236896,1
+Walnut Hill College,2004,1,,,,,1
+Warner University,2004,1,,,,138275,1
+Washburn University,2004,1,,,,156082,1
+Washington Adventist University,2004,1,,,,162210,1
+Washington State University Everett,2004,1,,,,,1
+Washington State University Spokane,2004,1,,,,,1
+Washington State University Tri-Cities,2004,1,,,,,1
+Wayland Baptist University,2004,1,,,,229780,1
+Wayne State College,2004,1,,,,181783,1
+Webber International University,2004,1,,,,138293,1
+Weber State University,2004,1,,,,230782,1
+Welch College,2004,1,,,,220206,1
+Wesleyan College,2004,1,,,,141325,1
+West Coast University,2004,1,,,,441229,1
+West Liberty University,2004,1,,,,237932,1
+West Texas A&M University,2004,1,,,,229814,1
+West Virginia University at Parkersburg,2004,1,,,,237686,1
+West Virginia University Institute of Technology,2004,1,,,,237950,1
+West Virginia University Potomac State College,2004,1,,,,,1
+Westcliff University,2004,1,,,,490133,1
+Western Connecticut State University,2004,1,,,,130776,1
+Western Governors University,2004,1,,,,433387,1
+Western Nevada College,2004,1,,,,182564,1
+Western New Mexico University,2004,1,,,,188304,1
+Westminster College,2004,1,,,,216807,1
+Westminster College,2004,1,,,,230807,1
+Westmont College,2004,1,,,,125727,1
+Wheaton College,2004,1,,,,168281,1
+Wheeling University,2004,1,,,,238078,1
+Wichita State University,2004,1,,,,156125,1
+Wilberforce University,2004,1,,,,206491,1
+Wiley College,2004,1,,,,229887,1
+William Peace University,2004,1,,,,199272,1
+Wilmington College,2004,1,,,,206507,1
+Wilmington University,2004,1,,,,131113,1
+Wilson College,2004,1,,,,217013,1
+Wingate University,2004,1,,,,199962,1
+Winona State University,2004,1,,,,175272,1
+Woodbury University,2004,1,,,,125897,1
+World Mission University,2004,1,,,,401223,1
+Xavier University of Louisiana,2004,1,,,,160904,1
+Yellowstone Christian College,2004,1,,,,,1
+Yeshiva and Killel Harbotzas Torah,2004,1,,,,,1
+Yeshiva Beth Moshe,2004,1,,,,217040,1
+Yeshiva Beth Yehuda-Yeshiva,2004,1,,,,,1
+Yeshiva D'Monsey Rabbinical College,2004,1,,,,420325,1
+Yeshiva Derech Chaim,2004,1,,,,197647,1
+Yeshiva Gedolah Imrei Yosef D'Spinka,2004,1,,,,375230,1
+Yeshiva Gedolah Rabbinical College,2004,1,,,,363712,1
+Yeshiva Karlin Stolin,2004,1,,,,197601,1
+Yeshiva Mikdash Melech,2004,1,,,,,1
+Yeshiva of Nitra,2004,1,,,,197674,1
+Yeshiva of the Telshe Alumni,2004,1,,,,431983,1
+Yeshiva Ohr Elchonon Chabad/West Coast Talmudical Seminary,2004,1,,,,126076,1
+Yeshiva Shaar HaTorah Talmudic,2004,1,,,,481438,1
+Yeshiva Shaarei Torah of Rockland,2004,1,,,,441609,1
+Yeshiva Toras Chaim Talmudical Seminary,2004,1,,,,,1
+Yeshiva University,2004,1,,,,197708,1
+Yeshiva Viznitz,2004,1,,,,197735,1
+Yeshivas Novominsk,2004,1,,,,405058,1
+Yeshivath Zichron Moshe,2004,1,,,,197744,1
+York College CUNY,2004,1,,,,,1
+Young Harris College,2004,1,,,,141361,1
+Youngstown State University,2004,1,,,,206695,1
