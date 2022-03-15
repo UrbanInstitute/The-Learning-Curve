@@ -23,7 +23,7 @@
 // CHANGE JUST THIS LINE
 global directory = "C:\Users\lrestrepo\Documents\Github_repos\The-Learning-Curve\2022_03_17-AP_Enrollment"
 
-cd ${directory}
+cd "${directory}"
 
 global data = "${directory}\data"
 global urbinst = "${data}\Urban Institute_AP"
