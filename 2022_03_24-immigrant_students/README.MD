@@ -1,1 +1,1 @@
-In order to reproduce the analysis in "Leveraging Nuanced data to inform research and policy for immigrant students and families," please download "Build_Analysis.do" and specify the directory you wish to download both input and output data, as well as visuals.
+In order to reproduce the analysis in "Leveraging Nuanced data to inform research and policy for immigrant students and families," please download "Build_Analysis.do" and specify the directory you wish in line 5 to download both input and output data, as well as visuals.
