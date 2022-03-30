@@ -1,0 +1,1 @@
+In order to generate the findings in "Disparities in AP Course Enrollment and Test-Taking," download "analysis.do" and change line 24 to reflect the directory you wish to load data and outputs into.

@@ -1,0 +1,1 @@
+In order to reproduce the analysis in "Regional and Temporal Patterns of Pandemic Enrollment Declines in Hawai'i Public Schools," download the "A0_MASTER.do" and "analysis.zip" files and place them in the same folder. In the "AO_MASTER.do" file, change line 14 to be the directory you wish to save data outputs such as visuals and data to.
