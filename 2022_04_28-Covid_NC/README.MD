@@ -1,0 +1,1 @@
+In order to reproduce the analysis in "Covid in North Carolina," please download "analysis.do" and "raw_data.zip" to the same directory. After doing so, specify the directory you wish in line 7 to hold generated data sets, analysis, and visuals.
