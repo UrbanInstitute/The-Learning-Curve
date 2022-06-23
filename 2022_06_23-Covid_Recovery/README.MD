@@ -1,0 +1,1 @@
+In order to run the code for "Both Supply and Demand for COVID-Related Academic and Social Interventions Are Insufficient to Address the Negative Effects of the Pandemic" by Morgan Polikoff and Dan Silver, download "analysis.do" and "data.zip" to the same folder, and edit line 18 to the directory they've been saved to. Output excel files will be recreated within that same folder.
