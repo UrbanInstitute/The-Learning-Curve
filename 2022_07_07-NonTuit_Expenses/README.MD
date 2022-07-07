@@ -1,0 +1,1 @@
+In order to reproduce the output in "A Closer Look at College Affordability," only line 32 in the MasterDo file needs to be modified to be the directory in which you want visuals and output dtas to be held.
