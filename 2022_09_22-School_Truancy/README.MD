@@ -1,0 +1,1 @@
+In order to perform the analysis in Ericka Weathers' "The State of Truancy Data," save both "analysis.R" and "original_data.zip" to the same directory, and run analysis.R within RStudio. The script will create raw data, intermediate data, and final data/visuals in the same folder the analysis script is saved in.
