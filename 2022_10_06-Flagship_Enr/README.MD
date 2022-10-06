@@ -1,0 +1,1 @@
+In order to reproduce the results in Joydeep Roy's "Trends in Enrollment in Enrollment Growth at Public Flagship Universities," download the "analysis.R" file to your target directory. It will create a data directory with visual and final data outputs without alterations after running; install or update any package dependencies and run.
