@@ -1,0 +1,1 @@
+In order to reproduce the analysis in Xiaoyang Ye's "More Money on Learning, Less Loss?", download the "LC-Analysis.do" script and the "original_data.zip" folder to the same location, and edit line "10." Run to reproduce visuals and figures in their analysis. 
