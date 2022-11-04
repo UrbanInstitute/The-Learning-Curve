@@ -1,0 +1,1 @@
+Bryan Cook and Alex Tilsey's analysis in "Exploring the Relationship between Student Loan Forgiveness, the Pell Bonus, and Race" can be reproduced by using the data hashes stored in "data_lab_hashes.xlsx." There is a short guide in the workbook walking you through the process. 
