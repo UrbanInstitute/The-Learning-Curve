@@ -162,8 +162,20 @@ di `r(N)'/`tot' // share that fail tuition/earnings and pass debt/earnings
 sum fail_tuit_earn_* if debt_0==1 // share of $0 debt programs that fail
 sum earn_ne_mdn_3yr if debt_0==1 & fail_tuit_earn_85==1 // avg earnings for $0 debt programs that fail 85% threshold
 
-sum share_black_awards share_hisp_awards share_female_awards if fail_debt==1 // awards by race and gender for programs failing debt/earnings
-sum share_black_awards share_hisp_awards share_female_awards if fail_tuit_earn_85==1 // awards by race and gender for programs failing tuition/earnings
+
+
+*Figure 3
+preserve
+keep if fail_debt==1
+collapse (mean) share_black_awards share_hisp_awards share_female_awards
+export excel using "${fin}/tuit_earn_lc_figs_v2.xlsx", sheet("Figure 3") sheetmodify firstrow(variables) keepcellfmt
+restore
+
+preserve
+keep if fail_tuit_earn_85==1
+collapse (mean) share_black_awards share_hisp_awards share_female_awards
+export excel using "${fin}/tuit_earn_lc_figs_v2.xlsx", sheet("Figure 3") sheetmodify cell(A3) keepcellfmt
+restore
 
 
 
@@ -223,4 +235,3 @@ di `r(N)'/`tot' // share of programs in this group
 
 sum earn_ne_mdn_3yr median_debt_plus tuition_fees if fail_tuit_earn_85==0 & fail_debt==1 // avg earnings, debt, and tuition for this group
 sum median_debt_plus tuition_fees // avg debt and tuition for all programs
-
