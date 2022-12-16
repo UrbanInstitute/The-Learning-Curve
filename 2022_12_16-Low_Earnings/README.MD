@@ -1,0 +1,1 @@
+In order to reproduce the analyis Jason Delisle and Jason Cohn's piece on Gainful Employment, download "raw_data.zip", "master.do", "analysis.do", and "datacleaning.do" to the same directory, and change line 20 to said directory. Run master.do to generate both output files.
