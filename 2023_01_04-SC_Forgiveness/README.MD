@@ -1,0 +1,1 @@
+In order to reproduce the analysis in Matt Chingos and Jason Cohn's "How were student loan borrowers affected by pandemic?" piece, download "analysis.do" and run. There's additional data to be downloaded from [here](https://datacatalog.urban.org/dataset/credit-health-metrics-student-loan-borrowers).
