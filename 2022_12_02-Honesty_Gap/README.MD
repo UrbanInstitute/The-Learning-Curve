@@ -1,1 +1,1 @@
-In order to reproduce the analyis Matt Chingos and Rachel Lamb's piece on test expectations, download "master.do", "analysis.do", and "datacleaning.do" to the same directory, and change line 20 to said directory. Run master.do to generate both output files and visuals.
+In order to reproduce the analyis Matt Chingos and Rachel Lamb's piece on test expectations, download "raw_data.zip", "master.do", "analysis.do", and "datacleaning.do" to the same directory, and change line 20 to said directory. Run master.do to generate both output files and visuals.
