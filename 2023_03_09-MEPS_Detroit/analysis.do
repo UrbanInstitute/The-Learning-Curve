@@ -5,7 +5,7 @@
 *set your common directory here
 cap n ssc install nsplit
 
-global directory = "C:/Users/lrestrepo/Documents/Singer_code"
+global directory = "*******"
 
 
 cd "${directory}"

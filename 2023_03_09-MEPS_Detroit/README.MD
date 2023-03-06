@@ -1,1 +1,1 @@
-In order to reproduce the analysis in Jeremy Singer's "Adequately Funding Low-Income Students: Options for Michigan Policymakers," download "analysis.do" and "data.zip." Change line 7 to reflect the directory both files have been saved to and run to reproduce both figures and values.
+In order to reproduce the analysis in Jeremy Singer's "Adequately Funding Low-Income Students: Options for Michigan Policymakers," download "analysis.do" and "data.zip." Change line 8 to reflect the directory both files have been saved to and run to reproduce both figures and values.
