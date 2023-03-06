@@ -21,7 +21,7 @@ foreach x in "${data}" "${output}" "${int}" "${vis}" {
 
 cd "${data}"
 
-unzipfile "${directory}/data2.zip", replace
+unzipfile "${directory}/data.zip", replace
 
 *****************************************
 *** DATA PREP ***************************
