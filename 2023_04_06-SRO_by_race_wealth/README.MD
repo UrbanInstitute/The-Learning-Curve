@@ -1,0 +1,1 @@
+In order to reproduce the analysis in Sagen Kidane's "Unequal Exposure to School Resource Officers by Student Race and Income," change line 8 to reflect your preferred directory for input and output files.
