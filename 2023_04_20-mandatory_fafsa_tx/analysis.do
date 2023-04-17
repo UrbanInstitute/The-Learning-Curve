@@ -57,25 +57,7 @@ if _rc == 601{
 	save		 "${der_data}/meps_2018.dta", replace
 }
 
-*----------------------------------------------
-*
-* CCD directory from Urban Institute Education Data Portal
-*
-*----------------------------------------------
-/*cap n confirm file "${der_data}/ccd_2019_no_same_name.dta"
-if _rc == 601{
-	copy "https://educationdata.urban.org/csv/ccd/schools_ccd_directory.csv" "${der_data}/raw_ccd_dir.csv", replace
-	import delimited "${der_data}/raw_ccd_dir.csv", clear varnames(1)
-	keep if year == 2019 & fips == 48
-	keep if highest_grade_offered == 12 
-	// delete same name - same city high schools (<1%)
-	egen 	group_same_name_and_city = group(school_name city_location )
-	bysort 	group_same_name_and_city: gen number_same_name_and_city = _N
 
-	keep if number_same_name_and_city == 1
-	drop group_same_name_and_city number_same_name_and_city
-	save "${der_data}/ccd_2019_no_same_name.dta", replace
-}*/
 *----------------------------------------------
 * 
 * CCD enrollment from Urban Institute Education Data Portal
@@ -91,7 +73,7 @@ foreach yr of numlist 2018/2021{
 			copy "https://educationdata.urban.org/csv/ccd/schools_ccd_enrollment_`yr'.csv" "${der_data}/raw_ccd_enr_`yr'.csv", replace
 			import delimited "${der_data}/raw_ccd_enr_`yr'.csv", clear varnames(1)
 		}
-		if `yr' == 2021{
+		if `yr' == 2021{ // downloading code from stata2, will be updated once data is on portal
 			use "//stata2/EDI/education_data_portal/ccd/data/_for_db_upload/enrollment_grade_sex_race_2021.dta", clear
 		}
 		keep if grade == 12 & fips == 48 & sex == 99
