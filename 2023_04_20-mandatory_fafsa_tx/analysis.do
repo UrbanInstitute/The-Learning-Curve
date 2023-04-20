@@ -16,13 +16,15 @@
 clear
 
 //project directory
-glo path = "*******"
+glo path = "******"
 
 glo data = "${path}/data"
 glo der_data = "${data}/derived"
 glo int_data = "${data}/int_data"
 glo fin_data = "${data}/fin_data"
 glo vis_data = "${data}/vis_data"
+
+local endash = ustrunescape("\u2013")
 
 
 foreach y in "${data}" "${der_data}" "${int_data}" "${fin_data}" "${vis_data}" {
@@ -269,7 +271,7 @@ preserve
 
 	twoway (connected  total_submit_rate year 	if submit_rate_quart_2019 == 4)	///			
 			(connected  total_complete_rate year if submit_rate_quart_2019 == 4), ///
-			xlabel(2019 "2018-19" 2020 "2019-20" 2021 "2020-21" 2022 "2021-22") ///
+			xlabel(2019 "2018`endash'19" 2020 "2019`endash'20" 2021 "2020`endash'21" 2022 "2021`endash'22") ///
 			xtitle("")	ytitle("FAFSA application rates") ///
 			legend(order(1 "FAFSA submissions" 2 "FAFSA completions")) ///
 			plotregion(margin(t = 12))
@@ -286,9 +288,9 @@ preserve
 			(connected  complete_rate year if submit_rate_quart_2019 == 2)	///
 			(connected  complete_rate year if submit_rate_quart_2019 == 3)	///
 			(connected  complete_rate year if submit_rate_quart_2019 == 4,  ///
-			xlabel(2019 "2018-19" 2020 "2019-20" 2021 "2020-21" 2022 "2021-22") ///
+			xlabel(2019 "2018`endash'19" 2020 "2019`endash'20" 2021 "2020`endash'21" 2022 "2021`endash'22") ///
 			xtitle("")	ytitle("FAFSA completion rate") ///	
-			legend(order(1 "≤ `p25'%" 2 "`p25'-`p50'%" 3 "`p50'-`p75'%" 4 "> `p75'%") rows(2)) ///
+			legend(order(1 "≤ `p25'%" 2 "`p25'`endash'`p50'%" 3 "`p50'`endash'`p75'%" 4 "> `p75'%") rows(2)) ///
 			plotregion(margin(t = 12)))		
 
 	graph export "${vis_data}/summary_complete_by_base_submit.png", replace
@@ -303,9 +305,9 @@ preserve
 			(connected  submit_rate year 		if submit_rate_quart_2019 == 2)	///
 			(connected  submit_rate year 		if submit_rate_quart_2019 == 3)	///
 			(connected  submit_rate year 		if submit_rate_quart_2019 == 4,  ///
-			xlabel(2019 "2018-19" 2020 "2019-20" 2021 "2020-21" 2022 "2021-22") ///
+			xlabel(2019 "2018`endash'19" 2020 "2019`endash'20" 2021 "2020`endash'21" 2022 "2021`endash'22") ///
 			xtitle("")	ytitle("FAFSA submission rate") ///	
-			legend(order(1 "≤ `p25'%" 2 "`p25'-`p50'%" 3 "`p50'-`p75'%" 4 "> `p75'%") rows(2)) ///
+			legend(order(1 "≤ `p25'%" 2 "`p25'`endash'`p50'%" 3 "`p50'`endash'`p75'%" 4 "> `p75'%") rows(2)) ///
 			plotregion(margin(t = 12)))
 
 	graph export "${vis_data}/summary_submit_by_base_submit.png", replace
@@ -357,9 +359,9 @@ preserve
 			(connected  submit_rate year if meps_poverty_pct_quart_2018 == 2)	///
 			(connected  submit_rate year if meps_poverty_pct_quart_2018 == 3)	///
 			(connected  submit_rate year if meps_poverty_pct_quart_2018 == 4,  ///
-			xlabel(2019 "2018-19" 2020 "2019-20" 2021 "2020-21" 2022 "2021-22") ///
+			xlabel(2019 "2018`endash'19" 2020 "2019`endash'20" 2021 "2020`endash'21" 2022 "2021`endash'22") ///
 			xtitle("")	ytitle("FAFSA submission rate") ///	
-			legend(order(1 "≤ `p25'%" 2 "`p25'-`p50'%" 3 "`p50'-`p75'%" 4 "> `p75'%") position(12) rows(2)) ///
+			legend(order(1 "≤ `p25'%" 2 "`p25'`endash'`p50'%" 3 "`p50'`endash'`p75'%" 4 "> `p75'%") rows(2)) ///
 			plotregion(margin(t = 12)))	
 
 	graph export "${vis_data}/summary_submit_by_meps.png", replace
@@ -375,9 +377,9 @@ preserve
 			(connected  complete_rate year if meps_poverty_pct_quart_2018 == 2)	///
 			(connected  complete_rate year if meps_poverty_pct_quart_2018 == 3)	///
 			(connected  complete_rate year if meps_poverty_pct_quart_2018 == 4,  ///
-			xlabel(2019 "2018-19" 2020 "2019-20" 2021 "2020-21" 2022 "2021-22") ///
+			xlabel(2019 "2018`endash'19" 2020 "2019`endash'20" 2021 "2020`endash'21" 2022 "2021`endash'22") ///
 			xtitle("")	ytitle("FAFSA completion rate") ///	
-			legend(order(1 "≤ `p25'%" 2 "`p25'-`p50'%" 3 "`p50'-`p75'%" 4 "> `p75'%") position(12) rows(2)) ///
+			legend(order(1 "≤ `p25'%" 2 "`p25'`endash'`p50'%" 3 "`p50'`endash'`p75'%" 4 "> `p75'%") rows(2)) ///
 			plotregion(margin(t = 12)))
 
 	graph export "${vis_data}/summary_complete_by_meps.png", replace
@@ -438,9 +440,9 @@ preserve
 			(connected  submit_rate year if share_black_hisp_quart_2019 == 2)	///
 			(connected  submit_rate year if share_black_hisp_quart_2019 == 3)	///
 			(connected  submit_rate year if share_black_hisp_quart_2019 == 4,  ///
-			xlabel(2019 "2018-19" 2020 "2019-20" 2021 "2020-21" 2022 "2021-22") ///
+			xlabel(2019 "2018`endash'19" 2020 "2019`endash'20" 2021 "2020`endash'21" 2022 "2021`endash'22") ///
 			xtitle("")	ytitle("FAFSA submission rate") ///			
-			legend(order(1 "≤ `p25'%" 2 "`p25'-`p50'%" 3 "`p50'-`p75'%" 4 "> `p75'%") rows(2)) ///
+			legend(order(1 "≤ `p25'%" 2 "`p25'`endash'`p50'%" 3 "`p50'`endash'`p75'%" 4 "> `p75'%") rows(2)) ///
 			plotregion(margin(t = 12)))
 
 	graph export "${vis_data}/summary_submit_by_share_bkaa_hisp.png", replace
@@ -455,9 +457,9 @@ preserve
 			(connected  complete_rate year if share_black_hisp_quart_2019 == 2)	///
 			(connected  complete_rate year if share_black_hisp_quart_2019 == 3)	///
 			(connected  complete_rate year if share_black_hisp_quart_2019 == 4,  ///
-			xlabel(2019 "2018-19" 2020 "2019-20" 2021 "2020-21" 2022 "2021-22") ///
+			xlabel(2019 "2018`endash'19" 2020 "2019`endash'20" 2021 "2020`endash'21" 2022 "2021`endash'22") ///
 			xtitle("")	ytitle("FAFSA completion rate") ///			
-			legend(order(1 "≤ `p25'%" 2 "`p25'-`p50'%" 3 "`p50'-`p75'%" 4 "> `p75'%") rows(2)) ///
+			legend(order(1 "≤ `p25'%" 2 "`p25'`endash'`p50'%" 3 "`p50'`endash'`p75'%" 4 "> `p75'%") rows(2)) ///
 			plotregion(margin(t = 12)))
 
 	graph export "${vis_data}/summary_complete_by_share_bkaa_hisp.png", replace
