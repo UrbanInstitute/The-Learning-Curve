@@ -1,0 +1,1 @@
+In order to reproduce Sie Won Kim's "How a Mandatory FAFSA Completion Policy in Texas Could Improve College Access," download "analysis.do" and change line 19 to reflect the directory in which the file is saved. After doing so, running "analysis.do" will create directories, download dependencies, and produce visuals.
