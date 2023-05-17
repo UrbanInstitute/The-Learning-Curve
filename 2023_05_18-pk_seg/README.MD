@@ -1,0 +1,1 @@
+In order to reproduce the analysis in Walker Swain, Shuyang Wang, and Joseph-Emery Kouaho's piece, "Means-Tested State Pre-K Programs Are More Segregated Than Universal Pre-K Programs," download the "analysis.do" file and edit line 6 to reflect the directory of your preference. Run the script to produce the analysis outputs.
