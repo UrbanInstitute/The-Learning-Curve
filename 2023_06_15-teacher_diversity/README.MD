@@ -1,0 +1,1 @@
+Melanie Rucinski's piece "Three Leaks in the Teacher Pipeline" was written using data not shared with the public; however, the code used to complete their analysis is available here. You may review it by downloading the "Learning_curve_analysis.do" file listed below.
