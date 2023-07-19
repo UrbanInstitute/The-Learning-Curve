@@ -13,7 +13,7 @@ missing data in the Ed Data Express 2019-20 File
 ********************************************************************************
 *Setting Directory
 	* change line 16 to reflect the current working directory
-	glo wd "C:\Users\lrestrepo\Documents\github_repos\The-Learning-Curve\2023_07_13-ESSA_accountability"
+	glo wd "**************"
 	glo raw_data "${wd}/rawdata"
 	glo data "${wd}/data"
 	glo out "${wd}/output"
