@@ -13,12 +13,11 @@ missing data in the Ed Data Express 2019-20 File
 ********************************************************************************
 *Setting Directory
 	* change line 16 to reflect the current working directory
-	glo wd "********"
+	glo wd "C:\Users\lrestrepo\Documents\github_repos\The-Learning-Curve\2023_07_13-ESSA_accountability"
 	glo raw_data "${wd}/rawdata"
 	glo data "${wd}/data"
 	glo out "${wd}/output"
 
-	cap n mkdir "${raw_data}"
 	cap n mkdir "${data}"
 	cap n mkdir "${out}"
 
@@ -32,153 +31,66 @@ missing data in the Ed Data Express 2019-20 File
 set scheme urbanschemes
 graph set window fontface "Lato"
 	
-cd "${raw_data}"
+cd "${wd}"	
 
 cap n unzipfile "${wd}/analysis.zip", replace
 
-cd "${wd}"	
+********* Cleaning raw data
 
-*********************************************************************************
-*Creating school and state level datasets for Cohorts 1 and 2
-//Cohort 1-2020
-use "data/CSI_Cohort_1.dta", clear
+use "${wd}/state_level_esea.dta", clear
 
-//Dropping States that I don't observe CSI designations
-drop if inlist(statename,"MAINE","NEW MEXICO","OHIO","SOUTH CAROLINA","VERMONT","")
-gen cohort=1
-recode csi (.=0)
-
-save "data/CSI_Cohort_1_sch.dta", replace
-
-//Cohort 2-2022, 2023, 2024
-use "data/CSI_Cohort_2.dta", clear
-
-//Dropping States that I don't observe CSI designations
-drop if inlist(statename,"MAINE","NEW MEXICO","OHIO","SOUTH CAROLINA","VERMONT","")
-gen cohort=2
-recode csi (.=0)
-
-save "data/CSI_Cohort_2_sch.dta", replace
-********************************************************************************
-//Estimating proportion of schools in intensive SI status across time
-*Data collected from several sources CSPR, EdFacts, NAYPI
-use "data/nclb_waiver_school_status.dta", clear
-bysort ncessch: egen titlei_max=max(titlei) //Accounts for changes to the Title I measure in CCD prior to 2008
-
-gen severe_csi=(inlist(school_status,"CORRACT","PRIORITY","RESTR","RESTRPLAN"))
-
-mean severe_csi if waiver==0 & inrange(year,2004,2012) & titlei_max==1, over(year)
-	mat nclb=e(b)
-	mat nclb=nclb'
-mean severe_csi if waiver==1 & inrange(year,2013,2015) & titlei==1, over(year)
-	mat waiver=e(b)
-	mat waiver=waiver'
-
-mat nclb_and_wiaver=nclb\waiver
-
-//ESSA
-//Combining School Level Data Sets
-use "data/CSI_Cohort_1_sch.dta", clear
-append using "data/CSI_Cohort_2_sch.dta"
-
-mean csi if titlei==1, over(cohort)
-	mat essa=e(b)
-	mat essa=essa'
-mat all_esea=nclb_and_wiaver\essa
-	
-clear
-svmat all_esea
-gen year=2003+_n
-
-//Graphing Intensive School Improvement Designations Across Time
-graph twoway (connected all_esea year, mcolor("22 150 210") lcolor("22 150 210")), ///
-graphregion(color(white)) bgcolor(white) ///
-ytitle("Proportion of Most Intensive Sanction") ///
-legend(off) ///
-ylabel(0 .01 "1%" .02 "2%" .03 "3%" .04 "4%" .05 "5%" .06 "6%" .07 "7%" .08 "8%" .09 "9%" .10 "10%" .11 "11%" .12 "12%" .13 "13%" .14 "15%", labsize(small)) ///
-yline(0 .01 .02 .03 .04 .05 .06 .07 .08 .09 .10 .11 .12 .13 .14, lp(solid) lc(gs14) lwid(vthin)) ///
-xlabel(2004 "2004 NCLB" 2005 "2005 NCLB" 2006 "2006 NCLB" 2007 "2007 NCLB" 2008 "2008 NCLB" ///
-2009 "2009 NCLB" 2010 "2010 NCLB" 2011 "2011 NCLB" 2012 "2012 NCLB" ///
-2013 "2013 Waiver" 2014 "2014 Waiver" 2015 "2015 Waiver" /// 
-2016 "2016 to 2020 ESSA" 2017 "2021 to 2023 ESSA", labsize(small) angle(45)) xtitle("")
-
-graph save "Graph" "output/sanctions_over_time.gph", replace
-graph export "output/sanctions_over_time.pdf", as(pdf) replace
-*********************************************************************************
-//Exporting Count of CSI Schools by Cohort and State
-
-//Combining School Level Data Sets
-use "data/CSI_Cohort_1_sch.dta", clear
-append using "data/CSI_Cohort_2_sch.dta"
-keep if titlei==1
-
-putexcel set "output/csi_count.xlsx", modify
-
-//Export State Names
-levelsof statename, local(state_names)
-local run=3
-foreach i of local state_names{
-di "`i'"
-putexcel B`run' = "`i'"
-local run=`run'+1
-}
-//Exporting Titles
-putexcel B2 = "State"
-putexcel C2 = "Cohort 1"
-putexcel D2 = "Cohort 2"
-
-//Export CSI Status
-tab statename csi if cohort==1, matcell(r1) m
-	mat r1=r1[1..46,2]
-	putexcel C3=matrix(r1)
-tab statename csi if cohort==2, matcell(r2) m
-	mat r2=r2[1..46,2]
-	putexcel D3=matrix(r2)
-
-//Entering Formulas
-putexcel C49=formula(=SUM(C3:C48))
-putexcel D49=formula(=SUM(D3:D48))
-********************************************************************************
-//Creating figure to show CSI schools by state
-use "data/state_crosswalk.dta", clear
-//Dropping States that I don't observe CSI designations
-drop if inlist(statename,"Maine","New Mexico","Ohio","South Carolina","Vermont","")
-
-//Creates CSI count from matrix for cohort 1
-svmat r1
-//Creates CSI count from matrix for cohort 2
-svmat r2
-//Creating Percent Change Variable
-gen pct_change=(r21-r11)/r11
-//Creating Count Change Variable
-gen num_change=r21-r11
-
-//Creating state value lables for figure
-sort num_change
-gen sort_order=_n
-labmask sort_order, values(stusab)
-
-//Graphing Change in the Number of CSI Schools Across Cohorts
-graph twoway bar num_change sort_order, ///
-sort ///
-lcolor("0  53  148%50") fcolor("22 150 210") /// 
-mlabel(sort_order) mlabsize(vsmall) mlabcolor(black) mlabangle(45) ///
-graphregion(color(white)) bgcolor(white) ///
-ylabel(-50 0 50 100 150) ///
-yline(-50 0 50 100 150, lp(solid) lc(gs12) lwid(vthin)) ///
-xlabel(none) ///
-ytitle("Change in Number of CSI Schools") xtitle("")
-
-graph save "Graph" "output/csi_count_change.gph", replace
-graph export "output/csi_count_change.pdf", as(pdf) replace
-********************************************************************************
-//Examining CSI Increase by ESSA system Type
-* Source: https://www.ecs.org/50-state-comparison-states-school-accountability-systems/
-
-//Combining School Level Data Sets
-use "data/CSI_Cohort_1_sch.dta", clear
-append using "data/CSI_Cohort_2_sch.dta"
-keep if titlei==1
+gen state_abb = ""
+replace state_abb = "AL" if statename == "alabama"
+replace state_abb = "AK" if statename == "alaska"
+replace state_abb = "AZ" if statename == "arizona"
+replace state_abb = "AR" if statename == "arkansas"
+replace state_abb = "CA" if statename == "california"
+replace state_abb = "CO" if statename == "colorado"
+replace state_abb = "CT" if statename == "connecticut"
+replace state_abb = "DE" if statename == "delaware"
+replace state_abb = "DC" if statename == "district of columbia"
+replace state_abb = "FL" if statename == "florida"
+replace state_abb = "GA" if statename == "georgia"
+replace state_abb = "HI" if statename == "hawaii"
+replace state_abb = "ID" if statename == "idaho"
+replace state_abb = "IL" if statename == "illinois"
+replace state_abb = "IN" if statename == "indiana"
+replace state_abb = "IA" if statename == "iowa"
+replace state_abb = "KS" if statename == "kansas"
+replace state_abb = "KY" if statename == "kentucky"
+replace state_abb = "LA" if statename == "louisiana"
+replace state_abb = "ME" if statename == "maine"
+replace state_abb = "MD" if statename == "maryland"
+replace state_abb = "MA" if statename == "massachusetts"
+replace state_abb = "MI" if statename == "michigan"
+replace state_abb = "MN" if statename == "minnesota"
+replace state_abb = "MS" if statename == "mississippi"
+replace state_abb = "MO" if statename == "missouri"
+replace state_abb = "MT" if statename == "montana"
+replace state_abb = "NB" if statename == "nebraska"
+replace state_abb = "NV" if statename == "nevada"
+replace state_abb = "NH" if statename == "new hampshire"
+replace state_abb = "NJ" if statename == "new jersey"
+replace state_abb = "NM" if statename == "new mexico"
+replace state_abb = "NY" if statename == "new york"
+replace state_abb = "NC" if statename == "north carolina"
+replace state_abb = "ND" if statename == "north dakota"
+replace state_abb = "OH" if statename == "ohio"
+replace state_abb = "OK" if statename == "oklahoma"
+replace state_abb = "OR" if statename == "oregon"
+replace state_abb = "PA" if statename == "pennsylvania"
+replace state_abb = "RI" if statename == "rhode island"
+replace state_abb = "SC" if statename == "south carolina"
+replace state_abb = "SD" if statename == "south dakota"
+replace state_abb = "TN" if statename == "tennessee"
+replace state_abb = "TX" if statename == "texas"
+replace state_abb = "UT" if statename == "utah"
+replace state_abb = "VT" if statename == "vermont"
+replace state_abb = "VA" if statename == "virginia"
+replace state_abb = "WA" if statename == "washington"
+replace state_abb = "WV" if statename == "west virginia"
+replace state_abb = "WI" if statename == "wisconsin"
+replace state_abb = "WY" if statename == "wyoming"
 
 replace statename=proper(statename)
 replace statename="District of Columbia" if statename=="District Of Columbia"
@@ -239,30 +151,104 @@ encode essa_system, gen(essa_system_type)
 
 gen formula=(inlist(essa_system_type,1,2,6))
 
-//Difference in Proportion CSI by cohort
-mean csi, over(cohort)
-reg csi cohort 
-//Difference in Proportion CSI by cohort
-mean csi, over(year)
-reg csi i.year
-//Difference in Proportion CSI by cohort
-mean csi, over(cohort formula)
 
-reg csi i.cohort##i.formula 
-xlincom (c1_ranked = _cons) (c1_formula = _cons+1.formula) (c2_ranked = _cons+2.cohort) (c2_formula = _cons+2.cohort+1.formula+2.cohort#1.formula), post
-	estimate store forumula_effect
+save "${wd}/state_level_esea_2.dta", replace
 
- 
-coefplot (forumula_effect ), ///
-		 recast(bar) barwidth(0.5) ciopts(recast(rcap) color(gs5)) citop ///
-		 bcolor("22 150 210") ///
-		 vert graphregion(color(white)) bgcolor(white) ///
-		 ytitle("Proportion CSI Schools in State") ///
-		 ylabel(0 .01 "1%" .02 "2%" .03 "3%" .04 "4%" .05 "5%" .06 "6%" .07 "7%") ///
-	 	 yline(0 .01 .02 .03 .04 .05 .06 .07, lp(solid) lc(gs12) lwid(vthin)) ///
-		 xlabel(1 "Cycle 1 Relative Systems" 2 "Cycle 1 Absolute Systems" 3 "Cycle 2 Relative Systems" 4 "Cycle 2 Absolute Systems", ///
-		 angle(45)) ///
-		 legend(off) xtitle("") 
+********************************************************************************
+//Estimating proportion of schools in intensive SI status across time
+*Data collected from several sources CSPR, EdFacts, NAYPI
+
+use "${wd}/state_level_esea_2.dta", clear
+
+preserve
+collapse (sum) csi flag, by(statename year waiver titlei_max)
+desc
+collapse (sum) csi (sum) flag, by(year waiver titlei_max)
+gen severe_csi_2 = csi/flag
+keep if waiver==0 & inrange(year,2004,2012) & titlei_max==1
+tempfile part_1
+save "`part_1'", replace
+restore
+
+preserve
+collapse (sum) csi flag, by(statename year waiver titlei)
+collapse (sum) csi (sum) flag, by(year waiver titlei)
+gen severe_csi_2 = csi/flag
+keep if waiver==1 & inrange(year,2013,2017) & titlei==1
+tempfile part_2
+save "`part_2'", replace
+restore
+
+clear
+use "`part_1'", clear
+append using "`part_2'"
+
+//Graphing Intensive School Improvement Designations Across Time
+graph twoway (connected severe_csi_2 year, mcolor("22 150 210") lcolor("22 150 210")), ///
+graphregion(color(white)) bgcolor(white) ///
+ytitle("Proportion of Most Intensive Sanction") ///
+legend(off) ///
+ylabel(0 .01 "1%" .02 "2%" .03 "3%" .04 "4%" .05 "5%" .06 "6%" .07 "7%" .08 "8%" .09 "9%" .10 "10%" .11 "11%" .12 "12%" .13 "13%" .14 "15%", labsize(small)) ///
+yline(0 .01 .02 .03 .04 .05 .06 .07 .08 .09 .10 .11 .12 .13 .14, lp(solid) lc(gs14) lwid(vthin)) ///
+xlabel(2004 "2004 NCLB" 2005 "2005 NCLB" 2006 "2006 NCLB" 2007 "2007 NCLB" 2008 "2008 NCLB" ///
+2009 "2009 NCLB" 2010 "2010 NCLB" 2011 "2011 NCLB" 2012 "2012 NCLB" ///
+2013 "2013 Waiver" 2014 "2014 Waiver" 2015 "2015 Waiver" /// 
+2016 "2016 to 2020 ESSA" 2017 "2021 to 2023 ESSA", labsize(small) angle(45)) xtitle("")
+
+graph save "Graph" "output/sanctions_over_time.gph", replace
+graph export "output/sanctions_over_time.pdf", as(pdf) replace
+
+*********************************************************************************
+//Creating figure to show CSI schools by state
+use "${wd}/state_level_esea_2.dta", clear
+
+keep if year >= 2016 & titlei == 1
+gen cohort = 1 if year == 2016
+replace cohort = 2 if year == 2017
+
+
+keep cohort csi statename state_abb
+ren csi csi_
+
+reshape wide csi, i(state_abb statename) j(cohort)
+
+gen num_change = (csi_2-csi_1)
+
+sort num_change
+gen ord = _n
+
+
+//Graphing Change in the Number of CSI Schools Across Cohorts
+graph twoway bar num_change ord, ///
+sort ///
+lcolor("0  53  148%50") fcolor("22 150 210") /// 
+mlabel(state_abb) mlabsize(vsmall) mlabcolor(black) mlabangle(45) ///
+graphregion(color(white)) bgcolor(white) ///
+ylabel(-50 0 50 100 150) ///
+yline(-50 0 50 100 150, lp(solid) lc(gs12) lwid(vthin)) ///
+xlabel(none) ///
+ytitle("Change in Number of CSI Schools") xtitle("")
+
+graph save "Graph" "output/csi_count_change.gph", replace
+graph export "output/csi_count_change.pdf", as(pdf) replace
+********************************************************************************
+//Examining CSI Increase by ESSA system Type
+* Source: https://www.ecs.org/50-state-comparison-states-school-accountability-systems/
+// Observations are currently available at the visualization level; error vars
+// can only be generated using school level rows. Reach out to the author in order to retrieve error terms.
+
+//Combining School Level Data Sets
+use "${wd}/coef_plot_attrib.dta", clear
+tostring cohort, replace
+tostring formula, replace
+
+gen flag = cohort + "_" + formula
+gen flag_1 = "First cycle, absolute cycle, relative" if flag == "1_0"
+replace flag_1 = "First cycle, relative" if flag == "1_1"
+replace flag_1 = "Second cycle, absolute" if flag == "2_0"
+replace flag_1 = "Second cycle" if flag == "2_1"
+
+graph bar avg, over(flag_1)
 
 graph save "Graph" "output/change_by_essa_type.gph", replace
 graph export "output/change_by_essa_type.pdf", as(pdf) replace
@@ -271,6 +257,7 @@ graph export "output/change_by_essa_type.pdf", as(pdf) replace
 *Source: Florida Accountabilty data from https://www.fldoe.org/academics/essa.stml
 
 //Florida 2020 Data
+cap n copy "https://www.fldoe.org/core/fileparse.php/14196/urlt/FederalIndex19.xlsx" "data/FL 2019.xlsx", replace
 import excel "data/FL 2019.xlsx", sheet("FPPI (Basic)") cellrange(A5:S3668) firstrow clear
 keep FederalPercentofPointsIndex ESSACategoryTSIorCSI SchoolName DistrictName
 rename FederalPercentofPointsIndex fedindexpct20
@@ -280,6 +267,7 @@ tempfile fl_essa_20
 save "`fl_essa_20'"
 
 //Florida 2022 Data
+cap n copy "https://www.fldoe.org/core/fileparse.php/14196/urlt/FederalIndex22.xlsx" "data/FL 2022.xlsx", replace
 import excel "data/FL 2022.xlsx", sheet("FPPI (Basic)") cellrange(A5:S3707) firstrow clear
 keep FederalPercentofPointsIndex ESSACategoryCSITSIorATSI SchoolName DistrictName
 rename FederalPercentofPointsIndex fedindexpct22
@@ -302,93 +290,15 @@ twoway (histogram fedindexpct20 if essa_cat20=="CS&I" & year20==1 & inrange(fedi
 
 graph save "Graph" "output/fl_histogram.gph", replace
 graph export "output/fl_histogram.pdf", as(pdf) replace
-********************************************************************************
-********************************************************************************
-//Differences in CSI round 2 status by TSI status in round 1
-use "data/CSI_Cohort_1_sch.dta", clear
-append using "data/CSI_Cohort_2_sch.dta"
-
-bysort ncessch: egen tsi_max=max(tsi)
-replace tsi_max=0 if csi==1 & cohort==1
-keep if cohort==2
-drop tsi
-rename tsi_max tsi
-
-tab csi tsi
-mean csi, over(tsi)
-********************************************************************************
-********************************************************************************
-//Differences in systems with an SQSS that includes chronic absenteeism
-//Combining School Level Data Sets
-use "data/CSI_Cohort_1_sch.dta", clear
-append using "data/CSI_Cohort_2_sch.dta"
-keep if titlei==1
-
-replace statename=proper(statename)
-replace statename="District of Columbia" if statename=="District Of Columbia"
-
-* Source: https://www.ecs.org/50-state-comparison-states-school-accountability-systems/
-gen essa_chronic=0
-replace essa_chronic=1 if statename=="Alabama"
-replace essa_chronic=1 if statename=="Alaska"
-replace essa_chronic=1 if statename=="Arizona"
-replace essa_chronic=1 if statename=="Arkansas"
-replace essa_chronic=0 if statename=="California"
-replace essa_chronic=1 if statename=="Colorado"
-replace essa_chronic=1 if statename=="Connecticut"
-replace essa_chronic=1 if statename=="Delaware"
-replace essa_chronic=1 if statename=="District of Columbia"
-replace essa_chronic=0 if statename=="Florida"
-replace essa_chronic=1 if statename=="Georgia"
-replace essa_chronic=1 if statename=="Hawaii"
-replace essa_chronic=0 if statename=="Idaho"
-replace essa_chronic=0 if statename=="Illinois"
-replace essa_chronic=1 if statename=="Indiana"
-replace essa_chronic=0 if statename=="Iowa"
-replace essa_chronic=0 if statename=="Kansas"
-replace essa_chronic=0 if statename=="Kentucky"
-replace essa_chronic=0 if statename=="Louisiana"
-replace essa_chronic=1 if statename=="Maine"
-replace essa_chronic=1 if statename=="Maryland"
-replace essa_chronic=1 if statename=="Massachusetts"
-replace essa_chronic=1 if statename=="Michigan"
-replace essa_chronic=0 if statename=="Minnesota"
-replace essa_chronic=0 if statename=="Mississippi"
-replace essa_chronic=1 if statename=="Missouri"
-replace essa_chronic=1 if statename=="Montana"
-replace essa_chronic=1 if statename=="Nebraska"
-replace essa_chronic=1 if statename=="Nevada"
-replace essa_chronic=0 if statename=="New Hampshire"
-replace essa_chronic=1 if statename=="New Jersey"
-replace essa_chronic=1 if statename=="New Mexico"
-replace essa_chronic=1 if statename=="New York"
-replace essa_chronic=0 if statename=="North Carolina"
-replace essa_chronic=0 if statename=="North Dakota"
-replace essa_chronic=1 if statename=="Ohio"
-replace essa_chronic=1 if statename=="Oklahoma"
-replace essa_chronic=1 if statename=="Oregon"
-replace essa_chronic=1 if statename=="Pennsylvania"
-replace essa_chronic=0 if statename=="Rhode Island"
-replace essa_chronic=0 if statename=="South Carolina"
-replace essa_chronic=1 if statename=="South Dakota"
-replace essa_chronic=1 if statename=="Tennessee"
-replace essa_chronic=0 if statename=="Texas"
-replace essa_chronic=0 if statename=="Utah"
-replace essa_chronic=0 if statename=="Vermont"
-replace essa_chronic=1 if statename=="Virginia"
-replace essa_chronic=1 if statename=="Washington"
-replace essa_chronic=1 if statename=="West Virginia"
-replace essa_chronic=1 if statename=="Wisconsin"
-replace essa_chronic=0 if statename=="Wyoming"
-
-//Difference in Proportion CSI by cohort
-mean csi, over(cohort essa_chronic)
-reg csi i.cohort##i.essa_chronic 
 
 ********************************************************************************
 //Back of the envelope estimate for change in Section 1003 funding
 *School Level School Improvement Funds 1003(a) for Title I Schools Downloaded from Ed Data Express
 *Data note observed for each state
+* can only be done with school level data; reach out to the author for school level observation
+/*
+cap n copy "https://eddataexpress.ed.gov/sites/default/files/data_download/EID_8124/SY1920_FS132_DG794_SCH_data_files.zip" ///
+	"rawdata/SY1920_FS132_DG794_SCH.xlsx", replace
 import excel "rawdata/SY1920_FS132_DG794_SCH.xlsx", sheet("SY1920_FS132_DG794_SCH") firstrow clear
 tostring NCESLEAID, gen(leaid) format(%07.0f)
 tostring NCESSCHID, gen(schid) format(%05.0f)
@@ -403,7 +313,7 @@ merge 1:1 ncessch using "data/CSI_Cohort_1.dta", keep(match) nogen
 
 preserve
 //2020 Enrollment Data
-import excel "rawdata/ELSI_excel_export_6381810347908733033797.xls", clear sheet("ELSI Export")
+import excel "ELSI_excel_export_6381810347908733033797.xls", clear sheet("ELSI Export")
 keep C D E
 destring *, force replace
 drop if C==.
@@ -454,21 +364,19 @@ di `sum_sec1003dol'/(`sum_sch_enrl_20'+(22952.171*10))
 
 //2020 per pupil + 20 percent more CSI schools
 di `sum_sec1003dol'/(`sum_sch_enrl_20'+(22952.171*20))
+*/
 ********************************************************************************
 ********************************************************************************
 //CSI non-exit contributions to designation increase in Michigan and Arkansas
 
 //Arkansas
-*35 CSI schools in round 1 and 165 in round 2
+*35 CSI schools in round 1 and 165 in round 2 (original data collection; ask author for school and LEA level data)
 mat ar_tsi_convert=28/(165-35)
 mat ar_csi_non_exit=30/(165-35)
 mat ar_csi_new=(165-35-28-30)/(165-35)
 
 //Michigan
-*178 CSI schools in round 1 and 48 in round 2
-import excel "rawdata/MI 2022 CSI.xlsx", sheet("Sheet1") firstrow clear
-table Reason if CharterAuthorizer=="n/a "
-
+*178 CSI schools in round 1 and 48 in round 2 (original data collection; ask author for school and LEA level data)
 mat mi_tsi_convert=(15+13)/(178-48)
 mat mi_csi_non_exit=19/(178-48)
 mat mi_csi_new=(178-48-15-13-19)/(178-48)
