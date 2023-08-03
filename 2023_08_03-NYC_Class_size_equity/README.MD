@@ -1,0 +1,1 @@
+In order to reproduce the analysis in Matt Chingos and Ariella Metzer's piece, "New Class Size Mandate May Reduce Education Equity in New York City," change line 3 to reflect your desired directory for output files.
