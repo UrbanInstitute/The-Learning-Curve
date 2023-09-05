@@ -1,1 +1,0 @@
-In order to reproduce the analysis in "In the Strike Zone," please download "analysis.do" and "data.zip" to the same directory. After doing so, specify the directory you wish in line 14 to hold generated data sets, analysis, and visuals.
