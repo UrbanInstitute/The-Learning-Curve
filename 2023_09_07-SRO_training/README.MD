@@ -1,0 +1,1 @@
+In order to reproduce Montserrat Avila-Acosta and Lucy C. Sorensen's "Contextualizing the push for more School Resource Officer funding," save "analysis.do" and edit line 7 to reflect your desired directory for outputs and data.
