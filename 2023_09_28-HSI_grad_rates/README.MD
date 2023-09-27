@@ -1,4 +1,4 @@
-In order to reproduce the analysis in Kaitlyn Stormes and Lizzbet Rojas piece, "Do Graduation Rates Improve Once Universities Become “Hispanic-Serving Institutions?", users need to download the following:
+In order to reproduce the analysis in Kaitlyn Stormes and Lizzet Rojas piece, "Do Graduation Rates Improve Once Universities Become “Hispanic-Serving Institutions?", users need to download the following:
 
 - 0_master.R
 - _analysis.zip
