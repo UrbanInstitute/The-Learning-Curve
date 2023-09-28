@@ -5,6 +5,12 @@ rm(list =ls())
 dire = dirname(rstudioapi::getActiveDocumentContext()$path)
 setwd(dire)
 
+if(!require("educationdata")){
+  install.packages("educationdata")
+}else{
+  update.packages("educationdata")
+}
+
 unzip("_analysis.zip")
 
 # Downloading the Less than 2-year IPEDS data
