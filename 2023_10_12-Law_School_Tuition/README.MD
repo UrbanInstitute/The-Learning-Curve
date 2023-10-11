@@ -1,0 +1,1 @@
+In order to reproduce Tia Caldwell's piece "How can policymakers assess the value of a law degree?," download both "raw_data.zip" and analysis.do to the same directory/folder. Edit line 25 to reflect the current working directory, and then run.
