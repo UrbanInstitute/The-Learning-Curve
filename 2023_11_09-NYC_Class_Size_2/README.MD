@@ -1,0 +1,1 @@
+In order to reproduce the analysis in Matt Chingos and Ariella Meltzer's piece, "How Will Implementing Class Size Caps in New York City Affect Funding Equity?," download both data_zip.zip and analysis.do to the same directory. Edit line 4 to reflect that directory, and run to reproduce tables and figures.
