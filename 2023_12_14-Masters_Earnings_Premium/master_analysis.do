@@ -13,7 +13,7 @@ loc n = 3
 // n=3 if Cody
 if `n' ==3 {
 	// Change line 14 to reflect the intended working directory, or "my_dir" as specified in the instructions
-	gl dir "C:/Users/lrestrepo/Documents/github_repos/The-Learning-Curve/2023_12_14-Masters_Earnings_Premium/"
+	gl dir "******"
 	gl data "${dir}Data/raw data/"
 	gl intermediate "${dir}Data/work data/"
 	gl programs = "${dir}analysis_2/"
