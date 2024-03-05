@@ -1,0 +1,1 @@
+In order to reproduce the analysis in Jeremy Singer's "Allocating Additional Funding for Low-Income Students: Michigan’s Section 25m Funding Proposal," save both analysis.do and raw_data.zip to the same directory. Change line 6 to reflect that directory, and run to produce the numbers in both figures and text.
