@@ -13,7 +13,7 @@ set more off
 Set globals/directory structure
 ------------------------------------------------------------------------------*/
 
-gl ds   	 "*****"
+gl ds  "*****"
 
 
 gl data		 "${ds}/data/"
@@ -23,13 +23,16 @@ foreach var in data graphs {
 	cap n mkdir "${`var'}"
 }
 
+cd "${data}"
+cap n unzipfile "${ds}/analysis.zip", replace
+
 graph set window fontface "Lato"
 
 
 /*------------------------------------------------------------------------------
 Analysis
 ------------------------------------------------------------------------------*/
-use "${ds}/teach_grant_s1.dta" , clear
+use "${data}/teach_grant_s1.dta" , clear
 
 *figure 1 and corresponding stats: trends in TEACH recipients, BA and MA ed awards
 
