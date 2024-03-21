@@ -1,0 +1,1 @@
+In order to reproduce Daniel Sparks' "Why do so many colleges decline to participate in federal grant program for teachers?," download both the "teach_clean.do" and "analysis.zip" files to the same directory. Edit line 16 to reflect the working directory, and run.
