@@ -1,0 +1,1 @@
+In order to reproduce the analysis in Sarah Cordes' piece, "", download both "master.do" and "analysis.zip" to the same directory. Edit line 6 to reflect the current working directory, and run to produce tables and figures.
