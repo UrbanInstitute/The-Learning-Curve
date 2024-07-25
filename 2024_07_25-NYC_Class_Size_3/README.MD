@@ -1,1 +1,1 @@
-In order to reproduce Matt Chingos, Ari Meltzer, and Jay Carter's third essay on NYC Class Sizes, edit line 7 to reflect the desired working directory, where outputs and downloaded files are to be saved.
+In order to reproduce Matt Chingos, Ari Meltzer, and Jay Carter's third essay on NYC Class Sizes, edit line 7 of the cleaning script to reflect the desired working directory, where outputs and downloaded files are to be saved.
