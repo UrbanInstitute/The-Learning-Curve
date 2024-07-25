@@ -35,7 +35,7 @@ use "${int}/2023 internal and external teacher hires v2.dta", clear
 // FIGURES - Figure 1 Figure 2 (Percentages generated in excel but same numbers using Table A1), Table A1 LR
 
 **# 2023 weighted ENI - transfers
-tab send_qu_ENI rec_qu_ENI, d row // internal hires
+tab send_qu_ENI rec_qu_ENI, row // internal hires
 tab qu_ENI if external_transfer == 1 // external hires
 
 // (unweighted code below was not used for figure 1, 2, or table A1, but idk if you want to keep it in here just in case)
@@ -46,7 +46,7 @@ tab qu_ENI_uw if external_transfer == 1
 
 // TABLE A.2 LR
 
-use "${int}/2022 internal and external teacher hires v2.dta", clear
+use "${raw}/2022 internal and external teacher hires v2.dta", clear
 
 **# 2022 weighted ENI - transfers - just these two lines for table A2
 tab send_qu_ENI rec_qu_ENI // weighted
@@ -130,7 +130,7 @@ tab send_qu_ENI rec_qu_ENI if CurrentBorough == "X" & SelectedBorough == "X", co
 **# Individual Borough Matrices: 
 
 ren send_qu_ENI qu_send_ENI
-ren qu_rec_ENI rec_qu_ENI
+ren rec_qu_ENI qu_rec_ENI
 
 foreach B in M Q K R X {
 	putexcel set "Updated ENI Matrices.xlsx", sheet("ENI - `B'", replace) modify
@@ -191,17 +191,8 @@ foreach B in M Q K R X {
 
 
 
-
+/*
 // Revising # of teachers
-
-glo main "K:\EDP\EDP_shared\Class size NYC\Essay #2" // this is the only line that needs to be edited for code to run. 
-
-cd "${main}"
-
-glo data "${main}/data"
-glo raw "${data}/raw"
-glo int "${data}/intermediate"
-glo fin "${data}/final"
 
 import excel "${raw}/NewYorkCitySchoolTransparency202223.xlsx", sheet("Part B") cellrange(A7:Y1616) firstrow clear
 
@@ -248,5 +239,5 @@ sum old_class_per_teacher, d
 ren total_classes_needed new_classes_needed
 
 
-
+*/
 

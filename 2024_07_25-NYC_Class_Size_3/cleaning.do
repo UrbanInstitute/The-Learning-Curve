@@ -4,7 +4,7 @@ This is the third in a series of essays analyzing the effects of implementing NY
 
 */
 
-glo main "C:\Users\lrestrepo\Documents\github_repos\The-Learning-Curve\2024_07_25-NYC_Class_Size_3" // this is the only line that needs to be edited for code to run. 
+glo main "*******************" // this is the only line that needs to be edited for code to run. 
 
 cd "${main}"
 
