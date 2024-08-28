@@ -1,1 +1,1 @@
-To reproduce this essay, edit line 13 of 00_HB729_Main.do to reflect the desired working directory, where outputs and downloaded files are to be saved.
+To reproduce this essay, edit lines 13 and 14 of 00_HB729_Main.do to reflect the desired working directory, where outputs and downloaded files are to be saved.
