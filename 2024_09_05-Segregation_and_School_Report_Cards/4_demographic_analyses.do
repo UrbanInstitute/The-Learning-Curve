@@ -3,10 +3,6 @@ Student Demographic Analyses
 
 */
 
-glo wd "C:\Users\jcarter\Documents\git_repos\HB_729_code\code\"
-
-glo data "${wd}data_files\"
-
 cap frame change default
 
 global geos "county child county_sch lea"
@@ -24,6 +20,7 @@ foreach group in county county_sch lea glea child{
 		if "`group'" == "child" local gp = "county"
 		if "`group'" == "lea" local gp = "leaid"
 		if "`group'" == "glea" local gp = "gleaid"
+		if "`group'" == "lea" drop if charter == 1
 		drop `group'_p_*
 		keep `gp' `group'_whit `group'_bkaa `group'_hisp `group'_asia `group'_aian `group'_all_other 
 		collapse (first) `group'_* , by(`gp')
@@ -63,6 +60,7 @@ foreach group in county county_sch lea glea child{
 		if "`group'" == "child" local gp = "county"
 		if "`group'" == "lea" local gp = "leaid"
 		if "`group'" == "glea" local gp = "gleaid"
+		if "`group'" == "lea" drop if charter == 1
 		foreach race in whit bkaa aian asia all_other hisp{
 			gen diff_`race' = sch_p_`race' - `group'_p_`race'
 		}
@@ -116,6 +114,7 @@ preserve
 	
 	
 	order grouping race share 
-
+	list in 1/10
 	export excel using "${wd}/TablesforLC.xlsx", sheetmodify sheet("Demographic Charts") firstrow(variables)
+
 restore
